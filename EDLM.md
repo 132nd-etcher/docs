@@ -73,7 +73,7 @@ Allow me to start with the cons, and provide, for each of them, a way to mitigat
 ### **No WYSIWYG** ("What you see is what you get")
 Markdown is pure text, therefore an editor who is busy writing documentation do not see the result appear as he types. Font does not resize for headings, pictures do not appear, tables do not build, etc.
 
-#### *Mitigation*:
+#### *Mitigation*
 
 * Converting from Markdown to Word/PDF/HTML is trivial, and the tool that I will be providing can be installed on any modern computer. Output can therefore be refreshed as often as needed to get a "sneak speek" into the actual result.
 * Numerous tools exists *online* to edit Markdown. Some of those tools are bare editor, providing a side by side "Edit" window and a "Result" window. Their offline equivalent are available as well. Moreover, and this gets really interesting, Markdown is mature enough that many *free* online editors offer amazing synchronization capabilities with Google Drive, Dropbox, Github, ... , **effectively allowing anyone to work on any document from any computer connected to the web, and directly sends their work for review into the Github repository of the 132^nd^ Virtual Wing** for review.
@@ -81,7 +81,7 @@ Markdown is pure text, therefore an editor who is busy writing documentation do 
 ### **Less liberty** when it comes to customizing the format/layout
  Having a common template for the layout/format of our document effectively "castrates" editors, denying them the liberty to get creative with the way their content is rendered. This could get on the nerves on some, especially the most perfectionists among us.
 
-#### *Mitigation*:
+#### *Mitigation*
 
 * The rendering, formatting and layout is done by a professional (although free) typesetting application that has been in existence since 1985. 32 years of development, testing and improvements have made it quite robust. It has been in use for decades by the scientific and teaching community all around the world for papers, essays, reports, etc.
 * The layout/format will be 100% identical for all documentation published by the 132^nd^ Virtual Wing, branding our documents with a unique "personality", and giving an overall "neat" picture of the Wing to the external world.
@@ -91,16 +91,16 @@ Markdown is pure text, therefore an editor who is busy writing documentation do 
 All the files that are to appear in the final document will be referenced in Markdown as links only, pointing to a file that exists near the Markdown source document (I'll come back on the structure later). 
 To give an example, if I wanted to include a file named `picture.png` in a document named `index.md`, I would have to write the following in `index.md`: `[Picture caption](path/to/picture.png){width: 8cm}`. "Picture caption" simply describes the picture, and can be any text. The `path` part is irrelevant, since that will be handled by the tools I am writing, but the problem persists: media only appear as text and are to exist alongside the source. The `{width: 8cm}` part is optional, but is amazing to "force" the same width (or height) on all pictures throughout a document (which looks real nice).
 
-#### *Mitigation*:
+#### *Mitigation*
 * Declaring pictures by name offers a finer grained controls on their size, and allow for dynamic resizing of pictures from all origins
-* Updating pictures can be done without even opening the source. A file named `picture.png` will be included in the final document, whatever that file contains. Updating batch of pictures is thus very easy, and does not require updating them one by one in every Word document.
+* Updating pictures can be done without even opening the source. A file named `picture.png` will be included in the final document, whatever that file contains. Updating batch of pictures is thus very easy, and does not require updating them one by one in every Word document (imagine how easy it would be to be able to run batch updates on the pictures library ...).
 * Pictures are automatically indexed and referenced in the final document, and an automatic "Table of figures" is automatically generated, with hyperlinks to the pictures within the text.
 
 
 ### **New technologies**
 While all the cons so far are of relatively small import, I fear this one might raise the most shields in our community. Please bear with me for a little while ? 
 For this project, I plan on using two pieces of software for the front-end (the parts people are expected to intercat with): **Markdown** and **Git**. For more information about them, see the "Technical" section of this document.
-#### *Mitigation*:
+#### *Mitigation*
 * While switching to new software always implies somewhat of a **learning curve**, I used the following criteria to select them:
     * Free (as in *no dinero*)
     * Open source
@@ -202,5 +202,9 @@ Then install the following:
 * [Github windows client application](https://desktop.github.com/) (alternatives: [smartGit](http://www.syntevo.com/smartgit/) (my favorite, more complex), [Gitkraken](https://www.gitkraken.com/))
 
 That's it ! Create an accound on https://github.com/, start your local Git client, and you're ready to rock !
+
+#### The workflow
+
+
 
 
