@@ -135,10 +135,72 @@ Excerpt from Wikipedia:
 
 [Here is a cheat-sheet with the available formatting](https://gist.github.com/jonschlinkert/5854601).
 
+##### Why Markdown ?
+
+I selected Markdown mainly because **it decouples the content and the format**, but also for the following reasons:
+* It's readable and easy to "learn"
+* It's used all over the web; tutorials are plenty, and all questions have been answered
+* It's supported by all the major players
+* It's very easy to transform into PDF, HTML, EPUB, RST, Microsoft Word, etc.
+ 
+##### Try it out
+
+You can try Markdown right now, without installing anything. Just head to one of those oneline editor, and write away:
+* http://dillinger.io/ (my favorite)
+* http://classeur.io/
+* https://stackedit.io/editor#
+* https://jbt.github.io/markdown-editor/
+* http://markdownlivepreview.com/
+* https://hackmd.io/
+* [etc...](https://www.google.be/search?q=markdown+online+editor&rlz=1C1GGRV_enBE752BE752&oq=markdown+online+editor&aqs=chrome.0.0j69i61j69i60j69i61j0l2.2135j0j7&sourceid=chrome&ie=UTF-8)
 
 ![Github logo](http://iconshow.me/media/images/ui/ios7-icons/png/128/social-github.png)
-#### Git & Github
+#### [Git](https://git-scm.com/) & [Github](https://github.com/)
+
+This is where things get a little bit hairy. It will seem very complicated at first, but I can assure you that after doing it a few times it makes a lot of sense and becomes actually quite easy (we're in the business of simulating a very complex environment, I reckon a few commands won't scare you that much =) ).
+
+Here is an [introductory tutorial about Git & Github](https://guides.github.com/activities/hello-world/).
+
+Here is another [tutorial about the Git philosophy, and one way to use it](http://thepilcrow.net/explaining-basic-concepts-git-and-github/).
+
+Please don't be scared by all the commands, there is a GUI application that lets you do all those things with a click of the mouse.
+
+I selected Git & Github because it allows for a *outstanding way of working together on the same project*. With Git & Github, you can:
+* Track *all* the changes, and roll back whichever one you'd like (constant backup of everything)
+* Associate changes with their author at a glance
+* Collaborative editing (many people can work on the same document at the same time)
+* Incremental review process supporting discussion
+* Issue tracker
+* Allows for a lot of automation under the hood
+* Git is the *de facto* Source Control Manageer nowadays (alternatives: [Subversion](https://subversion.apache.org/), [Mercurial](http://hginit.com/); [compare them](https://www.google.be/search?q=git+vs+subversion+vs+mercurial))
+* Github is the *de facto* hosting website for open source Git projects (alternatives: [Bitbucket](https://bitbucket.org/product), [Gitlab](https://about.gitlab.com/); [compare them](https://www.google.be/search?q=gitlab+vs+github+vs+bitbucket))
+
+**Note:** I'm leaving out alternatives that are not open-source, self-hosted and free to use.
+
+#### What you'll need
+
+This is the list of what you would have to install on your computer in order to be able to work on the documentation.
+
+##### Option 1: work online only
+
+This is absolutely possible. For example, with http://dillinger.io/, I'm writing this document in Markdown, I get to have a live preview of what I'm writing, and I can push it to Github with one click of the mouse. No fuss, no problemo.
+
+##### Option 2: work offline
+
+While option 1 is perfectly fine, you can also decide that you need more control of what is going on. In that case, you'll need a minimal suite of tools.
+
+###### Edit Markdown
+
+This one is easy: you don't need anything. Markdown is pure text, so any text editor will do
+
+###### Work with git & Github
+
+First, make sure you followed [this tutorial](https://guides.github.com/activities/hello-world/) and are a little bit familiar with Git.
+
+Then install the following:
+* [Git for windows](https://git-scm.com/download/win)
+* [Github windows client application](https://desktop.github.com/) (alternatives: [smartGit](http://www.syntevo.com/smartgit/) (my favorite, more complex), [Gitkraken](https://www.gitkraken.com/))
+
+That's it ! Create an accound on https://github.com/, start your local Git client, and you're ready to rock !
 
 
-
-http://thepilcrow.net/explaining-basic-concepts-git-and-github/
