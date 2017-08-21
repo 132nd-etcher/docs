@@ -2,30 +2,46 @@
 
 # Enhancement Proposal
 
+```
 Author: 132nd-etcher
 Published: 2017-08-11
 Version: DRAFT-1
-Audience: 132<sup>nd</sup> Virtual Wing CMD
+Audience: 132^nd^ Virtual Wing CMD
+```
 
 ## Abstract
 
-This document contains a proposal submitted to CMD for review.
+This document contains an enchancement proposal submitted to CMD for review.
+
+The proposal is about documentation in the 132^nd^ Virtual Wing. I would like to explore possible ways to make it better, easier to produce and easier to maintain.
 
 ## Rationale
 
+I was working a while back on the 696^th^ TRP (which produced no useful end-result), and was taken aback by many of Microsoft Word pitfalls. Why does it decide to auto-format so many things on my behalf ? And why can't it keep it consistent ? Reznik and I were editing with different locale settings (fr_BE and da_DK), which added even more fun to the mix: different paper size, different quote characters, and so on ...
 
+I've also been offered the chance to review the new 176^th^ before it officially came out, and the whole review process, using a proxy Google Docs temporary document seemed archaic and painful to me. This extra step adds a lot of undesirable overhead to the process.
+
+Last example: as a side-project, I'm maintaining a kneeboard document written with Microsoft Excel, and that takes the pain to a whole new level.
+
+I would like to propose a solution to get rid of those issues, and implement a better workflow for everyone. This document is published for review in order to assess how interested/willing people are interested to give it a try.
 
 ## Objective
 
-My objective with this project is to improve the way documentation is built and maintained within the Wing, leveraging freely available tools to increase quality and consistency, and to allow for easier collaboration, while maintaining an easy workflow for everyone involved.
+What I'm trying to achieve:
 
-Now that's very broadly speaking, of course. I will go over what I have in mind point by point, but here's a little list of what's really annoying me at the time:
+* Increase quality and consistency of the documentation
+* Allow for easier collaboration and review
+* Maintain an easy workflow for everyone
+ 
+What I'm trying to get rid of:
 
-* All documents look just a little bit different from each other, tiny variations in style or formatting
-* Documents that have been published a while back haven't been updated to the latest format and look completely "off"
-* When people are writing a new document, or editing an existing one, the process is compartmentalized and linear.  
+* Variations in style or formatting
+* Older documents not updated to latest layout/formatting
+* Passing documents around during review/editing process
 
-### First objective: decoupling the content from the format
+## Achieving these goals
+
+### 1. Decoupling the content from the format
 
 Writing a document with Microsoft Office Word implies formatting it as well. Despite the use of a template, guaranteeing a consistent format across a library of dozens of documents, written by many different authors, sometimes even multiple authors for the same document, is almost impossible.
 
@@ -33,9 +49,9 @@ Due to the inherent complexity of Microsoft Word Office, as well as the debatabl
 
 My first goal is to get rid of this ambiguity, and have one and only one way to express a given construct (a paragraph, a heading, a list, a table, ...).
 
-Also, decoupling content and format has the advantageous side-effect of freeing editors from worrying about formatting their content while they are writing it.
+This would also have the benefical side-effect of freeing editors from worrying about formatting their content while they are writing it, giving them more brain power for the actual content creation
 
-Decoupling content and format also means that any older document, even one that hasn't been touched in years, will be automatically updated to the latest format/layout whenever the format/layout is updated.
+Decoupling content and format also means that any older document, even one that hasn't been touched in years, will be automatically updated to the latest format/layout whenever the format/layout is updated, since their content has not changed.
 
 Once the content has been created by the editors, my goal is to provide a system that will take that "raw" content, and format it, consistently, into different formats that will later be published. A choice format is of course PDF, but I'm thinking HTTP (web) or EPUB (books) as well.
 
