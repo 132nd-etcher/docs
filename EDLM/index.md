@@ -26,7 +26,7 @@ summary_of_changes:
 
 ## Abstract
 
-This document contains an enchancement proposal submitted to CMD for review.
+This document contains an enhancement proposal submitted to CMD for review.
 
 The proposal is about documentation in the //wing. I would like to explore possible ways to make it better, easier to produce and easier to maintain.
 
@@ -66,7 +66,7 @@ Due to the inherent complexity of Microsoft Word Office, as well as the debatabl
 
 My first goal is to get rid of this ambiguity, and have one and only one way to express a given construct (a paragraph, a heading, a list, a table, ...).
 
-This would also have the benefical side-effect of freeing editors from worrying about formatting their content while they are writing it, giving them more brain power for the actual content creation
+This would also have the beneficial side-effect of freeing editors from worrying about formatting their content while they are writing it, giving them more brain power for the actual content creation
 
 Decoupling content and format also means that any older document, even one that hasn't been touched in years, will be automatically updated to the latest format/layout whenever the format/layout is updated, since their content has not changed.
 
@@ -83,6 +83,8 @@ The output should be:
 
 ## Pros & cons
 
+This section objectively (as much as I could) describes the pros and cons of the method I propose to implement.
+
 ### The cons
 
 Allow me to start with the cons, and provide, for each of them, a way to mitigate them.
@@ -92,8 +94,8 @@ Markdown is pure text, therefore an editor who is busy writing documentation do 
 
 ##### *Mitigation*
 
-* Converting from Markdown to Word/PDF/HTML is trivial, and the tool that I will be providing can be installed on any modern computer. Output can therefore be refreshed as often as needed to get a "sneak speek" into the actual result.
-* Numerous tools exists *online* to edit Markdown. Some of those tools are bare editor, providing a side by side "Edit" window and a "Result" window. Their offline equivalent are available as well. Moreover, and this gets really interesting, Markdown is mature enough that many *free* online editors offer amazing synchronization capabilities with Google Drive, Dropbox, Github, ... , **effectively allowing anyone to work on any document from any computer connected to the web, and directly sends their work for review into the Github repository of the //wing** for review.
+* Converting from Markdown to Word/PDF/HTML is trivial, and the tool that I will be providing can be installed on any modern computer. Output can therefore be refreshed as often as needed to get a "sneak peek" into the actual result.
+* Numerous tools exists *online* to edit Markdown. Some of those tools are bare editor, providing a side by side "Edit" window and a "Result" window. Their offline equivalent are available as well. Moreover, and this gets really interesting, Markdown is mature enough that many *free* online editors offer amazing synchronization capabilities with Google Drive, Dropbox, Github, ... , **effectively allowing anyone to work on any document from any computer connected to the web, and directly sends their work for review into the Github repository of the //wing**.
 
 #### Less liberty when it comes to customizing the format/layout
  Having a common template for the layout/format of our document effectively "castrates" editors, denying them the liberty to get creative with the way their content is rendered. This could get on the nerves on some, especially the most perfectionists among us.
@@ -116,7 +118,7 @@ To give an example, if I wanted to include a file named `picture.png` in a docum
 
 #### New technologies
 While all the cons so far are of relatively small import, I fear this one might raise the most shields in our community. Please bear with me for a little while ?
-For this project, I plan on using two pieces of software for the front-end (the parts people are expected to intercat with): **Markdown** and **Git**. For more information about them, see the "Technical" section of this document.
+For this project, I plan on using two pieces of software for the front-end (the parts people are expected to interact with): **Markdown** and **Git**. For more information about them, see the "Technical" section of this document.
 
 ##### *Mitigation*
 
@@ -125,7 +127,7 @@ For this project, I plan on using two pieces of software for the front-end (the 
     * Open source
     * Mature
     * Widely used across the world
-    * Well documentend
+    * Well documented
     * Will be supported for years to come
     * Easy enough for the intended usage
     * Has a luxuriant and flourishing ecosystem of tools around them
@@ -167,7 +169,7 @@ I selected Markdown mainly because **it decouples the content and the format**, 
 
 ##### Try it out
 
-You can try Markdown right now, without installing anything. Just head to one of those oneline editor, and write away:
+You can try Markdown right now, without installing anything. Just head to one of those online editor, and write away:
 
 * [dillinger](http://dillinger.io/) (my favorite)
 * [classeur](http://classeur.io/)
@@ -195,7 +197,7 @@ I selected Git & Github because it allows for a *outstanding way of working toge
 * Incremental review process supporting discussion
 * Issue tracker
 * Allows for a lot of automation under the hood
-* Git is the *de facto* Source Control Manageer nowadays (alternatives: [Subversion](https://subversion.apache.org/), [Mercurial](http://hginit.com/); [compare them](https://www.google.be/search?q=git+vs+subversion+vs+mercurial))
+* Git is the *de facto* Source Control Manager nowadays (alternatives: [Subversion](https://subversion.apache.org/), [Mercurial](http://hginit.com/); [compare them](https://www.google.be/search?q=git+vs+subversion+vs+mercurial))
 * Github is the *de facto* hosting website for open source Git projects (alternatives: [Bitbucket](https://bitbucket.org/product), [Gitlab](https://about.gitlab.com/); [compare them](https://www.google.be/search?q=gitlab+vs+github+vs+bitbucket))
 
 **Note:** I'm leaving out alternatives that are not open-source, self-hosted and free to use.
