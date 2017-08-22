@@ -167,6 +167,8 @@ This architecture allows to define settings and provide pictures at the global l
 
 Same thing goes for the media folder: when a picture is included in the document, it will be looked up first in the media folder of the document, and then in the global media folder.
 
+[Basic workflow](image1)
+
 #### Automation
 
 This is one of the biggest pro in my book. The starting point is a raw text file, editable from anyone on with access to the Internet, and, from there, PDF documents are autmomatically created and published. Even a full-fledged website if we want to !
@@ -196,13 +198,42 @@ Finally, hosting the documentation on Github gives everyone access to it. Anyone
 
 **Note:** if it turns out that having our work publicly available is a show stopper for some of us, please note that Bitbucket offers the same kind of functionnality for an unlimited number of private repositories. I'm a strong advocate of going public, though.
 
-
-
 #### Unified format
 
 All markdown documents are transformed into PDF with a master template. This means that:
 
-* all documents will have the same layout and general format
+* all documents will have the same layout and general format, giving them a distinc //wing look and feel
+* updating the template will reflect the changes on all documents (ex: title page format, heading size, paragraph spacing, bullet lists format, etc.)
+* content and format are decoupled
+
+Basically, what happens during the conversion is:
+
+**TODO**: move front matter from pandoc to the settings file (way easier)
+
+1. Grab the sttings from the global `settings.yml` file
+2. Update those settings with the document `settings.yml' file
+    * All settings that were in the global settings are preserved, unless a setting with the same name is declared for the document, in which case the global settings are overwritten
+    * All settings present in the document file that are not in the global settings will simply be added
+3. Using those settings, pre-process the markdown text files; settings may include:
+    * aliases to replace some text in the document with pre-defined string
+    * a new title for the docuement, different than the folder name; maybe some characters you want in the title aren't allowed as a folder name on Windows? **Note**: at the this proposal were written, those were the only two possible settings; many others will probably come in the future
+4. Still using the settings, pre-process the Latex template; this will, for example:
+    * compute the path to the media file
+5. Using the resulting template and markdown text, build the final PDF.
+
+[Processing](image2)
+
+Why such a complicated system ?
+
+First, we want to be able to declare and access settings that are common to all documents, and are susceptible to change in the future (new settings may be added later without requiring to change the document text, no worries). That is the role of the global `settings.yml`.
+
+Then, we also want to be able to create settings that are specific to the document itself. Maybe some abbreviation are valid only in the scope of a specific squadron ? That is the role of the `settings.yml` that is in the document folder itself.
+
+With those settings, we are able to pre-process the Markdown document. Aliases are replaced withon the text, etc.
+
+Finally, we need a global `template.tex` to create PDF. That template ensures that all documents received the same formatting. But, each document also has specific needs: their `media` folder will be at a different location, and some other settings may be different too. So we also pre-process the template using the current settings (and information gathered automatically, like the `media` folder path.
+
+We now have a pre-processed Markdown, and a pre-processed template. We can use Pandoc to get a PDF out of those two, and voilà !
 
 ## Technical
 
@@ -213,7 +244,6 @@ This section describes the tools chain that would be used to build and publish t
 Despite the vast possibilities that those tools permit, with a staggering amount of options, configurations and features, the whole process will be mostly automated, and the editors/reviewers will have to deal with very few technicalities.
 
 ### How it is built
-
 
 
 ### Specific tools, part1: the front-end
