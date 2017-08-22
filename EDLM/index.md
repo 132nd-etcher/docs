@@ -169,9 +169,13 @@ Same thing goes for the media folder: when a picture is included in the document
 
 #### Automation
 
-This is one of the biggests in my book. The starting point is a raw text file, editable from anyone on with access to the Internet, and, from there, PDF documents are autmomatically created and published. Even a full-fledged website if we want to !
+This is one of the biggest pro in my book. The starting point is a raw text file, editable from anyone on with access to the Internet, and, from there, PDF documents are autmomatically created and published. Even a full-fledged website if we want to !
 
-The build process is triggered every time a file changes on Github. That means we get to see what the PDF would be like every time someone creates a commit. This is of course very desirable when we are actually publishing the document, but it happens too when we're *working* on it. Every commit on the "develop" branch (the branch used for "work in progress") creates PDF. Every commi on a "pull request" (a "proposal to publish" pending review) creates PDF. In the case of the pull request, the PDF produced are availablee in the pull request thread, allowing for everyone to review and discuss the change. If the pull request is edited (new changes are added to it), the new files will show as well.
+The build process is triggered every time a file changes on Github. That means we get to see what the PDF would be like every time someone creates a commit. This is of course very desirable when we are actually publishing the document, but it happens too when we're *working* on it. Every commit on the "develop" branch (the branch used for "work in progress") creates PDF. Every commi on a "pull request" (a "proposal to publish" pending review) creates PDF. In the case of the pull request, the PDF produced are available in the pull request thread, allowing for everyone to review and discuss the change. If the pull request is edited (new changes are added to it), the new files will show as well.
+
+The publication happens every time someone commits on the "master" branch ("master" is the most up-do-date, official version). The documents are published on our FTP, replacing older versions. That means the the link to the documents stays the same; only the content gets updated. That also means that anyone with Internet access can, at any point, create a new release of any document (by comitting changes, or accepting a pending pull request, etc.) at any time, even from their phone should they wish so.
+
+**Note:** using the FTP to host documents is my current idea of the implementation, but can be changed very easily. I like the FTP idea because it means that the same document will always have the same link pointing to it, even between versions, which is very convenient for writing briefings, or the documents page of our website.
 
 Automation also gives us a lot of flexibility. Let us say we decide to change the font we use for the documentation, and examine the two following scenarios:
 
@@ -183,6 +187,22 @@ This stands not only for the font, but for pretty much everything else too. Anot
 The same goes for pictures: imagine we decide to include the GRG made by Looney (respect, sir) into the //617 TRP. We drop the file "dush_grg.png" into a "media" folder next to our markdown, and simply type `[Dusheti GRG](dush_grg.png){ width: 6cm }` in our Markdown text (the part between `[]` is the "caption" of the picture). Note as well that the `{ width: 6cm }` is totally optional and included here only because I'm a nerd =) Now every time Looney updates his GRG, all there is to do is drop the new file in place of the old one, and commit the change. No worries about resizing, aligning, formatting, publishing. Pull, change, commit, push, and grab a coffee; 2 minutes top, coffee included, worry free.
 
 Now let's take the example above a tad further. Imagine the //765 decides to include the GRG too. They move the "dush_grg.png" file into the "media" folder of the //wing, making it available for every document in the library, and include it in their TRP too. Now, whenever anyone update "dush_grg.png" in the root media folder, it automatically gets updated in every document that uses it. How cool is that ? =)
+
+This integrated and automated publication process also gives us a lot of information about everything that is going on, at any given time. For example, I could see who modified a specific line in a specific document. I could also comment directly on *that specific line* and start a discussion about it. I could revert a specific set of changes, if it turns out they're not as good as we thought. Since every commit is independently built, and Git branches are cheap, multiple people can work at the same time on different chapters of the same document, without ever colliding with each other, and have a immediate snapshot of their work every time they push it. Once finished, integrating the change set back into the "develop" or "master" branch is as simple as a click of the mouse.
+
+A side-effect of this system is that aboslutely every change ever pushed on Github are recorded. Every little one of them can be retrieved, analyzed, and reverted if we want to. Which is, essentially, free backup.
+
+Finally, hosting the documentation on Github gives everyone access to it. Anyone can jump in at any given point, and suggest a change, fix a typo, etc. Owners and maintainers are responsible for accepting or rejecting those changes, but virtually anyone willing to create a Github account can turn into a contributor.
+
+**Note:** if it turns out that having our work publicly available is a show stopper for some of us, please note that Bitbucket offers the same kind of functionnality for an unlimited number of private repositories. I'm a strong advocate of going public, though.
+
+
+
+#### Unified format
+
+All markdown documents are transformed into PDF with a master template. This means that:
+
+* all documents will have the same layout and general format
 
 ## Technical
 
