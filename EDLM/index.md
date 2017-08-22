@@ -134,7 +134,51 @@ For this project, I plan on using two pieces of software for the front-end (the 
 
 ### The pros
 
-TODO
+This section explains why I'm making this proposal in the first place
+
+#### Into: the build process
+
+Before I can present you with examples, I need to exaplin a few basics about the build process I'm proposing.
+
+Every document lives in its own folder, and is composed of three parts:
+
+1. The document itself, `index.md`; this file can contain text, pictures, and include other Markdown files in the same folder (that's useful to split the documents into different parts, and assemble them later, but totally optionla of course).
+2. A `settings.yml` file; this file contains informtaion about the document. It is optional too, but can be used to change some settings. For example, you can define aliases, stating that all "//jf" in the document should be replaced by "J-TAC/FAC(A)" (it just saves a lot of typing and help reduce typos).
+3. A `media` folder; his folder contains resources for the document, mainly pictures.
+
+In addtion to those three parts, there are also the global settings and the global media folder. Those are simply settings and pictures that are shared with *all* the documents.
+
+Example:
+
+* media/
+    * picture1.png
+    * picture2.png
+* settings.yml
+* SOME_DOCUMENT
+    * media/
+        * picture3.png
+        * picture4.png
+    * settings.yml
+    * index.md
+    * part1.md
+    * part2.md
+
+#### Automation
+
+This is one of the biggests in my book. The starting point is a raw text file, editable from anyone on with access to the Internet, and, from there, PDF documents are autmomatically created and published. Even a full-fledged website if we want to !
+
+The build process is triggered every time a file changes on Github. That means we get to see what the PDF would be like every time someone creates a commit. This is of course very desirable when we are actually publishing the document, but it happens too when we're *working* on it. Every commit on the "develop" branch (the branch used for "work in progress") creates PDF. Every commi on a "pull request" (a "proposal to publish" pending review) creates PDF. In the case of the pull request, the PDF produced are availablee in the pull request thread, allowing for everyone to review and discuss the change. If the pull request is edited (new changes are added to it), the new files will show as well.
+
+Automation also gives us a lot of flexibility. Let us say we decide to change the font we use for the documentation, and examine the two following scenarios:
+
+* First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone
+* Second scenario, we're using Markdown. We pull the repo (one click), change one line (10 seconds), then push the repo back (one click). This change is absolute over the entire document library, every single caracter is guaranteed to have been updated.
+
+This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to "//wing" in the Markdown text file. Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist).
+
+The same goes for pictures: imagine we decide to include the GRG made by Looney (respect, sir) into the //617 TRP. We drop the file "dush_grg.png" into a "media" folder next to our markdown, and simply type `[Dusheti GRG](dush_grg.png){ width: 6cm }` in our Markdown text (the part between `[]` is the "caption" of the picture). Note as well that the `{ width: 6cm }` is totally optional and included here only because I'm a nerd =) Now every time Looney updates his GRG, all there is to do is drop the new file in place of the old one, and commit the change. No worries about resizing, aligning, formatting, publishing. Pull, change, commit, push, and grab a coffee; 2 minutes top, coffee included, worry free.
+
+Now let's take the example above a tad further. Imagine the //765 decides to include the GRG too. They move the "dush_grg.png" file into the "media" folder of the //wing, making it available for every document in the library, and include it in their TRP too. Now, whenever anyone update "dush_grg.png" in the root media folder, it automatically gets updated in every document that uses it. How cool is that ? =)
 
 ## Technical
 
@@ -143,6 +187,10 @@ This section describes the tools chain that would be used to build and publish t
 ### Overview
 
 Despite the vast possibilities that those tools permit, with a staggering amount of options, configurations and features, the whole process will be mostly automated, and the editors/reviewers will have to deal with very few technicalities.
+
+### How it is built
+
+
 
 ### Specific tools, part1: the front-end
 
