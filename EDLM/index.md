@@ -136,9 +136,9 @@ For this project, I plan on using two pieces of software for the front-end (the 
 
 This section explains why I'm making this proposal in the first place
 
-#### Into: the build process
+#### Intro: the build process
 
-Before I can present you with examples, I need to exaplin a few basics about the build process I'm proposing.
+Before I can present you with examples, I need to explain a few basics about the build process I'm proposing.
 
 Every document lives in its own folder, and is composed of three parts:
 
@@ -153,7 +153,7 @@ Example:
 * media/
     * picture1.png
     * picture2.png
-* settings.yml
+* settings.yml (global)
 * SOME_DOCUMENT
     * media/
         * picture3.png
@@ -163,6 +163,10 @@ Example:
     * part1.md
     * part2.md
 
+This architecture allows to define settings and provide pictures at the global level, and overrides them at the document level if desired.
+
+Same thing goes for the media folder: when a picture is included in the document, it will be looked up first in the media folder of the document, and then in the global media folder.
+
 #### Automation
 
 This is one of the biggests in my book. The starting point is a raw text file, editable from anyone on with access to the Internet, and, from there, PDF documents are autmomatically created and published. Even a full-fledged website if we want to !
@@ -171,7 +175,7 @@ The build process is triggered every time a file changes on Github. That means w
 
 Automation also gives us a lot of flexibility. Let us say we decide to change the font we use for the documentation, and examine the two following scenarios:
 
-* First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone
+* First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone.
 * Second scenario, we're using Markdown. We pull the repo (one click), change one line (10 seconds), then push the repo back (one click). This change is absolute over the entire document library, every single caracter is guaranteed to have been updated.
 
 This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to "//wing" in the Markdown text file. Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist).
