@@ -205,10 +205,9 @@ All markdown documents are transformed into PDF with a master template. This mea
 * all documents will have the same layout and general format, giving them a distinc //wing look and feel
 * updating the template will reflect the changes on all documents (ex: title page format, heading size, paragraph spacing, bullet lists format, etc.)
 * content and format are decoupled
+* meta data like table of content, table of figures, table of tables (yes), heading numbers, etc. are automatically generated for all documents
 
 Basically, what happens during the conversion is:
-
-**TODO**: move front matter from pandoc to the settings file (way easier)
 
 1. Grab the sttings from the global `settings.yml` file
 2. Update those settings with the document `settings.yml' file
@@ -234,6 +233,20 @@ With those settings, we are able to pre-process the Markdown document. Aliases a
 Finally, we need a global `template.tex` to create PDF. That template ensures that all documents received the same formatting. But, each document also has specific needs: their `media` folder will be at a different location, and some other settings may be different too. So we also pre-process the template using the current settings (and information gathered automatically, like the `media` folder path.
 
 We now have a pre-processed Markdown, and a pre-processed template. We can use Pandoc to get a PDF out of those two, and voilà !
+
+### Centralised repository
+
+All documents live in one repository, that is itself hosted on Github.
+
+The advantages are plenty:
+* Automated recording of all changes
+* Automated and constant backup
+* The library is accessible to all; everyone can suggest a change or add content
+* review process greatly facilitated: changes are incremental, and their authors are clearly displayed; discussions about those changes are centralized around the pull request; merging the changes once they are ready is a one-click operation
+* concurrent edition: many different people ca work on the same document at the same time, sharing their progress along the way (conflitcts are handled on a per-line basis)
+* ease of access: editing a document or suggesting a change is available in all web browsers
+* **internal links and bibliography**: a document may include another, which may in turn include another, which may in turn ...; this makes it very easy to propagate changes in all "sub-documents" to their "parent" document (for example, a procedure that is commont to the whole //wing might be outlined in a dedicated document, which will be "included" in most TRPs; updating the sub-document would then upgrade all associated TRPs); building a bibliography that references all documents published by the //wing would be automated as well, allowing for easier reference to other documents
+* media files like pictures, logos, maps, etc. are shared across all documents; updating them propagates to all documents using them
 
 ## Technical
 
