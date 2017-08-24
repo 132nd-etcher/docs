@@ -183,6 +183,8 @@ Automation also gives us a lot of flexibility. Let us say we decide to change th
 
 * First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone.
 * Second scenario, we're using Markdown. We pull the repo (one click), change one line (10 seconds), then push the repo back (one click). This change is absolute over the entire document library, every single caracter is guaranteed to have been updated.
+* 
+
 
 This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to "//wing" in the Markdown text file. Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist).
 
@@ -344,3 +346,32 @@ Then install the following:
 That's it ! Create an account on https://github.com/, start your local Git client, and you're ready to rock !
 
 #### The workflow
+
+
+## Transition
+
+Transitionning from the current documentation library to EDLM will not be painless, but it should not be painful either, nor take an unreasonable amount of time.
+
+I'm providing tools to convert from Word/PDF to Markdown, but that process is error-prone. So, far, the issues I've been able to identify are:
+
+* The format
+    *  Tables
+    *  Lists
+* The pictures (the pictures are correctly extracted from the Word/PDF document, and put in the media folder, but their format and/or positionning might need to be adjusted)
+ 
+On big document, like the //617 SOP, this could take a couple of hours. On more simple document, it might take only a few minutes.
+
+### Process
+
+The actual transition would happen like this:
+
+1. Freeze the current state of the library (no more edition of current Word documents)
+2. Convert documents in Markdown
+3. Build a sane structure for the new library
+    * Place pictures in the correct folder (maybe some of them should be shared between document? Or even maybe with the whole Wing?)
+    * Define settings and metadata for the documents (title, authors, ...)
+4. Build the new library incrementally, green-lighting documents one by one until they all pass QA
+
+In all honesty, I'm unable to give an objective estimate of the time this will take, mainly because I don't know who will be able to spend time on this. Older documents, whose maintainers are gone or inactive, can be updated by myself or anyone willing.
+ 
+
