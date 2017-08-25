@@ -296,6 +296,15 @@ You can try Markdown right now, without installing anything. Just head to one of
 * [hackmd](https://hackmd.io/)
 * [etc...](https://www.google.be/search?q=markdown+online+editor&rlz=1C1GGRV_enBE752BE752&oq=markdown+online+editor&aqs=chrome.0.0j69i61j69i60j69i61j0l2.2135j0j7&sourceid=chrome&ie=UTF-8)
 
+##### Offline editors
+
+If you prefer to work offline, there are tons of editors for Markdown:
+
+* [Notepad++](https://notepad-plus-plus.org/) with [plugins](https://www.google.be/search?q=notepad%2B%2B+markdown)
+* [Atom](https://atom.io/) with [plugins](https://www.google.be/search?rlz=1C1GGRV_enBE752BE752&q=atom+markdown)
+
+[And millions others...](https://www.google.be/search?q=markdown+editor+windows)
+
 #### [Git](https://git-scm.com/) & [Github](https://github.com/)
 
 This is where things get a little bit hairy. It will seem very complicated at first, but I can assure you that after doing it a few times it makes a lot of sense and becomes actually quite easy (we're in the business of simulating a very complex environment, I reckon a few commands won't scare you that much =) ).
@@ -373,5 +382,14 @@ The actual transition would happen like this:
 4. Build the new library incrementally, green-lighting documents one by one until they all pass QA
 
 In all honesty, I'm unable to give an objective estimate of the time this will take, mainly because I don't know who will be able to spend time on this. Older documents, whose maintainers are gone or inactive, can be updated by myself or anyone willing.
+
+
+### Crash course
+
+I plan on offering crash course with Git/Github/Markdown to the people who are interested in it, and to write a few pages long tutorial to help getting newcomers started as well.
+
+The crash course should take about 30 minutes on TS, getting people to install the necessary tools, and get started with them ("hands on" tutorial).
+
+the written tutorial would be much of the same, covering the installation of tools, the publishing process and a few syntax related guidelines.
  
 
