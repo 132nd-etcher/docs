@@ -72,14 +72,18 @@ Decoupling content and format also means that any older document, even one that 
 
 #### Specification
 
-Once the content has been created by the editors, my goal is to provide a system that will take that "raw" content, and format it, consistently, into different formats that will later be published. A choice format is of course PDF, but I'm thinking HTTP (web) or EPUB (books) as well.
+Once the content has been created by the editors, my goal is to provide a system that will take that "raw" content, and format it, consistently, into different formats that will later be published. A choice format is of course PDF, but we can also convert to Microsoft Word format, HTML (create a website automatically for our documentation), EPUB (books that can be read easily on readers/mobile), you-name-it.
+
+Here is a non-exhaustive list of the *ouput* format supported: (more *input* formats are available still)
+
+> [Pandoc] can write plain text, Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, OPML, DocBook, OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup, DokuWiki markup, ZimWiki markup, Haddock markup, EPUB (v2 or v3), FictionBook2, Textile, groff man pages, Emacs Org mode, AsciiDoc, InDesign ICML, TEI Simple, and Slidy, Slideous, DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF output on systems where LaTeX, ConTeXt, or wkhtmltopdf is installed.
 
 The output should be:
 
 * Consistent across builds: the same content must **always** yield the same result, even on different computers, operating systems, or software versions
 * Uniformly formatted: **all** the documents in the library should have the same general layout, giving all documentation published by the //wing a visual identity of their own
 * Retroactively managed: all documents that have been published in the past should be **updated without human intervention**. If a logo changes, if we decide to change the title page, or the space after paragraphs, those changes should be **automatically propagated across the entire library**
-* Adapted to our needs: the documentation should not look "generic" and bland
+* Adapted to our needs: the documentation should not look "generic" or bland; each document should bear 
 
 ## Pros & cons
 
@@ -90,7 +94,7 @@ This section objectively (as much as I could) describes the pros and cons of the
 Allow me to start with the cons, and provide, for each of them, a way to mitigate them.
 
 #### No WYSIWYG ("What you see is what you get")
-Markdown is pure text, therefore an editor who is busy writing documentation do not see the result appear as he types. Font does not resize for headings, pictures do not appear, tables do not build, etc.
+Markdown is pure text, therefore an editor who is busy writing documentation does not see the result appear as he types. Font does not resize for headings, pictures do not appear, tables do not build, etc.
 
 ##### *Mitigation*
 
@@ -102,9 +106,9 @@ Markdown is pure text, therefore an editor who is busy writing documentation do 
 
 ##### *Mitigation*
 
-* The rendering, formatting and layout is done by a professional (although free) typesetting application that has been in existence since 1985. 32 years of development, testing and improvements have made it quite robust. It has been in use for decades by the scientific and teaching community all around the world for papers, essays, reports, etc.
+* The rendering, formatting and layout is done by a professional (although free) typesetting application that has been in existence since 1985: [Latex](https://en.wikipedia.org/wiki/LaTeX). 32 years of development, testing and improvements have made it quite robust. It has been in use for decades by the scientific and teaching community all around the world for papers, essays, reports, etc.. Even if we might disagree with some of the minor formatting choices it makes when it comes to typesetting the document (I sometimes do myself, with the placement of pictures for example), we can at least be sure that the standard it follows is accepted world-wide, and is the result of decades of professionnal work.
 * The layout/format will be 100% identical for all documentation published by the //wing, branding our documents with a unique "personality", and giving an overall "neat" picture of the Wing to the external world.
-* In case of necessity, when part of the output does not fit a specific need of ours, we can take advantage of the maturity of the tools and customize every little detail to our needs (this would of course be my job).
+* In case it becomes necessary, when part of the output does not fit a specific need of ours, we can take advantage of the maturity of the tools and customize every little detail to our needs (this would of course be my job, unless someone else feels like diving in the gory implementation details =) ).
 
 #### Resources like pictures, videos, sound, are to be included on the side
 All the files that are to appear in the final document will be referenced in Markdown as links only, pointing to a file that exists near the Markdown source document (I'll come back on the structure later).
@@ -183,8 +187,6 @@ Automation also gives us a lot of flexibility. Let us say we decide to change th
 
 * First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone.
 * Second scenario, we're using Markdown. We pull the repo (one click), change one line (10 seconds), then push the repo back (one click). This change is absolute over the entire document library, every single caracter is guaranteed to have been updated.
-* 
-
 
 This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to "//wing" in the Markdown text file. Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist).
 
@@ -249,6 +251,12 @@ The advantages are plenty:
 * ease of access: editing a document or suggesting a change is available in all web browsers
 * **internal links and bibliography**: a document may include another, which may in turn include another, which may in turn ...; this makes it very easy to propagate changes in all "sub-documents" to their "parent" document (for example, a procedure that is commont to the whole //wing might be outlined in a dedicated document, which will be "included" in most TRPs; updating the sub-document would then upgrade all associated TRPs); building a bibliography that references all documents published by the //wing would be automated as well, allowing for easier reference to other documents
 * media files like pictures, logos, maps, etc. are shared across all documents; updating them propagates to all documents using them
+
+### Extensibility
+
+Once the content has been created (i.e.: the Markdown texts are written), we can output in a lot of different formats. This means that if, at any given point in the future, we find that we would need to publish books with our documentation on the Google Play Store and its Apple counter-part, it would take us about 5 minutes of manual work. The *content* is there already, all we would need to do is add the *output* to the pipeline.
+
+This is of course a silly example, but I think extensibility is still a very strong pro.
 
 ## Technical
 
