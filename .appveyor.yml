@@ -1,0 +1,73 @@
+version: pending.{build}
+max_jobs: 10
+skip_branch_with_pr: false
+skip_commits:
+  files:
+    - docs/*
+    - '**/*.html'
+  message: /.*\[nobuild\].*/
+skip_tags: false
+
+environment:
+    GIT_DAEMON_PATH:   "C:\\Program Files\\Git\\mingw64\\libexec\\git-core"
+    CYGWIN_GIT_PATH:   "C:\\cygwin\\bin;%GIT_DAEMON_PATH%"
+    CYGWIN64_GIT_PATH: "C:\\cygwin64\\bin;%GIT_DAEMON_PATH%"
+    APPVEYOR_ARTIFACT_UPLOAD_TIMEOUT: 60
+    PYTHON: "C:\Miniconda36-x64"
+    PYTHON_VERSION: "3.6"
+    GIT_PATH: "%GIT_DAEMON_PATH%"
+    GH_TOKEN:
+      secure: H9M/aPctMSk1+0AWe/l5D0U3oXto404/4UYiPMCECpjy0llgb8cBKTRyr20UDWdX
+    GH_MAIL:
+      secure: hyFFOoK6WbxtLxy2jOGlOPbRJ33Al8E1B0QeT+qUqJ8=
+
+
+matrix:
+    fast_finish: true
+
+init:
+  # If there is a newer build queued for the same PR, cancel this one.
+  # The AppVeyor 'rollout builds' option is supposed to serve the same
+  # purpose but is problematic because it tends to cancel builds pushed
+  # directly to master instead of just PR builds.
+  # credits: JuliaLang developers.
+  - ps: if ($env:APPVEYOR_PULL_REQUEST_NUMBER -and $env:APPVEYOR_BUILD_NUMBER -ne ((Invoke-RestMethod `
+        https://ci.appveyor.com/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/history?recordsNumber=50).builds | `
+        Where-Object pullRequestId -eq $env:APPVEYOR_PULL_REQUEST_NUMBER)[0].buildNumber) { `
+        throw "There are newer queued builds for this pull request, failing early." }
+
+  # Check that we have the expected version and architecture for Python
+  - set PATH=%PYTHON%;%PYTHON%\Scripts;C:\MinGW\msys\1.0\bin;%PATH%
+  - "git config --system http.sslcainfo \"C:\\Program Files\\Git\\mingw64\\ssl\\certs\\ca-bundle.crt\""
+  - "%PYTHON%/python -V"
+  - "%PYTHON%/python -c \"import struct;print(8 * struct.calcsize(\'P\'))\""
+  - "pip --version"
+
+  - cmd: echo %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%
+  - cmd: echo %APPVEYOR_BUILD_WORKER_IMAGE%
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_TOKEN):x-oauth-basic@github.com`n"
+  - "git config --global user.email %GH_MAIL%"
+  - "git config --global user.name %APPVEYOR_ACCOUNT_NAME%"
+  - cmd: echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
+  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE%
+  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%
+
+cache:
+  - C:\Miniconda36-x64 -> .invalidate_av_cache
+
+install:
+  - "%PYTHON%/Scripts/conda.exe install miktex pandoc"
+  - git clone --branch=master https://github.com/132nd-etcher/verpatch.git C:\projects\verpatch
+  - curl -O http://esrg.sourceforge.net/utils_win_up/md5sum/crc32.exe
+  - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
+
+build_script:
+  - cmd: edlm convert ./EDLM
+  - cmd: edlm convert ./OvGME
+
+
+artifacts:
+  - path: '**/*.pdf'
+    name: document
+    type: File
