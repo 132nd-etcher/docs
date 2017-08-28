@@ -1,15 +1,16 @@
 ---
+title: "OvGME: proposal"
 author:
   - etcher
 applies:
-  - //wing
+    - //wing
 title_pictures:
-  - logo617th.png
-  - logo23rd.png
-  - logo259th.png
-  - logo696th.png
-  - logo176th.png
-  - logo765th.png
+    - logo617th.png
+    - logo23rd.png
+    - logo259th.png
+    - logo696th.png
+    - logo176th.png
+    - logo765th.png
 audience: CMD
 subtitle: Mods and skins management
 type: Enhancement Proposal

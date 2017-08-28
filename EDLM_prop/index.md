@@ -1,4 +1,5 @@
 ---
+title: "EDLM: proposal"
 author:
  - etcher
 applies:

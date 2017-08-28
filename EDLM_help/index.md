@@ -1,4 +1,5 @@
 ---
+title: EDLM
 author:
     - etcher
 applies:
