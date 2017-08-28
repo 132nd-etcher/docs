@@ -10,7 +10,8 @@ title_pictures:
  - logo696th.png
  - logo176th.png
  - logo765th.png
-subtitle: Documentation overhaul
+audience: CMD
+subtitle: Mods and skins management
 type: Enhancement Proposal
 version: 0
 published_date: unpublished
