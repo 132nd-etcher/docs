@@ -76,14 +76,16 @@ Once the content has been created by the editors, my goal is to provide a system
 
 Here is a non-exhaustive list of the *output* format supported: (more *input* formats are available still)
 
-&gt; [Pandoc] can write plain text, Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, OPML, DocBook, OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup, DokuWiki markup, ZimWiki markup, Haddock markup, EPUB (v2 or v3), FictionBook2, Textile, groff man pages, Emacs Org mode, AsciiDoc, InDesign ICML, TEI Simple, and Slidy, Slideous, DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF output on systems where LaTeX, ConTeXt, or wkhtmltopdf is installed.
+> Pandoc can write plain text, Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, OPML, DocBook, OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup, DokuWiki markup, ZimWiki markup, Haddock markup, EPUB (v2 or v3), FictionBook2, Textile, groff man pages, Emacs Org mode, AsciiDoc, InDesign ICML, TEI Simple, and Slidy, Slideous, DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF output on systems where LaTeX, ConTeXt, or wkhtmltopdf is installed.
 
 The output should be:
 
 * Consistent across builds: the same content must **always** yield the same result, even on different computers, operating systems, or software versions
 * Uniformly formatted: **all** the documents in the library should have the same general layout, giving all documentation published by the //wing a visual identity of their own
 * Retroactively managed: all documents that have been published in the past should be **updated without human intervention**. If a logo changes, if we decide to change the title page, or the space after paragraphs, those changes should be **automatically propagated across the entire library**
-* Adapted to our needs: the documentation should not look "generic" or bland; each document should bear ## Pros &amp; cons
+* Adapted to our needs: the documentation should not look "generic" or bland; each document should bear ## 
+
+## Pros and cons
 
 This section objectively (as much as I could) describes the pros and cons of the method I propose to implement.
 
