@@ -63,11 +63,12 @@ install:
   - curl -O http://esrg.sourceforge.net/utils_win_up/md5sum/crc32.exe
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
 
-build_script:
-  - cmd: edlm convert ./EDLM_help
-  - cmd: edlm convert ./EDLM_prop
-  - cmd: edlm convert ./OvGME_help
-  - cmd: edlm convert ./OvGME_prop
+build: off
+#build_script:
+#  - cmd: edlm convert ./EDLM_help
+#  - cmd: edlm convert ./EDLM_prop
+#  - cmd: edlm convert ./OvGME_help
+#  - cmd: edlm convert ./OvGME_prop
 
 
 artifacts:
