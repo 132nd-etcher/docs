@@ -64,8 +64,10 @@ install:
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
 
 build_script:
-  - cmd: edlm convert ./EDLM
-  - cmd: edlm convert ./OvGME
+  - cmd: edlm convert ./EDLM_help
+  - cmd: edlm convert ./EDLM_prop
+  - cmd: edlm convert ./OvGME_help
+  - cmd: edlm convert ./OvGME_prop
 
 
 artifacts:
