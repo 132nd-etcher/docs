@@ -117,22 +117,47 @@ The //wing's repository is described by the 132nd.xml file. That file is automat
 All the mods themselves are contained in the "132nd" folder, right next to the file.
 
 The mods are in two format:
-    * folder:  the mod itself, containing all the files, in the same format as JSGME
-    * ZIP: mod packaged and ready to be distributed
+    * bare folder:  the mod itself, deflated, containing all the files, in the same format as JSGME; this is the "source"
+    * ZIP: mod packaged and ready to be distributed; this is the "package"
     
-To create a mod, the first thing to do is to create the folder containing the files of the mods. For example, a simple skin.
+To create a mod, the first thing to do is to create the source folder, containing the files of the mods. For example, a simple skin. This folder follows the JsGME standard, replicating the target directory structure, adding and replacing files on the fly.
 
-The folder is available locally for installation.
+Onca created, the source folder is available locally for installation, thus permitting to test the mod before packaging it.
 
-Then, using //ov, the folder is packaged in a ZIP file, along with "metadata" about (metadata is things like version, description, author, etc.).
+Then, using //ov, the source folder is packaged into a ZIP file, along with "metadata" about (metadata is things like version, description, author, etc.).
 
-That ZIP file is availabe locally for installation as well.
+That ZIP file is also availabe locally for installation, and it should be tested as well.
 
-Now, stil using //ov, there is a command to create a "repository" file from all the mods currently available locally. That command will look for every ZIPped mod, and create a "*.xml" file containing metadata for all of them.
+Now, stil using //ov, there is a command to create a "repository" file from all the mods currently available locally. That command will look for every ZIP-ped mod, and create a "*.xml" file containing metadata for all of them (see, for example, [132.xml](http://132virtualwing.org/files/ovgme/132nd.xml)).
 
 At that point, all there is to do is upload both the ZIP file and the XML file to the FTP, and you're set.
 
-**Note**: I've upload the mods in folder formats on the FTP as well, so if someone wants to update oneof the mod, they have access to the folder I've used to create the ZIP.
+**Note**: I've upload the mods in folder formats on the FTP as well, so if someone wants to update one of the mods, they have access to the source folder I've used to create the ZIP package.
+
+###### Profiles
+
+I've explained briefly how to go from a mod folder to a ZIP package, and how to make a repository out of a set of packages (for example the "132nd" folder and the "132nd.xml" file on the FTP). This section describes how to manage and switch repositories.
+
+To manage different repositories, you need "profiles". When you build the "*.xml" file, //ov will use *all* the mods that are present in the curent profile (the current mods folder of //ov), or to be put it another way, all the mods that are visible in //ov at that time.
+
+So, if we want to create another repository for "externals", for example, we need another profile. That is what I did with the "external" folder and the "external.xml" on the FTP.
+
+So, in the end, I have 3 profiles in //ov:
+
+* My regular profile, pointing to DCS, to install mods and skins
+* A profile for the "132nd" repository, in sync with the "132nd" dir of the FTP
+* A profile for the "externals" repository, in sync with the "exeternal" dir of the FTP
+ 
+###### Workflow
+
+Now that we know all that, the work flow to add or update a mod is as follows:
+
+1. Connect to the FTP and download the latest changes into the local profile
+2. Make the changes needed or add the new mod/skin
+3. Test the new/updated mod
+4. Create a ZIP package for the mod, adding or updating the metadata (version, author, decsription, ...)
+5. Update the XML file with //OV
+6. Upload the new/updated ZIP package and the XML to the FTP
 
 ## Transition
 
