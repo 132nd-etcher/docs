@@ -61,13 +61,13 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-% \usepackage[unicode=true, bookmarks=true]{hyperref}
-\usepackage[colorlinks=false,
-            allbordercolors={0 0 0},
-            pdfborderstyle={/S/U/W 1}]{hyperref}
-% $if(colorlinks)$
-% \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-% $endif$
+\usepackage[unicode=true, bookmarks=true]{hyperref}
+% \usepackage[colorlinks=false,
+%             allbordercolors={0 0 0},
+%             pdfborderstyle={/S/U/W 1}]{hyperref}
+$if(colorlinks)$
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+$endif$
 
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
@@ -85,14 +85,14 @@ $endif$
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
 $endif$
-% $if(colorlinks)$
-%             colorlinks=true,
-%             linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
-%             citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
-%             urlcolor=$if(urlcolor)$$urlcolor$$else$Black$endif$,
-% $else$
-%             pdfborder={0 0 0},
-% $endif$
+$if(colorlinks)$
+            colorlinks=true,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
+            citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$Black$endif$,
+$else$
+            pdfborder={0 0 0},
+$endif$
 %               colorlinks=false,
 % %               linkcolor=lightgray,
 % %               pdfborderstyle={/S/U/W 1},
