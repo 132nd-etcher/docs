@@ -61,16 +61,15 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage[unicode=true, bookmarks=true]{hyperref}
 % \usepackage[colorlinks=false,
 %             allbordercolors={0 0 0},
 %             pdfborderstyle={/S/U/W 1}]{hyperref}
-% $if(colorlinks)$
-% \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-% $endif$
+$if(colorlinks)$
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+$endif$
 
-% \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
 $if(title-meta)$
             pdftitle={$title-meta$},
@@ -95,9 +94,9 @@ $endif$
 %             pdfborder={0 0 0},
 % $endif$
               colorlinks = true,
-              linkcolor = blue,
-              urlcolor  = blue,
-              citecolor = blue,
+              linkcolor = Blue,
+              urlcolor  = Blue,
+              citecolor = Blue,
               anchorcolor = blue
 %               pdfborderstyle={/S/U/W 1},
 %               pdfborder={0 0 0},
