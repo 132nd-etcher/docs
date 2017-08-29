@@ -1,7 +1,9 @@
 ---
 title: "Proposal: OvGME"
+title-meta: "Proposal: OvGME"
 author:
-  - etcher
+  - 132nd-etcher
+author-meta: 132nd-etcher
 applies:
     - //wing
 title_pictures:
@@ -22,17 +24,15 @@ summary_of_changes:
 ---
 
 
-![//ovgme](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
+![//ovgme logo](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
 
-# Enhancement Proposal
-
-## Abstract
+# Abstract
 
 This document contains an enhancement proposal submitted to CMD for review.
 
 The proposal is about managing mods and skins in the //wing. I would like to make it easier for maintainers to offer and maintain mods, while keeping it simple for the end-user to install them.
 
-## Rationale
+# Rationale
 
 The current system for skins distribution is working fine, from the end-user point of view at least. Using the //ski to install files is a one-click process and that is really, really good. There two issues with it though:
 
@@ -41,7 +41,7 @@ The current system for skins distribution is working fine, from the end-user poi
 
 This proposal has been cooking since July 2017, but I've decided to rush it because of the issues we've had lately with some of the mandatory mods (Helipad, WASP, Range targets, ...). It has become difficult and troublesome for people to make sure that their DCS installation is compatible with the //wing's server. My apologies for the rough state of this proposal, as well as for the half-finish documentation.
 
-## Objective
+# Objective
 
 > **Note:** in tis document, I'm using the terms "end-user and "maintainer" to describe:
     End-user: a pilot that will use our skins and mods; they might be part or the //wing or memeber of an external organization.
@@ -54,32 +54,32 @@ What I'm trying to achieve:
 3. Allow for he installation of mods in the DCS installation as well as in the Saved Games folder
 
 
-## Getting there
+# Getting there
 
 This section conceptually describes how to achieve the goals outlined above.
 
-### Using //ovgme
+## Using //ovgme
 
 This proposal is very simple. The plan is to use [//ovgme](http://www.ovoid.org/ovgme/) instead of the //ski to distribute mods and skins within the //wing.
 
 [Documentation website for //ovgme](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
 
-#### Specification
+### Specification
 
 OvGME is a mod management application, much like JsGME, that allows to install/uninstall mods (obviously), but also to subrscribe to remote repositories of versionned mods. This  makes propagating and updating the mods much simpler.
 
-## Pros and cons
+# Pros and cons
 
 This section objectively (as much as I could) describes the pros and cons of the method I propose to implement.
 
-### The cons
+## The cons
 
 * Depending on yet another dependency: we will have to transition from using the //ski to using /ov, which might pose a problem to the less tech-asvvy of our userbase. See "Transition" section below.
 * Modular dependencies: no more *one click install* of mods and skins. Since some mods are optional (for mission makers for example) and others contextual (a pit for the Ka50 for example), users will need to install some mods and skip others. **To mitigate that, my solution is currently to tag every mod/skin as "MANDATORY" or "OPTIONAL"**, making it obvious which one MUST be installed to join the server.
 * External organizations do not need access to all of our mods, and some mods might resitrict re-distribution, forcing us to redirect external users to their official website and to assume they'll be able to install them themselves. Internally, distributing "protected" mods is not an issue.
 * Atomal packaging of mods: the idea would be to have one mod labelled as "MANDATORY", so users who want the minimal amount of bother can install that one and be done with it. The issue with it is that updating and downloading a mod is an atomic operation: if we want to update one skin, we have to upload the whole ZIP file again, and users who want to update will have to download the whole file as well. If we put all our mods together in one single, nice package, then every time we update a skins for the //617 for example, we'll have to **upload** all skins (including externals, some of them weight hundreds of megabytes), and users would have to download it as well. I find it impractical, which is why I decided to split mods and skins into more manageable chuncks.
 
-### The pros
+## The pros
 
 * Single source of thruth: this a big one. No more fiddling around with the //ski on one side, then going to google Drive/Dropbox to grab mods and install them manually, or with JsGME///ovgme. This should help a lot with the current situation, where it is not an uncommon occurence to have to debug with users before the flight on TS because  a missing mod won't let them join the server.
 * Most of us are already using JsGME or //ovgme, to integrating the new workflow won't be a problem for those.
@@ -92,23 +92,23 @@ This section objectively (as much as I could) describes the pros and cons of the
     * Manage different version of the mods/skins for different DCS versions
     * Install some mods in the Save Games folder, and other directly in the main DCS installation
 
-## Technical
+# Technical
 
 This section describes the tools chain that would be used to build and publish the documentation.
 
-### Overview
+## Overview
 
 This section describes the tools and workflow needed to implement the new system.
 
-#### End-user
+### End-user
 
 The only tool needed for the end-user is //ovgme itself. Some might need guidance during the initial transition process, which will be provided by the documentation. Using //ovgme is straight forward enough that everyone should be able to maintain with ease.
 
-#### Maintainer
+### Maintainer
 
 Maintainers will need //ovgme, as wel as a FTP client to be able to upload files on the //wing's FTP ([Filezilla](https://filezilla-project.org/) is a good starting point).
 
-##### Brief description
+#### Brief description
 
 The documentation will eventually cover this in a more detailed fashion, but here is a brief overview of how it works:
 
@@ -136,7 +136,7 @@ At that point, all there is to do is upload both the ZIP file and the XML file t
 
 **Note**: I've upload the mods in folder formats on the FTP as well, so if someone wants to update one of the mods, they have access to the source folder I've used to create the ZIP package.
 
-###### Profiles
+##### Profiles
 
 I've explained briefly how to go from a mod folder to a ZIP package, and how to make a repository out of a set of packages (for example the "132nd" folder and the "132nd.xml" file on the FTP). This section describes how to manage and switch repositories.
 
@@ -150,7 +150,7 @@ So, in the end, I have 3 profiles in //ovgme:
 * A profile for the "132nd" repository, in sync with the "132nd" dir of the FTP
 * A profile for the "externals" repository, in sync with the "exeternal" dir of the FTP
  
-###### Workflow
+##### Workflow
 
 Now that we know all that, the work flow to add or update a mod is as follows:
 
@@ -161,11 +161,11 @@ Now that we know all that, the work flow to add or update a mod is as follows:
 5. Update the XML file with //OV
 6. Upload the new/updated ZIP package and the XML to the FTP
 
-## Transition
+# Transition
 
 This section describes how to transition to the new system if we decide to switch.
 
-### Overview
+## Overview
 
 Description of the transition process step by step:
 
@@ -181,14 +181,14 @@ Step 4 is ongoing, as I've already written the documentation for the end-users. 
 
 Step 5 would take very little time, as I expect little to no issue by using this process. The only trouble I can foresee is for people who are not using a mod manager at this time, relying instead on just dropping mod content in their install; they'll have a bad time removing old mods betfore switching.
 
-### Documentation
+## Documentation
 
 I'm writing a document describing, step by step, how to use //ovgme as:
 
 * an end-user, to downloads, install and update mods and skins (done)
 * a maintainer, to create, upload and update mods and skins (ongoing)
 
-### Crash course
+## Crash course
 
 I plan on offering crash course with OvGME to the people who are interested in it.
 
