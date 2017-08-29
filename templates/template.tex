@@ -61,7 +61,6 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
-\usepackage{xcolor} 
 \usepackage[unicode=true, bookmarks=true]{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -85,10 +84,7 @@ $endif$
 %             pdfborder={0 0 0},
 % $endif$
             breaklinks=true,
-            linkbordercolor=black,
-            urlbordercolor=black,
-            filebordercolor=blue,
-            citebordercolor=red,
+            allbordercolors={0 0 0},
             pdfborderstyle={/U}{hyperref}}
 \urlstyle{same}  % don't use monospace font for urls
 $if(verbatim-in-note)$
