@@ -70,7 +70,7 @@ build_script:
 #  - cmd: edlm convert pdf ./EDLM_help
 #  - cmd: edlm convert pdf ./EDLM_prop
 #  - cmd: edlm convert ./OvGME_help
-  - cmd: edlm convert pdf ./OvGME_prop
+  - cmd: edlm convert pdf .
 
 
 artifacts:
