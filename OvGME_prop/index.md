@@ -29,9 +29,7 @@ summary_of_changes:
 
 # Abstract
 
-This document contains an enhancement proposal submitted to CMD for review.
-
-The proposal is about managing mods and skins in the //wing. I would like to make it easier for maintainers to offer and maintain mods, while keeping it simple for the end-user to install them.
+This document contains an enhancement proposal submitted to CMD for review is about managing mods and skins in the //wing.
 
 # Rationale
 
