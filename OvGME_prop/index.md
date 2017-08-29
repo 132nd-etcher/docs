@@ -122,7 +122,7 @@ The mods are in two format:
     
 To create a mod, the first thing to do is to create the source folder, containing the files of the mods. For example, a simple skin. This folder follows the JsGME standard, replicating the target directory structure, adding and replacing files on the fly.
 
-Onca created, the source folder is available locally for installation, thus permitting to test the mod before packaging it.
+Once created, the source folder is available locally for installation, thus permitting to test the mod before packaging it.
 
 ### Packaging
 
@@ -134,7 +134,7 @@ Now, stil using //ovgme, there is a command to create a "repository" file from a
 
 At that point, all there is to do is upload both the ZIP file and the XML file to the FTP, and you're set.
 
-**Note**: I've upload the mods in folder formats on the FTP as well, so if someone wants to update one of the mods, they have access to the source folder I've used to create the ZIP package.
+**Note**: I've uploaded the mods in folder formats on the FTP as well, so if someone wants to update one of the mods, they have access to the source folder that  I've used to create the ZIP package.
 
 ### Profiles
 
