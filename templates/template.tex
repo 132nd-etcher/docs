@@ -71,6 +71,11 @@ $if(title-meta)$
 $endif$
 $if(author-meta)$
             pdfauthor={$author-meta$},
+            pdfcreator={$author-meta$},
+            pdfproducer={$author-meta$},
+$endif$
+$if(subtitle)$
+            pdfsubject={$subtitle$},
 $endif$
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
@@ -83,9 +88,13 @@ $endif$
 % $else$
 %             pdfborder={0 0 0},
 % $endif$
-              colorlinks=false,
+              colorlinks=true,
               allbordercolors={0 0 0},
-              pdfborderstyle={/S/U/W 1}}
+              pdfborderstyle={/S/U/W 1},
+              linkbordercolor=lightgray,
+              citebordercolor=red,
+              urlbordercolor=lightgray,
+              }
 \urlstyle{same}  % don't use monospace font for urls
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
