@@ -15,6 +15,7 @@ title_pictures:
     - logo765th.png
 audience: CMD
 subtitle: Mods and skins management
+keywords: mods,skins,jsgme,ovgme,proposal
 type: Enhancement Proposal
 version: 0
 published_date: unpublished
