@@ -67,7 +67,7 @@ $endif$
 %             allbordercolors={0 0 0},
 %             pdfborderstyle={/S/U/W 1}]{hyperref}
 % $if(colorlinks)$
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+% \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 % $endif$
 
 % \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
@@ -90,7 +90,7 @@ $endif$
             colorlinks=true,
             linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
             citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$Black$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$Red$endif$,
 % $else$
 %             pdfborder={0 0 0},
 % $endif$
