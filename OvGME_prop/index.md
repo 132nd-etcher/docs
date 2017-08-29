@@ -39,9 +39,10 @@ This proposal has been cooking since July 2017, but I've decided to rush it beca
 
 # Objective
 
-> **Note:** in tis document, I'm using the terms "end-user and "maintainer" to describe:
-> * End-user: a pilot that will use our skins and mods; they might be part or the //wing or memeber of an external organization.
-> * Maintainer: a maintainer is a member of the //wing who is responsible for maintaining a mod/skin up to date. They also are the ones who initially creates mods/skins packages, and upload them.
+**Note**: in tis document, I'm using the terms "end-user and "maintainer" to describe:
+> End-user: a pilot that will use our skins and mods; they might be part or the //wing or memeber of an external organization.
+
+> Maintainer: a maintainer is a member of the //wing who is responsible for maintaining a mod/skin up to date. They also are the ones who initially creates mods/skins packages, and upload them.
 
 What I'm trying to achieve:
 
