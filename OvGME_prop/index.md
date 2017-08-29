@@ -65,7 +65,7 @@ This proposal is very simple. The plan is to use [//ovgme](http://www.ovoid.org/
 
 ### Specification
 
-OvGME is a mod management application, much like JsGME, that allows to install/uninstall mods (obviously), but also to subrscribe to remote repositories of versionned mods. This  makes propagating and updating the mods much simpler.
+OvGME is a mod management application, much like JsGME, that allows to install/uninstall mods (obviously), but also to subscribe to remote repositories of versionned mods, making propagating and updating mods and skins much simpler.
 
 # Pros and cons
 
@@ -73,8 +73,8 @@ This section objectively (as much as I could) describes the pros and cons of the
 
 ## The cons
 
-* Depending on yet another dependency: we will have to transition from using the //ski to using /ov, which might pose a problem to the less tech-asvvy of our userbase. See "Transition" section below.
-* Modular dependencies: no more *one click install* of mods and skins. Since some mods are optional (for mission makers for example) and others contextual (a pit for the Ka50 for example), users will need to install some mods and skip others. **To mitigate that, my solution is currently to tag every mod/skin as "MANDATORY" or "OPTIONAL"**, making it obvious which one MUST be installed to join the server.
+* Depending on yet another dependency: we will have to transition from using the //ski to using //ovgme, which might pose a problem to the less tech-asvvy of our userbase. See "Transition" section below.
+* Modular dependencies: no more *one click install* of mods and skins. Since some mods are optional (for mission makers for example) and others contextual (a pit for the Ka50 for example), users will need to install some mods and skip others. **To mitigate that, my solution is currently to tag every mod/skin as "MANDATORY" or "OPTIONAL"**, making it obvious which one MUST be installed to join the server and letting the user decide which optional mod to install.
 * External organizations do not need access to all of our mods, and some mods might resitrict re-distribution, forcing us to redirect external users to their official website and to assume they'll be able to install them themselves. Internally, distributing "protected" mods is not an issue.
 * Atomal packaging of mods: the idea would be to have one mod labelled as "MANDATORY", so users who want the minimal amount of bother can install that one and be done with it. The issue with it is that updating and downloading a mod is an atomic operation: if we want to update one skin, we have to upload the whole ZIP file again, and users who want to update will have to download the whole file as well. If we put all our mods together in one single, nice package, then every time we update a skins for the //617 for example, we'll have to **upload** all skins (including externals, some of them weight hundreds of megabytes), and users would have to download it as well. I find it impractical, which is why I decided to split mods and skins into more manageable chuncks.
 
@@ -90,6 +90,7 @@ This section objectively (as much as I could) describes the pros and cons of the
 * //ovgme is capable of managing multiple target destinations; this would be very useful in case we need one of the following:
     * Manage different version of the mods/skins for different DCS versions
     * Install some mods in the Save Games folder, and other directly in the main DCS installation
+* Managing conflicts: when two mods modified the same file, there is a conflict. Sometimes, the conflict is void, because the two mods are making the same change. Other times, the two mods are changing different part of the same file. In that latter case, a "patch" needs to be created, that merges the changes from the two conflicting mods. With //ovgme, this is very easy to do.
 
 # Technical
 
