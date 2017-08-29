@@ -24,9 +24,6 @@ summary_of_changes:
  - nil
 ---
 
-
-![//ovgme logo](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
-
 # Abstract
 
 This document contains an enhancement proposal submitted to CMD for review is about managing mods and skins in the //wing.
@@ -57,6 +54,8 @@ What I'm trying to achieve:
 
 This proposal is very simple. The plan is to use [//ovgme](http://www.ovoid.org/ovgme/) instead of the //ski to distribute mods and skins within the //wing.
 
+![//ovgme logo](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
+
 OvGME is a mod management application, much like JsGME, that allows to install/uninstall mods (obviously), but also to subscribe to remote repositories of versionned mods, making propagating and updating mods and skins much simpler.
 
 [Documentation website for //ovgme](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
@@ -67,23 +66,23 @@ This section objectively (as much as I could) describes the pros and cons of the
 
 ## The cons
 
-* Depending on yet another dependency: we will have to transition from using the //ski to using //ovgme, which might pose a problem to the less tech-asvvy of our userbase. See "Transition" section below.
-* Modular dependencies: no more *one click install* of mods and skins. Since some mods are optional (for mission makers for example) and others contextual (a pit for the Ka50 for example), users will need to install some mods and skip others. **To mitigate that, my solution is currently to tag every mod/skin as "MANDATORY" or "OPTIONAL"**, making it obvious which one MUST be installed to join the server and letting the user decide which optional mod to install.
-* External organizations do not need access to all of our mods, and some mods might resitrict re-distribution, forcing us to redirect external users to their official website and to assume they'll be able to install them themselves. Internally, distributing "protected" mods is not an issue.
+* Depending on yet another dependency: we will have to transition from using the //ski to using //ovgme, which might pose a problem to the less tech-asvvy of our userbase. See "Transition" section below;
+* Modular dependencies: no more *one click install* of mods and skins. Since some mods are optional (for mission makers for example) and others contextual (a pit for the Ka50 for example), users will need to install some mods and skip others. **To mitigate that, my solution is currently to tag every mod/skin as "MANDATORY" or "OPTIONAL"**, making it obvious which one MUST be installed to join the server and letting the user decide which optional mod to install;
+* External organizations do not need access to all of our mods, and some mods might resitrict re-distribution, forcing us to redirect external users to their official website and to assume they'll be able to install them themselves. Internally, distributing "protected" mods is not an issue;
 * Atomal packaging of mods: the idea would be to have one mod labelled as "MANDATORY", so users who want the minimal amount of bother can install that one and be done with it. The issue with it is that updating and downloading a mod is an atomic operation: if we want to update one skin, we have to upload the whole ZIP file again, and users who want to update will have to download the whole file as well. If we put all our mods together in one single, nice package, then every time we update a skins for the //617 for example, we'll have to **upload** all skins (including externals, some of them weight hundreds of megabytes), and users would have to download it as well. I find it impractical, which is why I decided to split mods and skins into more manageable chuncks.
 
 ## The pros
 
-* Single source of thruth: this a big one. No more fiddling around with the //ski on one side, then going to google Drive/Dropbox to grab mods and install them manually, or with JsGME///ovgme. This should help a lot with the current situation, where it is not an uncommon occurence to have to debug with users before the flight on TS because  a missing mod won't let them join the server.
-* Most of us are already using JsGME or //ovgme, to integrating the new workflow won't be a problem for those.
-* Mods and skins are modular: this is also a pro, because it allows squadrons to ditribute mods that are not mandatory, but nice to have (ex: new cockpit, maps for the TAD, ...). This allows getting newcomers onbaord much faster.
-* Versionning of mods and skins: each mod and each skin uploaded to our repository receives a version. This makes it *very* easy to make sure that everyone has the correct, latest version of the mods. When a maintainer releases a new version of a mod or a skin, a NOTAM would be issued, and the people who currently have this mod installed (or everyone in acse of a "MANDATORY" mod) just need to fire up //ovgme and update the mod (a few click and a few seconds).
-* Much simpler job for maintainers: creating, uploading and updating mods and skins in the repository is much simpler than with the //ski. It takes but a few clicks and a few minutes to have a new version of a mods on in the repository, available for users to download.
-* Sharing the load: splitting the mods and skins into smaller, more manageable units allows for a better repartition of tasks. Each mod/skin should have an official "maintainer", and that person is responsible for keeping it up-to-date. For example, someone might be responsible for the skins of the //259, while someone else would be responsible for the "MISSION MAKERS" mods. No more huge, monolithic list of mingled skins.
-* Using external repositories: in the future, maybe an external organization will be using //ovgme to manage their list of skins and mods. Adding their reporitory to //ovgme is a trivial process, and it would allow us to user their skins directly, instead of having to re-package them ourselves.
+* Single source of thruth: this a big one. No more fiddling around with the //ski on one side, then going to google Drive/Dropbox to grab mods and install them manually, or with JsGME///ovgme. This should help a lot with the current situation, where it is not an uncommon occurence to have to debug with users before the flight on TS because  a missing mod won't let them join the server;
+* Most of us are already using JsGME or //ovgme, to integrating the new workflow won't be a problem for those;
+* Mods and skins are modular: this is also a pro, because it allows squadrons to ditribute mods that are not mandatory, but nice to have (ex: new cockpit, maps for the TAD, ...). This allows getting newcomers onbaord much faster;
+* Versionning of mods and skins: each mod and each skin uploaded to our repository receives a version. This makes it *very* easy to make sure that everyone has the correct, latest version of the mods. When a maintainer releases a new version of a mod or a skin, a NOTAM would be issued, and the people who currently have this mod installed (or everyone in acse of a "MANDATORY" mod) just need to fire up //ovgme and update the mod (a few click and a few seconds);
+* Much simpler job for maintainers: creating, uploading and updating mods and skins in the repository is much simpler than with the //ski. It takes but a few clicks and a few minutes to have a new version of a mods on in the repository, available for users to download;
+* Sharing the load: splitting the mods and skins into smaller, more manageable units allows for a better repartition of tasks. Each mod/skin should have an official "maintainer", and that person is responsible for keeping it up-to-date. For example, someone might be responsible for the skins of the //259, while someone else would be responsible for the "MISSION MAKERS" mods. No more huge, monolithic list of mingled skins;
+* Using external repositories: in the future, maybe an external organization will be using //ovgme to manage their list of skins and mods. Adding their reporitory to //ovgme is a trivial process, and it would allow us to user their skins directly, instead of having to re-package them ourselves;
 * //ovgme is capable of managing multiple target destinations; this would be very useful in case we need one of the following:
-    * Manage different version of the mods/skins for different DCS versions
-    * Install some mods in the Save Games folder, and other directly in the main DCS installation
+    * Manage different version of the mods/skins for different DCS versions;
+    * Install some mods in the Save Games folder, and other directly in the main DCS installation;
 * Managing conflicts: when two mods modified the same file, there is a conflict. Sometimes, the conflict is void, because the two mods are making the same change. Other times, the two mods are changing different part of the same file. In that latter case, a "patch" needs to be created, that merges the changes from the two conflicting mods. With //ovgme, this is very easy to do.
 
 # Technical
