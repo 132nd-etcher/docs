@@ -60,7 +60,7 @@ cache:
 
 install:
   - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
-  - "%PYTHON%/Scripts/conda.exe conda"
+  - "%PYTHON%/Scripts/conda.exe update conda"
   - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
   - cmd: pip install --upgrade pip setuptools
 #  - git clone --branch=master https://github.com/132nd-etcher/verpatch.git C:\projects\verpatch
