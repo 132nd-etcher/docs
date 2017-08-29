@@ -62,9 +62,6 @@ $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
 \usepackage[unicode=true, bookmarks=true]{hyperref}
-% \usepackage[colorlinks=false,
-%             allbordercolors={0 0 0},
-%             pdfborderstyle={/S/U/W 1}]{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
@@ -72,7 +69,7 @@ $endif$
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
 $if(title-meta)$
-            pdftitle=$title-meta$,
+            pdftitle=$title$,
 $endif$
 $if(author-meta)$
             pdfauthor=$author-meta$,
@@ -258,7 +255,7 @@ $if(institute)$
 $endif$
 \date{$date$}
 
-\graphicspath{{\VAR{media_folder}/}{\VAR{media_folder_main}/}}
+\graphicspath{\VAR{media_folders}}
 \newcommand{\wing}{132\textsuperscript{nd} Virtual Wing}
 
 \usepackage{lastpage}
