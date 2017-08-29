@@ -39,19 +39,19 @@ init:
   # Check that we have the expected version and architecture for Python
   - set PATH=%PYTHON%;%PYTHON%\Scripts;C:\MinGW\msys\1.0\bin;%PATH%
   - "git config --system http.sslcainfo \"C:\\Program Files\\Git\\mingw64\\ssl\\certs\\ca-bundle.crt\""
-  - "%PYTHON%/python -V"
-  - "%PYTHON%/python -c \"import struct;print(8 * struct.calcsize(\'P\'))\""
-  - "pip --version"
+#  - "%PYTHON%/python -V"
+#  - "%PYTHON%/python -c \"import struct;print(8 * struct.calcsize(\'P\'))\""
+#  - "pip --version"
 
-  - cmd: echo %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%
-  - cmd: echo %APPVEYOR_BUILD_WORKER_IMAGE%
-  - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_TOKEN):x-oauth-basic@github.com`n"
-  - "git config --global user.email %GH_MAIL%"
-  - "git config --global user.name %APPVEYOR_ACCOUNT_NAME%"
-  - cmd: echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
-  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE%
-  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%
+#  - cmd: echo %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%
+#  - cmd: echo %APPVEYOR_BUILD_WORKER_IMAGE%
+#  - git config --global credential.helper store
+#  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GH_TOKEN):x-oauth-basic@github.com`n"
+#  - "git config --global user.email %GH_MAIL%"
+#  - "git config --global user.name %APPVEYOR_ACCOUNT_NAME%"
+#  - cmd: echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
+#  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE%
+#  - cmd: echo %APPVEYOR_REPO_COMMIT_MESSAGE_EXTENDED%
 
 cache:
   - C:\Miniconda36-x64\Scripts\ -> .invalidate_av_cache
@@ -60,9 +60,11 @@ cache:
 
 install:
   - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
+  - "%PYTHON%/Scripts/conda.exe conda"
   - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
-  - git clone --branch=master https://github.com/132nd-etcher/verpatch.git C:\projects\verpatch
-  - curl -O http://esrg.sourceforge.net/utils_win_up/md5sum/crc32.exe
+  - cmd: pip install --upgrade pip setuptools
+#  - git clone --branch=master https://github.com/132nd-etcher/verpatch.git C:\projects\verpatch
+#  - curl -O http://esrg.sourceforge.net/utils_win_up/md5sum/crc32.exe
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
 
 build_script:
