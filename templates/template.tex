@@ -85,14 +85,14 @@ $endif$
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
 $endif$
-% $if(colorlinks)$
-%             colorlinks=true,
-%             linkcolor=$if(linkcolor)$$linkcolor$$else$Red$endif$,
-%             citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
-%             urlcolor=$if(urlcolor)$$urlcolor$$else$Red$endif$,
-% $else$
+$if(colorlinks)$
+            colorlinks=true,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$Red$endif$,
+            citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$Red$endif$,
+$else$
             pdfborder={0 0 0},
-% $endif$
+$endif$
 %               colorlinks=true,
 %               linkcolor=Blue,
 %               urlcolor=Blue,
