@@ -62,9 +62,12 @@ $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
 \usepackage[unicode=true, bookmarks=true]{hyperref}
-$if(colorlinks)$
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-$endif$
+\usepackage[colorlinks=false,
+            allbordercolors={0 0 0},
+            pdfborderstyle={/S/U/W 1}]{hyperref}
+% $if(colorlinks)$
+% \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+% $endif$
 
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
@@ -90,13 +93,13 @@ $endif$
 % $else$
 %             pdfborder={0 0 0},
 % $endif$
-              colorlinks=false,
-%               linkcolor=lightgray,
-%               pdfborderstyle={/S/U/W 1},
-              pdfborder={0 0 0},
-              linkbordercolor=red,
-              citebordercolor=red,
-              urlbordercolor=red
+%               colorlinks=false,
+% %               linkcolor=lightgray,
+% %               pdfborderstyle={/S/U/W 1},
+%               pdfborder={0 0 0},
+%               linkbordercolor=red,
+%               citebordercolor=red,
+%               urlbordercolor=red
 }
 % \makeatletter
 % \Hy@AtBeginDocument{%
