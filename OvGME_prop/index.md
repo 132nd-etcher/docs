@@ -35,16 +35,16 @@ This document contains an enhancement proposal submitted to CMD for review is ab
 
 The current system for skins distribution is working fine, from the end-user point of view at least. Using the //ski to install files is a one-click process and that is really, really good. There two issues with it though:
 
-1. While it is easy for *users* to use the //ski, updating the skins with it is a pain for the *maintainer*
-2. The //ski only installs files under the "Saved Games" directory. This is a problem for some of the mods we need nowadays, they need to go in the DCS installation directly. Now the //ski ws never meant to manage mods, so this isn't something I'm holding against it, but the needs we have have changed.
+1. While it is easy for *users* to use the //ski, updating the skins with it is a pain for the *maintainer*;
+2. The //ski only installs files under the "Saved Games" directory. This is a problem for some of the mods we need nowadays, they need to go in the DCS installation directly. The //ski was never meant to manage mods, it is just that the needs we have have changed.
 
 This proposal has been cooking since July 2017, but I've decided to rush it because of the issues we've had lately with some of the mandatory mods (Helipad, WASP, Range targets, ...). It has become difficult and troublesome for people to make sure that their DCS installation is compatible with the //wing's server. My apologies for the rough state of this proposal, as well as for the half-finish documentation.
 
 # Objective
 
 > **Note:** in tis document, I'm using the terms "end-user and "maintainer" to describe:
-    End-user: a pilot that will use our skins and mods; they might be part or the //wing or memeber of an external organization.
-    Maintainer: a maintainer is a member of the //wing who is responsible for maintaining a mod/skin up to date. They also are the ones who initially creates mods/skins packages, and upload them.
+> * End-user: a pilot that will use our skins and mods; they might be part or the //wing or memeber of an external organization.
+> * Maintainer: a maintainer is a member of the //wing who is responsible for maintaining a mod/skin up to date. They also are the ones who initially creates mods/skins packages, and upload them.
 
 What I'm trying to achieve:
 
