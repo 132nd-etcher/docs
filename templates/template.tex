@@ -90,20 +90,21 @@ $endif$
 % $else$
 %             pdfborder={0 0 0},
 % $endif$
-              colorlinks=true,
-              linkcolor=lightgray,
+              colorlinks=false,
+%               linkcolor=lightgray,
 %               pdfborderstyle={/S/U/W 1},
+              pdfborder={0 0 0},
               linkbordercolor=red,
               citebordercolor=red,
               urlbordercolor=red
 }
-\makeatletter
-\Hy@AtBeginDocument{%
-  \def\@pdfborder{0 0 1}% Overrides border definition set with colorlinks=true
-  \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set with colorlinks=true
-                                % Hyperlink border style will be underline of width 1pt
-}
-\makeatother
+% \makeatletter
+% \Hy@AtBeginDocument{%
+%   \def\@pdfborder{0 0 1}% Overrides border definition set with colorlinks=true
+%   \def\@pdfborderstyle{/S/U/W 1}% Overrides border style set with colorlinks=true
+%                                 % Hyperlink border style will be underline of width 1pt
+% }
+% \makeatother
 \urlstyle{same}  % don't use monospace font for urls
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
