@@ -116,8 +116,9 @@ The //wing's repository is described by the 132nd.xml file. That file is automat
 All the mods themselves are contained in the "132nd" folder, right next to the file.
 
 The mods are in two format:
-    * bare folder:  the mod itself, deflated, containing all the files, in the same format as JSGME; this is the "source"
-    * ZIP: mod packaged and ready to be distributed; this is the "package"
+
+* bare folder:  the mod itself, deflated, containing all the files, in the same format as JSGME; this is the "source"
+* ZIP: mod packaged and ready to be distributed; this is the "package"
     
 To create a mod, the first thing to do is to create the source folder, containing the files of the mods. For example, a simple skin. This folder follows the JsGME standard, replicating the target directory structure, adding and replacing files on the fly.
 
