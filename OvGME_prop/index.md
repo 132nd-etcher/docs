@@ -1,5 +1,5 @@
 ---
-title: "OvGME: proposal"
+title: "Proposal: OvGME"
 author:
   - etcher
 applies:
@@ -22,7 +22,7 @@ summary_of_changes:
 ---
 
 
-![Documentation](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
+![//ovgme](https://www.virtual-aaf.com/uploads/monthly_2017_06/OvGME-logo.png.a0cf027982a22a14140b3523e254bf08.png)
 
 # Enhancement Proposal
 
@@ -58,11 +58,11 @@ What I'm trying to achieve:
 
 This section conceptually describes how to achieve the goals outlined above.
 
-### Using //ov
+### Using //ovgme
 
-This proposal is very simple. The plan is to use [//ov](http://www.ovoid.org/ovgme/) instead of the //ski to distribute mods and skins within the //wing.
+This proposal is very simple. The plan is to use [//ovgme](http://www.ovoid.org/ovgme/) instead of the //ski to distribute mods and skins within the //wing.
 
-[Documentation website for //ov](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
+[Documentation website for //ovgme](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
 
 #### Specification
 
@@ -80,14 +80,14 @@ This section objectively (as much as I could) describes the pros and cons of the
 
 ### The pros
 
-* Single source of thruth: this a big one. No more fiddling around with the //ski on one side, then going to google Drive/Dropbox to grab mods and install them manually, or with JsGME///ov. This should help a lot with the current situation, where it is not an uncommon occurence to have to debug with users before the flight on TS because  a missing mod won't let them join the server.
-* Most of us are already using JsGME or //ov, to integrating the new workflow won't be a problem for those.
+* Single source of thruth: this a big one. No more fiddling around with the //ski on one side, then going to google Drive/Dropbox to grab mods and install them manually, or with JsGME///ovgme. This should help a lot with the current situation, where it is not an uncommon occurence to have to debug with users before the flight on TS because  a missing mod won't let them join the server.
+* Most of us are already using JsGME or //ovgme, to integrating the new workflow won't be a problem for those.
 * Mods and skins are modular: this is also a pro, because it allows squadrons to ditribute mods that are not mandatory, but nice to have (ex: new cockpit, maps for the TAD, ...). This allows getting newcomers onbaord much faster.
-* Versionning of mods and skins: each mod and each skin uploaded to our repository receives a version. This makes it *very* easy to make sure that everyone has the correct, latest version of the mods. When a maintainer releases a new version of a mod or a skin, a NOTAM would be issued, and the people who currently have this mod installed (or everyone in acse of a "MANDATORY" mod) just need to fire up //ov and update the mod (a few click and a few seconds).
+* Versionning of mods and skins: each mod and each skin uploaded to our repository receives a version. This makes it *very* easy to make sure that everyone has the correct, latest version of the mods. When a maintainer releases a new version of a mod or a skin, a NOTAM would be issued, and the people who currently have this mod installed (or everyone in acse of a "MANDATORY" mod) just need to fire up //ovgme and update the mod (a few click and a few seconds).
 * Much simpler job for maintainers: creating, uploading and updating mods and skins in the repository is much simpler than with the //ski. It takes but a few clicks and a few minutes to have a new version of a mods on in the repository, available for users to download.
 * Sharing the load: splitting the mods and skins into smaller, more manageable units allows for a better repartition of tasks. Each mod/skin should have an official "maintainer", and that person is responsible for keeping it up-to-date. For example, someone might be responsible for the skins of the //259, while someone else would be responsible for the "MISSION MAKERS" mods. No more huge, monolithic list of mingled skins.
-* Using external repositories: in the future, maybe an external organization will be using //ov to manage their list of skins and mods. Adding their reporitory to //ov is a trivial process, and it would allow us to user their skins directly, instead of having to re-package them ourselves.
-* //ov is capable of managing multiple target destinations; this would be very useful in case we need one of the following:
+* Using external repositories: in the future, maybe an external organization will be using //ovgme to manage their list of skins and mods. Adding their reporitory to //ovgme is a trivial process, and it would allow us to user their skins directly, instead of having to re-package them ourselves.
+* //ovgme is capable of managing multiple target destinations; this would be very useful in case we need one of the following:
     * Manage different version of the mods/skins for different DCS versions
     * Install some mods in the Save Games folder, and other directly in the main DCS installation
 
@@ -101,11 +101,11 @@ This section describes the tools and workflow needed to implement the new system
 
 #### End-user
 
-The only tool needed for the end-user is //ov itself. Some might need guidance during the initial transition process, which will be provided by the documentation. Using //ov is straight forward enough that everyone should be able to maintain with ease.
+The only tool needed for the end-user is //ovgme itself. Some might need guidance during the initial transition process, which will be provided by the documentation. Using //ovgme is straight forward enough that everyone should be able to maintain with ease.
 
 #### Maintainer
 
-Maintainers will need //ov, as wel as a FTP client to be able to upload files on the //wing's FTP ([Filezilla](https://filezilla-project.org/) is a good starting point).
+Maintainers will need //ovgme, as wel as a FTP client to be able to upload files on the //wing's FTP ([Filezilla](https://filezilla-project.org/) is a good starting point).
 
 ##### Brief description
 
@@ -113,7 +113,7 @@ The documentation will eventually cover this in a more detailed fashion, but her
 
 **Note**: to follow along, open [http://132virtualwing.org/files/ovgme/](http://132virtualwing.org/files/ovgme/) in your borwser.
 
-The //wing's repository is described by the 132nd.xml file. That file is automatically generated by //ov.
+The //wing's repository is described by the 132nd.xml file. That file is automatically generated by //ovgme.
 
 All the mods themselves are contained in the "132nd" folder, right next to the file.
 
@@ -125,11 +125,11 @@ To create a mod, the first thing to do is to create the source folder, containin
 
 Onca created, the source folder is available locally for installation, thus permitting to test the mod before packaging it.
 
-Then, using //ov, the source folder is packaged into a ZIP file, along with "metadata" about (metadata is things like version, description, author, etc.).
+Then, using //ovgme, the source folder is packaged into a ZIP file, along with "metadata" about (metadata is things like version, description, author, etc.).
 
 That ZIP file is also availabe locally for installation, and it should be tested as well.
 
-Now, stil using //ov, there is a command to create a "repository" file from all the mods currently available locally. That command will look for every ZIP-ped mod, and create a "*.xml" file containing metadata for all of them (see, for example, [132.xml](http://132virtualwing.org/files/ovgme/132nd.xml)).
+Now, stil using //ovgme, there is a command to create a "repository" file from all the mods currently available locally. That command will look for every ZIP-ped mod, and create a "*.xml" file containing metadata for all of them (see, for example, [132.xml](http://132virtualwing.org/files/ovgme/132nd.xml)).
 
 At that point, all there is to do is upload both the ZIP file and the XML file to the FTP, and you're set.
 
@@ -139,11 +139,11 @@ At that point, all there is to do is upload both the ZIP file and the XML file t
 
 I've explained briefly how to go from a mod folder to a ZIP package, and how to make a repository out of a set of packages (for example the "132nd" folder and the "132nd.xml" file on the FTP). This section describes how to manage and switch repositories.
 
-To manage different repositories, you need "profiles". When you build the "*.xml" file, //ov will use *all* the mods that are present in the curent profile (the current mods folder of //ov), or to be put it another way, all the mods that are visible in //ov at that time.
+To manage different repositories, you need "profiles". When you build the "*.xml" file, //ovgme will use *all* the mods that are present in the curent profile (the current mods folder of //ovgme), or to be put it another way, all the mods that are visible in //ovgme at that time.
 
 So, if we want to create another repository for "externals", for example, we need another profile. That is what I did with the "external" folder and the "external.xml" on the FTP.
 
-So, in the end, I have 3 profiles in //ov:
+So, in the end, I have 3 profiles in //ovgme:
 
 * My regular profile, pointing to DCS, to install mods and skins
 * A profile for the "132nd" repository, in sync with the "132nd" dir of the FTP
@@ -169,9 +169,9 @@ This section describes how to transition to the new system if we decide to switc
 Description of the transition process step by step:
 
 1. Freeze the current mods and skins list
-2. Transfer them into the //ov repository of the //wing
+2. Transfer them into the //ovgme repository of the //wing
 3. Create another repository for external organizations
-4. Publish //ov documentation along with a NOTAM
+4. Publish //ovgme documentation along with a NOTAM
 5. Help users who have trouble getting up to speed
 
 Step 1 and 2 are almost taken care of, I have a working, test repository that's been going on for a while now. you can find it at: [http://132virtualwing.org/files/ovgme/](http://132virtualwing.org/files/ovgme/) (**note**: the only two relevant folders are "132nd" and "externals", the others are artifacts from previous testing.).
@@ -182,7 +182,7 @@ Step 5 would take very little time, as I expect little to no issue by using this
 
 ### Documentation
 
-I'm writing a document describing, step by step, how to use //ov as:
+I'm writing a document describing, step by step, how to use //ovgme as:
 
 * an end-user, to downloads, install and update mods and skins (done)
 * a maintainer, to create, upload and update mods and skins (ongoing)
@@ -192,4 +192,3 @@ I'm writing a document describing, step by step, how to use //ov as:
 I plan on offering crash course with OvGME to the people who are interested in it.
 
 The crash course should take about 10 minutes on TS for end-users, and maybe 30 minutes for the maintainers.
- 
