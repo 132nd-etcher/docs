@@ -312,6 +312,16 @@ $endif$
 \end{center}
 \restoregeometry
 \newpage
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{.6\textwidth}
+PAGE INTENTIONNALY BLANK
+\end{minipage}
+\end{center}
+\vfill % equivalent to \vspace{\fill}
+\clearpage
+\newpage
 \thispagestyle{empty}
 
 $if(applies)$
@@ -414,5 +424,14 @@ $for(include-after)$
     $include-after$
     \newpage
 $endfor$
-
+\newpage
+\clearpage
+\vspace*{\fill}
+\begin{center}
+\begin{minipage}{.6\textwidth}
+PAGE INTENTIONNALY BLANK
+\end{minipage}
+\end{center}
+\vfill % equivalent to \vspace{\fill}
+\clearpage
 \end{document}
