@@ -65,6 +65,8 @@ $endif$
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
+
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
 $if(title-meta)$
             pdftitle={$title-meta$},
@@ -252,8 +254,6 @@ $endif$
 \rfoot{\thepage}
 
 \usepackage{adjustbox}
-
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 
 \begin{document}
 \thispagestyle{empty}
