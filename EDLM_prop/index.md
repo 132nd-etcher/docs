@@ -1,16 +1,11 @@
 ---
 title: "EDLM: proposal"
 author:
- - etcher
+ - //etcher
+author-meta: //etcher
 applies:
  - //wing
-title_pictures:
- - logo617th.png
- - logo23rd.png
- - logo259th.png
- - logo696th.png
- - logo176th.png
- - logo765th.png
+title_pictures: //all_logos
 subtitle: Documentation overhaul
 type: Enhancement Proposal
 version: 0

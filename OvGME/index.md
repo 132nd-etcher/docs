@@ -1,17 +1,12 @@
 ---
 title: OvGME
 author:
-    - etcher
+    - //etcher
+author-meta: //etcher
 applies:
-    - \wing
+    - //wing
     - External organizations
-title_pictures:
-    - logo617th.png
-    - logo23rd.png
-    - logo259th.png
-    - logo696th.png
-    - logo176th.png
-    - logo765th.png
+title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Management
 type: Operating Instructions
 version: 0
@@ -26,13 +21,11 @@ Introduction to OvGME
 
 Extract from OvGME's homepage[^1]:
 
-```
-OvGME is a free and open source standalone Mod Manager based on the idea
+> OvGME is a free and open source standalone Mod Manager based on the idea
 and concept of the old well known JSGME, it takes the GME acronym from
 JSGME which stands for Generic Mod Enabler. The main purpose of OvGME is
 to provide an easy way enable and disable mods with automatic backup
 mechanism.
-```
 
 OvGME will eventually replace the Skinstaller for the installation and
 updates of skins and mods within the 132^nd^ Virtual Wing.
@@ -63,7 +56,7 @@ OvGME installation
 
 > [http://www.ovoid.org/ovgme/downl.htm](http://www.ovoid.org/ovgme/downl.htm)
 
-Latest version as of 2017, May 13^th^: "**1.7.1**"
+Latest version as of 2017, May 13^th^: **1.7.1**
 
 Simply run the setup to install OvGME on your system.
 
@@ -97,7 +90,7 @@ In the pop-up window, fill in the fields "Configuration title",
 "Configuration root folder", and "Configuration mods folder", then click
 "Create".
 
-!["New configuration" window](./132 OvGME/media/image9.png){width="8cm"}
+!["New configuration" window](media/image9.png){width="8cm"}
 
 ### (optional) OpenBeta/OpenAlpha
 
@@ -119,7 +112,7 @@ Just in case something goes wrong, make a backup of your currently
 activated mods in JSGME. Open JSGME, and click the blue "Tasks..." menu
 in the centre of the window:
 
-![C:\\Users\\bob\\Downloads\\tasks.png](image10.png){width="8cm"}
+![Save JsGME settings](image10.png){width="8cm"}
 
 In the contextual menu that appears, click "Save mod profile...", then
 save the resulting "\*.mep" file somewhere on your system. That file is
@@ -130,7 +123,7 @@ the list of the activated mods in your JSGME installation.
 
 Click the ```<<<``` button, and confirm:
 
-![C:\\Users\\bob\\Downloads\\remove\_all.png](image11.png){width="8cm"}
+![Uninstall all JsGME mods](F:\DEV\EDLM\DOCS\OvGME\media\image11.png){width="8cm"}
 
 #### Migrate your mods from JSGME to OvGME
 
@@ -160,48 +153,32 @@ OvGME concept: "Repository"
 
 Fire up OvGME, and go to "Mods", "Repositories", "Configure..."
 
-![](image12.png){width="8cm"}
+![Configure repositories](image12.png){width="8cm"}
 
 The following dialog opens:
 
-![](image13.png){width="8cm"}
+![Repositories dialog](image13.png){width="8cm"}
 
 Copy paste the following line in the "URL" field, then click "Add":
 
 > http://132virtualwing.org/files/ovgme/132nd
 
-![](image14.png){width="8cm"}
+![Add the //wing repository](image14.png){width="8cm"}
 
 The window will now look like this:
 
-![](image15.png){width="8cm"}
-
-Repeat the previous step with the following lines:
-
-> http://132virtualwing.org/files/ovgme/externals
->
-> http://132virtualwing.org/files/ovgme/259th
->
-> http://132virtualwing.org/files/ovgme/617th
->
-> http://132virtualwing.org/files/ovgme/696th
->
-> http://132virtualwing.org/files/ovgme/765th
-
-The final result should be:
-
-![](image16.png){width="8cm"}
+![Properly configured repositories dialog](image15.png){width="8cm"}
 
 Download the mods and skins from the repositories
 -------------------------------------------------
 
 Open "Mods", "Repositories", "Query"
 
-![](image17.png){width="8cm"}
+![Query the repositories for new/updated mods](image17.png){width="8cm"}
 
 Click "Download all", and wait for the download to complete
 
-![](image19.png){width="8cm"}
+![Download all updates from repository](image19.png){width="8cm"}
 
 Click "Close".
 
@@ -213,7 +190,7 @@ Click "Close".
 
 The mods and skins now appear in OvGME's main window
 
-![](image20.png){width="8cm"}
+![Populated mods window](image20.png){width="8cm"}
 
 Install the mods and skins
 --------------------------
@@ -240,16 +217,16 @@ pilot's discretion.
 
 To install a mod, select it in the list, then click "Enable selected"
 
-![](image21.png){width="8cm"}
+![Installing a mod](image21.png){width="8cm"}
 
 You can also right click it, and select "Toggle"
 
-![](image22.png){width="8cm"}
+![Installing a mod via right-click](image22.png){width="8cm"}
 
 A mod that has been installed will be marked by a green arrow before its
 name
 
-![](image23.png){width="8cm"}
+![Installed mod with green arrow](image23.png){width="8cm"}
 
 ### Uninstalling a mod
 
@@ -275,7 +252,7 @@ updated.
 For the sake of demonstration, let us assume there is a mod,
 "dummymod", which is at version 0.0.1 on my system:
 
-![](image24.png){width="8cm"}
+![Dummy mod](image24.png){width="8cm"}
 
 CMD staff releases a NOTAM stating that pilots should update this very
 mod via OvGME. Following the procedure in 3.3 Download the mods and
@@ -283,15 +260,19 @@ skins from the repositories, I update my local mods.
 
 During the query, OvGME informs me that "dummymod" had been updated:
 
-![](image25.png){width="8cm"}
+![Dummy mod has an update!](image25.png){width="8cm"}
 
 I download the update, then re-start OvGME to get rid of the duplicates.
 After the restart, "dummymod" has been updated to 0.0.2, which is good,
 but it also has been disabled to allow for the update to take place.
 
-![](image26.png){width="8cm"}
+![Dummy mod has been updated](image26.png){width="8cm"}
 
 **Make sure to check all updated mods and re-enable them accordingly
 after each query !**
+
+# OvGME for maintainers
+
+TODO
 
 [^1]: http://www.ovoid.org/ovgme/index.htm

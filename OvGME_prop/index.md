@@ -1,9 +1,8 @@
 ---
 title: "Proposal: OvGME"
-title-meta: "Proposal: OvGME"
 author:
-  - 132nd-etcher
-author-meta: 132nd-etcher
+  - //etcher
+author-meta: //etcher
 applies:
     - //wing
 title_pictures:
