@@ -53,19 +53,13 @@ What I'm trying to achieve:
 3. Allow for he installation of mods in the DCS installation as well as in the Saved Games folder
 
 
-# Getting there
-
-This section conceptually describes how to achieve the goals outlined above.
-
-## Using //ovgme
+# Proposed solution
 
 This proposal is very simple. The plan is to use [//ovgme](http://www.ovoid.org/ovgme/) instead of the //ski to distribute mods and skins within the //wing.
 
-[Documentation website for //ovgme](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
-
-### Specification
-
 OvGME is a mod management application, much like JsGME, that allows to install/uninstall mods (obviously), but also to subscribe to remote repositories of versionned mods, making propagating and updating mods and skins much simpler.
+
+[Documentation website for //ovgme](http://www.ovoid.org/ovgme/help/en/index.php?c=introduction.html).
 
 # Pros and cons
 
