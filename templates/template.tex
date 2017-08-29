@@ -69,7 +69,7 @@ $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
 
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+% \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \hypersetup{
 $if(title-meta)$
             pdftitle={$title-meta$},
@@ -85,14 +85,14 @@ $endif$
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
 $endif$
-$if(colorlinks)$
+% $if(colorlinks)$
             colorlinks=true,
             linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
             citecolor=$if(citecolor)$$citecolor$$else$Red$endif$,
             urlcolor=$if(urlcolor)$$urlcolor$$else$Black$endif$,
-$else$
-            pdfborder={0 0 0},
-$endif$
+% $else$
+%             pdfborder={0 0 0},
+% $endif$
 %               colorlinks=false,
 % %               linkcolor=lightgray,
 % %               pdfborderstyle={/S/U/W 1},
