@@ -61,7 +61,7 @@ cache:
 install:
   - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
   - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
-  - cmd: pip install --upgrade pip setuptools
+#  - cmd: pip install --upgrade pip setuptools
 #  - git clone --branch=master https://github.com/132nd-etcher/verpatch.git C:\projects\verpatch
 #  - curl -O http://esrg.sourceforge.net/utils_win_up/md5sum/crc32.exe
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
