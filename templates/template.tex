@@ -61,6 +61,7 @@ $endif$
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
 $endif$
+\usepackage{xcolor} 
 \usepackage[unicode=true, bookmarks=true]{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -88,7 +89,7 @@ $endif$
             urlbordercolor=black,
             filebordercolor=blue,
             citebordercolor=red,
-            pdfborderstyle={/U}]{hyperref}}
+            pdfborderstyle={/U}{hyperref}}
 \urlstyle{same}  % don't use monospace font for urls
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
