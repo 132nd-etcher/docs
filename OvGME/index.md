@@ -39,8 +39,7 @@ This document is split in two parts:
     responsible for updating mods and skins, and for keeping them up to
     date.
 
-OvGME for pilots
-================
+# OvGME for pilots
 
 This part of the document describes the installation and basic setup of
 OvGME, as well as the steps required to install and update the skins and
@@ -49,8 +48,7 @@ mods needed to take part in event organised by the 132^nd^ Virtual Wing.
 Everyone, include mods/skins makers, should follow the steps described
 below.
 
-OvGME installation
-------------------
+## OvGME installation
 
 "Download" page of OvGME's website:
 
@@ -63,8 +61,7 @@ Simply run the setup to install OvGME on your system.
 OvGME will install a shortcut in your start menu, and optionally on your
 desktop if the option was selected.
 
-OvGME initial setup
--------------------
+## OvGME initial setup
 
 OvGME concept: "Configuration"
 
@@ -169,8 +166,7 @@ The window will now look like this:
 
 ![Properly configured repositories dialog](image15.png){width="8cm"}
 
-Download the mods and skins from the repositories
--------------------------------------------------
+## Download the mods and skins from the repositories
 
 Open "Mods", "Repositories", "Query"
 
@@ -192,8 +188,7 @@ The mods and skins now appear in OvGME's main window
 
 ![Populated mods window](image20.png){width="8cm"}
 
-Install the mods and skins
---------------------------
+## Install the mods and skins
 
 ### Mandatory and optional mods and skins
 
@@ -203,11 +198,9 @@ installed before joining an event hosted by the 132^nd^ Virtual Wing.
 Note: some "MANDATORY" mods are specific to an aircraft or a situation,
 and must be installed only for the people concerned. For example:
 
--   "**MANDATORY FOR A-10C - 617th - 132nd VW NEW Navigation maps v.2**"
-    must be installed for anyone who wants to fly the A-10C
+*   "**MANDATORY FOR A-10C - 617th - 132nd VW NEW Navigation maps v.2**" must be installed for anyone who wants to fly the A-10C
 
--   "**MANDATORY FOR MISSION MAKERS - 132nd - DB, TACAN, SADL mod**"
-    must be installed for anyone who wants to create/edit a mission.
+*   "**MANDATORY FOR MISSION MAKERS - 132nd - DB, TACAN, SADL mod**" must be installed for anyone who wants to create/edit a mission.
 
 Mods and skins that are offered as convenience or eye-candy only are
 marked by the prefix "OPTIONAL". Installing those or not is left to the
@@ -243,8 +236,7 @@ SHIFT/CTRL selection schemes:
 -   Select a mod, then hold SHIFT a select another to add all the mods
     between them in the list to the selection
 
-Updating the mods and skins
----------------------------
+## Updating the mods and skins
 
 Upon notification from CMD staff, mods and skins will have to be
 updated.
@@ -270,6 +262,20 @@ but it also has been disabled to allow for the update to take place.
 
 **Make sure to check all updated mods and re-enable them accordingly
 after each query !**
+
+## Updating DCS
+
+**Note:** this is a *mandatory* procedure for when DCS needs updating. If you do not de-activate your mods before updating DCS, headaches will ensue.
+
+When CMD issues a NOTAM to update DCS, the procedure es as follows:
+1. Launch //ovgme
+2. Take a snapshot of the currently activated mods TODO: add picture
+3. De-activate *all* the mods
+4. Update DCS
+5. (optional) If specified in the NOTAM, query the //ovgme repository to get the latest versions of all mods
+6. Re-activate the mods you had before using the snapshot
+
+*Note*: using the "snapshot" feature of //ovgme is not mandatory; the only thing that matters is that all mods are removed before updating DCS.
 
 # OvGME for maintainers
 
