@@ -158,7 +158,9 @@ The following dialog opens:
 
 Copy paste the following line in the "URL" field, then click "Add":
 
-```http://132virtualwing.org/files/ovgme/132nd```
+```
+http://132virtualwing.org/files/ovgme/132nd
+```
 
 ![Add the //wing repository](image14.png){width="8cm"}
 
@@ -184,7 +186,6 @@ Click "Close".
 (all the downloaded mods will appear in the list twice).**
 
 **Restart OvGME now.**
-
 
 The mods and skins now appear in OvGME's main window
 
