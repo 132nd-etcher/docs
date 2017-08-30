@@ -112,13 +112,13 @@ in the centre of the window:
 ![Save JsGME settings](image10.png){width="8cm"}
 
 In the contextual menu that appears, click "Save mod profile...", then
-save the resulting "\*.mep" file somewhere on your system. That file is
+save the resulting `*.mep` file somewhere on your system. That file is
 a text file, that you can open with Notepad++ (or similar), containing
 the list of the activated mods in your JSGME installation.
 
 #### Uninstall all mods
 
-Click the ```<<<``` button, and confirm:
+Click the `<<` button, and confirm:
 
 ![Uninstall all JsGME mods](F:\DEV\EDLM\DOCS\OvGME\media\image11.png){width="8cm"}
 
@@ -132,8 +132,8 @@ mods folder").
 
 All your mods should now appear in OvGME's main window. With a clean DCS
 installation, you may now install them again, using OvGME. In case you
-forgot which one were activated, you can use the backup "\*.mep" file
-created during 3.2.3.1 Save the current JSGME profile).
+forgot which one were activated, you can use the backup `*.mep` file
+created during 3.2.3.1 Save the current JSGME profile, it is a simple text file listing installed mods by name).
 
 ### Add the 132^nd^ Virtual Wing repositories
 
@@ -143,10 +143,10 @@ and updates the mod.
 OvGME concept: "Repository"
 
 > A repository is a list of mods and skins, located on a web server.
-> Clients can subscribe to a repository in order to download the mods
-> and skins that it offers. Maintainers of a repository can then update
-> the mods and skins in a repository, propagating the updates to the
-> repository's clients.
+Clients can subscribe to a repository in order to download the mods
+and skins that it offers. Maintainers of a repository can then update
+the mods and skins in a repository, propagating the updates to the
+repository's clients.
 
 Fire up OvGME, and go to "Mods", "Repositories", "Configure..."
 
@@ -158,13 +158,15 @@ The following dialog opens:
 
 Copy paste the following line in the "URL" field, then click "Add":
 
-> http://132virtualwing.org/files/ovgme/132nd
+```http://132virtualwing.org/files/ovgme/132nd```
 
 ![Add the //wing repository](image14.png){width="8cm"}
 
 The window will now look like this:
 
 ![Properly configured repositories dialog](image15.png){width="8cm"}
+
+The repository is now added and ready to go!
 
 ## Download the mods and skins from the repositories
 
@@ -279,6 +281,117 @@ When CMD issues a NOTAM to update DCS, the procedure es as follows:
 
 # OvGME for maintainers
 
-TODO
+Maintainers are the ones responsible for creating and updating mods and skins.
+
+In addition to //ovgme, you'll need access to the //wing's FTP as well as a working FTP client ([Filezilla](https://filezilla-project.org/)  will do nicely).
+
+The FTP client is used to transfer files back and forth between your computer and the //wing's FTP.
+
+## Getting started
+
+The first thing to do will aways be to to pull the latest changes from the FTP to your local computer. Create a directory somewhere, and name it howerver you'd like. This directory does not need to be located on a SSD, and can grow to a few Gygabytes in size. In this tutorial, I will call that directory the `local root folder`.
+
+In this directory, we will download the //wing's repositories, and work from there.
+
+Fire up Filezilla and connect to the //wing's FTP.
+
+On the left pane, navigate to the folder you have just created (it should be empty).
+
+On the right pane, open the `ovmge` remote folder. In that remote folder, you should see two folders, `132nd` and `externals`, as well as two files, `132nd.xml` and `externals.xml` (some other things may be present, disregard them). Download those four items into your local folder.
+
+Your setup is now ready for adding or updating mods.
+
+## Updating the local root folder
+
+It is paramount that your local root folder is up to date before you start working on it.
+
+A good practice is to update it every time you start working on a mod, before you make any changes.
+
+To update the local root folder, simply fire up Filezilla, and download everything again. Files that are identical may be safely skipped.
+
+**Note:** for advanced users, there are many solutions that will keep your files in sync with the FTP at all times, acting somewhat loke Google Drive or Dropbox will. For example, check out the Open Source [SyncAny](https://www.syncany.org/). If you would prefer to stick with Filezilla, here is [an interesting read](https://superuser.com/questions/935353/filezilla-how-to-synchronize-two-way-newest-file-wins).
+
+## Create a new mod
+
+### Create the source folder
+
+To create a new mod, start by navigating to your local root folder.
+
+Open up the repository in which you want the mod to live in (either `132nd` or `externals` at the time I'm writing this).
+
+Create a folder and give it the name of your mod. This mod folder behaves exactly like in JsGME: any file added to it will end up being installed in the DCS installation of the end-users, mirrorring the fodlers structure.
+
+Make sure to test your mod before you package them by installing them in your own DCS installation and making sure they work as intended !
+
+### Package the mod
+
+Using //ovmg (TODO: add pic and correct terms), create a package from your source folder. A package is simply a zip file that contains:
+
+* Your mod's files;
+* Metadata about your mod; when you create the package, //ovgme will ask you to fill in a few boxes, asking you information about your mod (author, version, etc...).
+
+#### Metadata
+
+The metadata about your mod includes the following:
+
+* Version: version of the mod; this will be used by //ovgme to check if a new verison of the mod is available;
+* Description: a free text describing the mod.
+
+The version will end up in a `VERSION` file inside the ZIP, and the description in a `README` file.
+
+The description of the mods is very important, because it will appear to the end-user when they select your mod in //ovgme. It may include: author/maintainer of the mod, remarks about installation, URL to the source of the mod (forum page, website, ...), changelog, etc...
+
+The template I've been using so far is the following:
+
+```
+maintainer: [name of the person responsible for this mod (in case of issue)]
+ 
+ OpenBeta: yes/no
+ OpenAlpha: yes/no
+ 
+ One-line description of the mod
+```
+
+When I create a new version, I simply add this line to the description:
+
+```
+20170714: etcher: updated skins for DeeJay, added skins for bilgatus and Chilts
+```
+
+Or, another example of description, for a mod that is a patch of two others:
+
+```
+This package contains a patch for the mod "132nd - DB, TACAN, SADL mod" when using "MANDATORY - 132nd - Helipads".
+ 
+ IMPORTANT: you MUST install this patch AFTER the two mods mentionned above.
+ ```
+ 
+### Update the XML file
+
+In //ovgme, you should now see your shiny new mod appear twice: once for the folder version, and once for the packaged (ZIP) version.
+
+When you create/update the XML file, //ovgme will discard everything except ZIP files, so it's safe to have left-over mods in folder formats.
+
+TODO: write the procedure with pictures to create the XML file
+
+### Upload the results
+
+You now have a modified local repository: your new mod(s), and a modified XML file.
+
+All there is to do is upload them both on the FTP !
+
+Overwrite the XML file and the ZIP files, and your mod should be available for download.
+
+## Updating an existing mod
+
+To update an existing mod, start as before by pulling the latest changes from the FTP to your local root folder.
+
+Edit the mod you want to update, using the folder of the mod to change files and run your tests.
+
+Once you are happy with the results, simply re-package your mod, giving it a new version (don't forget to update the changelog), and **overwrite the existing ZIP file**.
+
+Update the XML file, and upload everything (packages (ZIP) and XML to the FTP.
+
+That's it !
 
 [^1]: http://www.ovoid.org/ovgme/index.htm
