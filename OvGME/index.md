@@ -365,7 +365,7 @@ Or, another example of description, for a mod that is a patch of two others:
 This package contains a patch for the mod "132nd - DB, TACAN, SADL mod" when using "MANDATORY - 132nd - Helipads".
  
  IMPORTANT: you MUST install this patch AFTER the two mods mentionned above.
- ```
+```
  
 ### Update the XML file
 
