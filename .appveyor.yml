@@ -71,9 +71,24 @@ build_script:
 #  - cmd: edlm convert pdf ./EDLM_prop
 #  - cmd: edlm convert ./OvGME_help
   - cmd: edlm convert pdf .
+  - cmd: REN OUTPUT docs
 
 
 artifacts:
   - path: '**/*.pdf'
     name: document
     type: File
+
+deploy:
+  provider: FTP
+  protocol: sftp
+  host:
+    secure: 5ySqGu0Sy46I/vsKje7UrC3zMHw8+ouvqbc3wbSkpUg=
+  username:
+    secure: ISGmrm6l6EZVSeUIJFW7kw==
+  password:
+    secure: 3UqjnpgLIcOlO+lXGID86Q==
+  folder:
+    secure: ravvRrFksxyhvZ3hLgzDUcR6YulJepgzQrEmwvasBAg=
+  on:
+    branch: master
