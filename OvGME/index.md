@@ -19,6 +19,8 @@ summary_of_changes:
 Introduction to OvGME
 =====================
 
+TODO: talk about snapshots during DCS update
+
 Extract from OvGME's homepage[^1]:
 
 > OvGME is a free and open source standalone Mod Manager based on the idea
