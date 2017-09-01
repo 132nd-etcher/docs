@@ -310,7 +310,7 @@ A good practice is to update it every time you start working on a mod, before yo
 
 To update the local root folder, simply fire up Filezilla, and download everything again. Files that are identical may be safely skipped.
 
-**Note:** for advanced users, there are many solutions that will keep your files in sync with the FTP at all times, acting somewhat loke Google Drive or Dropbox will. For example, check out the Open Source [SyncAny](https://www.syncany.org/). If you would prefer to stick with Filezilla, here is [an interesting read](https://superuser.com/questions/935353/filezilla-how-to-synchronize-two-way-newest-file-wins).
+**Note:** for advanced users, there are many solutions that will keep your files in sync with the FTP at all times, acting somewhat like Google Drive or Dropbox will. For example, check out the Open Source [SyncAny](https://www.syncany.org/) or the ver handy [WinSCP](https://winscp.net/). If you would prefer to stick with Filezilla, here is [an interesting read](https://superuser.com/questions/935353/filezilla-how-to-synchronize-two-way-newest-file-wins).
 
 ## Create a new mod
 
