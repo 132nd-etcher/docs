@@ -5,6 +5,7 @@ author:
 author-meta: //etcher
 applies:
  - //wing
+status: in writing
 title_pictures: //all_logos
 subtitle: Documentation overhaul
 type: Enhancement Proposal

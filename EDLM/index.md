@@ -3,6 +3,7 @@ title: "EDLM"
 author:
  - //etcher
 author-meta: //etcher
+status: in writing
 applies:
  - //wing
 title_pictures: //all_logos

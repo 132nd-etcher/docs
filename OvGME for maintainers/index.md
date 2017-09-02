@@ -4,6 +4,7 @@ author:
     - //etcher
 author-meta: //etcher
 header_text: OvGME for maintainers
+status: submitted for review
 applies:
     - //wing
 title_pictures: //all_logos

@@ -6,6 +6,7 @@ author-meta: //etcher
 applies:
     - //wing
 title_pictures: //all_logos
+status: published
 audience: CMD
 subtitle: Mods and skins management
 keywords: "mods,skins,jsgme,ovgme,proposal"

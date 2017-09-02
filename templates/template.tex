@@ -346,48 +346,54 @@ $if(applies)$
         \begin{center}
             \begin{tabular}{ r l }
 
-                {\color{gray}APPLIES TO:}               & \parbox[t]{8cm}{$for(applies)$ \textbf{$applies$} \\ $endfor$} \\
+                {\color{gray}APPLIES TO:}                   & \parbox[t]{8cm}{$for(applies)$ \textbf{$applies$} \\ $endfor$} \\
 
                 \null & \null \\
 
                 $if(type)$
-                {\color{gray}TYPE:}                     & \parbox[t]{8cm}{\textbf{$type$}} \\
+                {\color{gray}TYPE:}                         & \parbox[t]{8cm}{\textbf{$type$}} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(version)$
-                {\color{gray}VERSION:}                  & \parbox[t]{8cm}{$version$} \\
+                {\color{gray}VERSION:}                      & \parbox[t]{8cm}{$version$} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(audience)$
-                {\color{gray}INTENDED AUDIENCE:}           & \parbox[t]{8cm}{$audience$} \\
+                {\color{gray}INTENDED AUDIENCE:}            & \parbox[t]{8cm}{$audience$} \\
+
+                \null & \null \\
+                $endif$
+
+                $if(status)$
+                {\color{gray}STATUS:}                       & \parbox[t]{8cm}{status$} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(published_date)$
-                {\color{gray}PUBLISHED DATE:}           & \parbox[t]{8cm}{$published_date$} \\
+                {\color{gray}PUBLISHED DATE:}               & \parbox[t]{8cm}{$published_date$} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(responsible)$
-                {\color{gray}DOCUMENT RESPONSIBLE:}     & \parbox[t]{8cm}{$responsible$} \\
+                {\color{gray}DOCUMENT RESPONSIBLE:}         & \parbox[t]{8cm}{$responsible$} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(summary_of_changes)$
-                {\color{gray}SUMMARY OF CHANGES:}       & \parbox[t]{8cm}{$for(summary_of_changes)$ $summary_of_changes$ \\ $endfor$} \\
+                {\color{gray}SUMMARY OF CHANGES:}           & \parbox[t]{8cm}{$for(summary_of_changes)$ $summary_of_changes$ \\ $endfor$} \\
 
                 \null & \null \\
                 $endif$
 
                 $if(references)$
-                {\color{gray}REFERENCES:}               & \parbox[t]{8cm}{$for(references)$ $references$ \\ $endfor$} \\
+                {\color{gray}REFERENCES:}                   & \parbox[t]{8cm}{$for(references)$ $references$ \\ $endfor$} \\
                 $endif$
 
             \end{tabular}

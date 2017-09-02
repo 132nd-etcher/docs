@@ -4,6 +4,7 @@ author:
     - //etcher
 author-meta: //etcher
 header_text: OvGME for pilots
+status: submitted for review
 applies:
     - //wing
     - External organizations
