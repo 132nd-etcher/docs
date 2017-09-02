@@ -19,7 +19,7 @@ summary_of_changes:
 
 # Tables
 
-```Markdown
+```
 Table: T.-T. Data
 
     .      Tweedledee       Tweedledum
