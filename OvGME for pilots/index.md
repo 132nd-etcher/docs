@@ -15,11 +15,6 @@ version: 0
 published_date: unpublished
 responsible: //etcher
 audience: pilots
-summary_of_changes:
-    - nil
-references:
-    - nil
-    - nil
 ---
 
 # Introduction to OvGME

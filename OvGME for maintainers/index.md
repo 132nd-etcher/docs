@@ -14,11 +14,6 @@ version: 0
 published_date: unpublished
 responsible: //etcher
 audience: mods maintainers
-summary_of_changes:
-    - nil
-references:
-    - nil
-    - nil
 ---
 
 # Introduction
