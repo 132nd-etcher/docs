@@ -66,6 +66,6 @@ deploy:
     secure: ISGmrm6l6EZVSeUIJFW7kw==
   password:
     secure: 3UqjnpgLIcOlO+lXGID86Q==
-  folder: /var/www/132web/files/docs
+  folder: docs
   on:
     branch: master
