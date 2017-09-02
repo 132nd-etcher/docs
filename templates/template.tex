@@ -317,42 +317,61 @@ $endif$
 
 $if(applies)$
 %    \newgeometry{noheadfoot=true,top=8cm,bottom=1.5cm}
-    \vspace*{5cm}
-    \begin{center}
-        \begin{tabular}{ r l }
+%    \vspace*{5cm}
+    \null
+    \vfill
+    \begin{minipage}{\textwidth}
+        \begin{center}
+            \begin{tabular}{ r l }
 
-            {\color{gray}APPLIES TO:}               & \parbox[t]{8cm}{$for(applies)$ \textbf{$applies$} \\ $endfor$} \\
+                {\color{gray}APPLIES TO:}               & \parbox[t]{8cm}{$for(applies)$ \textbf{$applies$} \\ $endfor$} \\
 
-            $if(type)$
-            {\color{gray}TYPE:}                     & \parbox[t]{8cm}{\textbf{$type$}} \\
-            $endif$
+                \null & \null \\
 
-            $if(version)$
-            {\color{gray}VERSION:}                  & \parbox[t]{8cm}{$version$} \\
-            $endif$
+                $if(type)$
+                {\color{gray}TYPE:}                     & \parbox[t]{8cm}{\textbf{$type$}} \\
 
-            $if(audience)$
-            {\color{gray}INTENDED AUDIENCE:}           & \parbox[t]{8cm}{$audience$} \\
-            $endif$
+                \null & \null \\
+                $endif$
 
-            $if(published_date)$
-            {\color{gray}PUBLISHED DATE:}           & \parbox[t]{8cm}{$published_date$} \\
-            $endif$
+                $if(version)$
+                {\color{gray}VERSION:}                  & \parbox[t]{8cm}{$version$} \\
 
-            $if(responsible)$
-            {\color{gray}DOCUMENT RESPONSIBLE:}     & \parbox[t]{8cm}{$responsible$} \\
-            $endif$
+                \null & \null \\
+                $endif$
 
-            $if(summary_of_changes)$
-            {\color{gray}SUMMARY OF CHANGES:}       & \parbox[t]{8cm}{$for(summary_of_changes)$ $summary_of_changes$ \\ $endfor$} \\
-            $endif$
+                $if(audience)$
+                {\color{gray}INTENDED AUDIENCE:}           & \parbox[t]{8cm}{$audience$} \\
 
-            $if(references)$
-            {\color{gray}REFERENCES:}               & \parbox[t]{8cm}{$for(references)$ $references$ \\ $endfor$} \\
-            $endif$
+                \null & \null \\
+                $endif$
 
-        \end{tabular}
-    \end{center}
+                $if(published_date)$
+                {\color{gray}PUBLISHED DATE:}           & \parbox[t]{8cm}{$published_date$} \\
+
+                \null & \null \\
+                $endif$
+
+                $if(responsible)$
+                {\color{gray}DOCUMENT RESPONSIBLE:}     & \parbox[t]{8cm}{$responsible$} \\
+
+                \null & \null \\
+                $endif$
+
+                $if(summary_of_changes)$
+                {\color{gray}SUMMARY OF CHANGES:}       & \parbox[t]{8cm}{$for(summary_of_changes)$ $summary_of_changes$ \\ $endfor$} \\
+
+                \null & \null \\
+                $endif$
+
+                $if(references)$
+                {\color{gray}REFERENCES:}               & \parbox[t]{8cm}{$for(references)$ $references$ \\ $endfor$} \\
+                $endif$
+
+            \end{tabular}
+        \end{center}
+    \end{minipage}
+    \vfill
 %    \restoregeometry
     \newpage
 $endif$
