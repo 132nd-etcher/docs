@@ -67,6 +67,6 @@ deploy:
   password:
     secure: 3UqjnpgLIcOlO+lXGID86Q==
   folder:
-    secure: ravvRrFksxyhvZ3hLgzDUcR6YulJepgzQrEmwvasBAg=
+    secure: ravvRrFksxyhvZ3hLgzDUbg0HesC+lxPdQdGo5jh89s=
   on:
     branch: master
