@@ -130,7 +130,7 @@ $if(tables)$
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 $endif$
-$if(graphics)$
+
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -140,7 +140,7 @@ $if(graphics)$
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-$endif$
+
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -237,10 +237,14 @@ $endif$
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{$if(header_text)$ $header_text$ $endif$ $if(header_picture)$\includegraphics[height=1.5cm]{$header_picture$}$endif$}
+\rhead{$title$}
+%\rhead{
+%    $if(title_pictures)$$for(title_pictures)$\includegraphics[height=1cm]{$title_pictures$}$endfor$$endif$
+%}
 
 \lhead{\includegraphics[height=1.5cm]{logo132.png}\wing}
 \rfoot{\thepage}
+
 
 \usepackage{adjustbox}
 
@@ -252,10 +256,27 @@ $endif$
 % Increase spacing of tables rows
 \renewcommand{\arraystretch}{1.3}
 
+\lstset{
+    basicstyle=\ttfamily,
+    numbers=none,
+    numberstyle=\footnotesize,
+    stepnumber=2,
+    numbersep=5pt,
+    backgroundcolor=\color{black!3},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    breakautoindent=true,
+    linewidth=\textwidth
+}
+
 \begin{document}
 
 \thispagestyle{empty}
-\newgeometry{margin=1cm}
 
 \begin{center}
     \vspace*{\fill}
@@ -268,45 +289,46 @@ $endif$
     \vspace{2cm}
 
     \noindent\rule{\textwidth}{0.4pt}
-    \vspace{0.1cm}
+%    \vspace{0.1cm}
 
-    {\fontsize{2cm}{2.3cm}\selectfont $title$}
+    {\fontsize{2cm}{2.3cm}\selectfont $title$\par}
 
     \noindent\rule{\textwidth}{0.4pt}
 
-    $for(applies)$
-        $applies$ \\
-    $endfor$
+%    $for(applies)$
+%        $applies$ \\
+%    $endfor$
 
     $subtitle$
 
     $if(title_pictures)$
-        \vspace{1cm}
+%        \vspace{1cm}
         \begin{figure}[h]
             \begin{minipage}[c]{\linewidth}
                 \centering
                 $for(title_pictures)$
-                      \includegraphics[height=3.5cm]{$title_pictures$}
+                      \includegraphics[height=3cm]{$title_pictures$}
                 $endfor$
             \end{minipage}
         \end{figure}
     $endif$
 
-    \vspace{2cm}
+%    \vspace{2cm}
+    \vfill
 
     {\href{http://132virtualwing.org}{\wing}}, \the\year \\
     \vspace{0.3cm}
     This work is licensed under a {\href{https://creativecommons.org/licenses/by-sa/3.0/}{Creative Commons Attribution-ShareAlike 3.0 Unported License}}.
 
-    \vfill
+%    \vfill
 \end{center}
 
-\restoregeometry
 
 \newpage
-    \thispagestyle{empty}
     \clearpage
-    \vspace*{\fill}
+    \thispagestyle{empty}
+    \null
+    \vfill
     \begin{center}
     \begin{minipage}{.6\textwidth}
     \centering PAGE INTENTIONNALY LEFT BLANK
@@ -315,11 +337,9 @@ $endif$
     \vfill % equivalent to \vspace{\fill}
 \clearpage
 \newpage
-\thispagestyle{empty}
 
 $if(applies)$
-%    \newgeometry{noheadfoot=true,top=8cm,bottom=1.5cm}
-%    \vspace*{5cm}
+    \thispagestyle{empty}
     \null
     \vfill
     \begin{minipage}{\textwidth}
@@ -374,14 +394,13 @@ $if(applies)$
         \end{center}
     \end{minipage}
     \vfill
-%    \restoregeometry
     \newpage
 $endif$
 
-$for(include-before)$
-    $include-before$
-    \newpage
-$endfor$
+%$for(include-before)$
+%    $include-before$
+%    \newpage
+%$endfor$
 
 \vspace*{1cm}
 
