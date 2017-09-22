@@ -4,7 +4,7 @@ author:
     - //etcher
 author-meta: //etcher
 header_text: OvGME for pilots
-status: submitted for review
+status: effective
 applies:
     - //wing
     - External organizations
@@ -15,6 +15,8 @@ version: 1
 published_date: 22/09/2017
 responsible: //etcher
 audience: pilots
+summary_of_changes:
+ - nil
 ---
 
 # Introduction to OvGME
