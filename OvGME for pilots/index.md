@@ -11,8 +11,8 @@ applies:
 title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Installation
 type: Operating Instructions
-version: 0
-published_date: unpublished
+version: 1
+published_date: 22/09/2017
 responsible: //etcher
 audience: pilots
 ---
@@ -277,4 +277,14 @@ When CMD issues a NOTAM to update DCS, the procedure is as follows:
 ![Activate profile](profile_activate.png)
 
 *Note*: using the "profile" feature of //ovgme is not mandatory; the only thing that matters is that all mods are removed before updating DCS.
+
+# Manual installation of the mods
+
+**Note**: this is *NOT* a recommended procedure, and is included only for information.
+
+In case you do not want to use //ovgme for some reason, you will still need to download and install all the mods and skins in order to be able to join the server.
+
+The files are available for direct download on the [//wing's server](http://132virtualwing.org/files/ovgme/132nd/).
+
+Please note that you will be responsible for keeping your own installation up to date.
 
