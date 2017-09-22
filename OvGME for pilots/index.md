@@ -32,14 +32,14 @@ Extract from OvGME's homepage: [^1][]
 OvGME will eventually replace the Skinstaller for the installation and
 updates of skins and mods within the 132^nd^ Virtual Wing.
 
-This document is split in two parts:
+The documentation for //ovgme is split into two parts:
 
 -   The first part is intended for everyone, and will describe the
-    procedures to use OvGME on a day-to-day basis.
+    procedures to use OvGME on a day-to-day basis (this document).
 
 -   The second part is intended for maintainers, i.e. the people
     responsible for updating mods and skins, and for keeping them up to
-    date.
+    date (separate document).
 
 # OvGME installation
 
@@ -156,8 +156,6 @@ http://132virtualwing.org/files/ovgme/132nd
 ```
 
 ![Add the //wing repository](image14.png)
-
-The window will now look like this:
 
 ![Properly configured repositories dialog](image15.png)
 
