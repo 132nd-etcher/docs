@@ -4,16 +4,18 @@ author:
     - //etcher
 author-meta: //etcher
 header_text: OvGME for maintainers
-status: submitted for review
+status: effective
 applies:
     - //wing
 title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Management
 type: Operating Instructions
-version: 0
-published_date: unpublished
+version: 1
+published_date: 22/09/2017
 responsible: //etcher
 audience: mods maintainers
+summary_of_changes:
+ - nil
 ---
 
 # Introduction
@@ -48,7 +50,7 @@ Click the `New` button, and create the initial configuration.
 
 Click the `Save` button (check `Save password` if you want to, it's fine).
 
-Select the //wing's FTP in the list, and click `Login``.
+Select the //wing's FTP in the list, and click `Login`.
 
 A scary SSH window will open, because WinSCP does not yet know the SSH key of the //wing's server. Just click `Yes`.
 
