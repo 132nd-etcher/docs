@@ -280,7 +280,7 @@ When CMD issues a NOTAM to update DCS, the procedure is as follows:
 
 *Note*: using the "profile" feature of //ovgme is not mandatory; the only thing that matters is that all mods are removed before updating DCS.
 
-# Manual installation of the mods
+# Manual installation of mods and skins
 
 **Note**: this is *NOT* a recommended procedure, and is included only for information.
 
