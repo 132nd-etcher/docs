@@ -34,32 +34,6 @@ Version 1.4: Deleted ARIES, inserted UniversRadio (UR). Minor corrections
 Version 1.5: Included OVGME repository for required files
 Version 1. 6 : Remove Squadron Logos, refer to ATC Document
 ```
-### Contents
-
-Introduction ......................................................................................................................................................... 3
-
-Required Mods, Files and Skins ........................................................................................................................... 3
-
-Real world information ........................................................................................................................................ 3
-
-Mission flow. ....................................................................................................................................................... 4
-
-Air Tasking Order ............................................................................................................................................... 10
-
-Airspace information ......................................................................................................................................... 11
-
-Communcations ................................................................................................................................................. 11
-
-Combat Search And Rescue ............................................................................................................................... 11
-
-Airfield operations ............................................................................................................................................. 12
-
-ATC procedures ................................................................................................................................................. 12
-
-Lightpolicy on airports under 176th Virtual Air Control Squadron Control: ...................................................... 12
-
-Appendix 1 Explanation of ATO signal view ...................................................................................................... 13
-
 
 ```
 132nd Virtual Wing, 2013:
@@ -69,7 +43,7 @@ Appendix 1 Explanation of ATO signal view ......................................
 ```
 Scope. These Multiplayer Instructions gives information to external organizations with regards to
 132nd Virtual Wing events. NOTE: These Multiplayer Instructions will not replace each
-participating squadron own SOP’s but will make sure that all participating pilots have a common
+participating squadron own SOP's but will make sure that all participating pilots have a common
 understanding on how to operate during 132nd Virtual Wing hosted events
 ```
 ```
@@ -123,7 +97,7 @@ is also allowed to respawn.
 ```
 ```
 Mission time. Most missions in 132nd Virtual Wing hosted events will be started on the
-flightlead’s discretion based on their own preparation and start up time. Take-off times and latest
+flightlead's discretion based on their own preparation and start up time. Take-off times and latest
 landing times will be given and all flights must adhere to these.
 ```
 ```
@@ -334,7 +308,7 @@ Approach and Departure Charts (VAD Charts A-10).
 ```
 ```
 ATC. When possible there will be a human ATC / AWACS operator supporting the mission.
-When there won’t be a human ATC, all calls on the airport should still be transmitted blindly, so
+When there won't be a human ATC, all calls on the airport should still be transmitted blindly, so
 that other people can act accordingly when they know your intentions. In this scenario you
 inform other pilots of your operations rather than ask for clearances.
 ```
@@ -376,6 +350,7 @@ Shutdown. Position lights: FLASH, Taxi light: OFF. Anti Collision OFF.
 ```
 ### Appendix 1 Explanation of ATO signal view
 
+```
 VTASK/Tasked Unit ID/Mission number/Briefing time (Real-world time)//
 TASKUNIT/Tasked unit/Homebase//
 AMSNDAT/Msnnr/-/Primary Mission/Secondary Mission/Package/2/Alert state/Takeoff time (in
@@ -390,6 +365,7 @@ AAR/CALLSIGN/Position/Altitude/Frequency/TACAN//
 CONTROLA/Type/CALLSIGN/Report in point/Primary Frequency/Secondary Frequency//
 JTAC/Type/CALLSIGN/Position/Primary Frequency/Secondary Frequency//
 AMPN/Amplification//
+```
 
 Meaning:
 VTASK: Virtual Task
@@ -401,11 +377,6 @@ GTGLOC: Ground Target Location
 PKGCMD: Package Commander
 AAR: Air to Air Refueling
 CONTROLA: Controlling agency
-
-
-```
-132nd Virtual Wing, 2013:
-```
 JTAC: Joint Terminal Attack Controller
 AMPN: Amplification
 
