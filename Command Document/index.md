@@ -109,135 +109,108 @@ After completion of the mission all pilots are highly encouraged to fill out an 
 132nd Virtual Wing will use an Air Tasking Order to task flights. The ATO is published on the 132nd Virtual Wing website. The ATO can be found under Event, View full ATO. There is also a shortcut to View ATO, if you click into one of the events. See pictures above. After users have signed up on the event page on the 132nd Virtual Wing website, they should check in on the website regularly until mission start. Once signed up, please note the missionnumber on the tasking. Also look at the tasking information, as there might be information there that are needed for your mission. See appendix 1 for explanation of the signal view of taskings. In addition, under documents on the 132nd website you will find a link to ATO Manual, which describes the ATO in more detail.
 
 ## Airspace information
-```
-Airport airspace. For all airspace users in 132nd Virtual Wing hosted events, airport airspace is
-described in GND and VAD CHARTS A10C by ARIES.
-```
-```
-Restricted areas. There are several restricted airspace areas. These areas will be described in the
-SPINS. Follow procedures in the SPINS on how to use and request these airspaces.
-```
-```
-Mandatory files for the range: In order to make sure you will have the targets outlined in the
-range, a ll pilots need to have the most recent versions of the required mods and files. All required
-mods, files and skins are obtainable via an OVGME repository. Please download OVGME-link
-and refer to the instructions-link how to obtain the files required
-```
-### Communications
 
-```
-Frequencies. Frequencies are given a name and a number to make change of frequencies easier.
-See 132nd Virtual Wing website, under Documents, 132nd Operational Frequencies, for the
-valid names and frequencies in use.
-```
-```
-Airfield frequencies are ingame frequency + .100MHZ/.200MHZ. A airfield having ingame
-frequency 123.000 MHZ will have GROUND UR frequency 123.100 MHZ. and TOWER UR
-frequency 123.200 MHZ. If an approach frequency is used, it will be stated. In the TBLISI area,
-APPROACH uses frequency 127.200 for all operations within Tblisi TMA (Tblisi Terminal
-Maneuver Area).
-```
-```
-All other frequencies not listed in the 132nd Operational Frequencies list are free to use at the
-discretion of any participating squadron participating squadrons.
-```
-```
+### Airport airspace
+For all airspace users in 132nd Virtual Wing hosted events, airport airspace is described in GND and VAD CHARTS A10C by ARIES.
+
+### Restricted areas
+There are several restricted airspace areas. These areas will be described in the SPINS. Follow procedures in the SPINS on how to use and request these airspaces.
+
+### Mandatory files for the range
+In order to make sure you will have the targets outlined in the range, a ll pilots need to have the most recent versions of the required mods and files. All required mods, files and skins are obtainable via an OVGME repository. Please download OVGME-link and refer to the instructions-link how to obtain the files required
+
+# Communications
+
+## Frequencies
+Frequencies are given a name and a number to make change of frequencies easier. See 132nd Virtual Wing website, under Documents, 132nd Operational Frequencies, for the valid names and frequencies in use.
+
+## Airfield frequencies
+Airfield frequencies are ingame frequency + .100MHZ/.200MHZ. A airfield having ingame frequency 123.000 MHZ will have GROUND UR frequency 123.100 MHZ. and TOWER UR frequency 123.200 MHZ. If an approach frequency is used, it will be stated. In the TBLISI area, APPROACH uses frequency 127.200 for all operations within Tblisi TMA (Tblisi Terminal Maneuver Area).
+
+## Other frequencies
+All other frequencies not listed in the 132nd Operational Frequencies list are free to use at the discretion of any participating squadron participating squadrons.
+
+## Frequencies allocation
 Each flight will be given 2 frequencies (UHF, VHF AM or VHF FM) for use during a flight.
-```
-```
-Guard frequency. Guard frequency for all FW operations will be 243.000 MHZ. When calling
-on Guard frequency, make sure to state that you are calling on Guard so other pilots know you
-are transmitting on Guard and not their UHF frequency. All FW aircraft are required to listen to
-Guard at all times when airborne.
-```
-### Combat Search And Rescue
 
+## Guard frequency
+Guard frequency for all FW operations will be 243.000 MHZ. When calling on Guard frequency, make sure to state that you are calling on Guard so other pilots know you are transmitting on Guard and not their UHF frequency. All FW aircraft are required to listen to Guard at all times when airborne. 
+
+## Combat Search And Rescue
 In the 132nd Virtual Wing, the Mi-8 is used as a CSAR plattform that can pick-up downed pilots.
 The procedure to be able to be picked up is explained here:
 
-WHAT TO DO WHEN EJECTED
+# WHAT TO DO WHEN EJECTED
+ 1. Initial call will be on UHF GUARD (243.000). This can be a mayday call from the pilot in trouble or a call by another flight member.
+ 2. The flight lead is responsible for passing on as much details about their downed pilot's position to AWACS.
+ 3. Downed pilot can also communicate with AWACS (see below)
+ 4. AWACS will coordinate the CSAR mission on the CSAR net, or any NET as directed per AWACS
 
+If & when the rescue helicopter approached the downed pilots location, the downed pilot (Skinny) will communicate with the rescue helicopter for talk-on and terminal guidance.
 
-```
-132nd Virtual Wing, 2013:
-```
-- Initial call will be on UHF GUARD (243.000). This can be a mayday call from the pilot in trouble
-or a call by another flight member.
-- The flight lead is responsible for passing on as much details about their downed pilot's position to
-AWACS.
-- Downed pilot can also communicate with AWACS (see below)
-- AWACS will coordinate the CSAR mission on the CSAR net, or any NET as directed per AWACS
+## GETTING IN
 
-If & when the rescue helicopter approached the downed pilots location, the downed pilot (Skinny)
-will communicate with the rescue helicopter for talk-on and terminal guidance.
-
-##### GETTING IN
-
-You can walk around with your pilot using your joystick and rudder axes. The movement is not
-visible for other players in the current DCS version. If the RESCUE BIRD lands, walk into it where
-the doors are open. You will now be inside (with your head sticking out). Make sure the Mi-8 pilot
-can close the doors. DONT MOVE WHILE INSIDE (as there is a risk of you falling out). Note that
-the Mi-8 pilot is not able to see you if you have moved from your position, and is 100% reliant on
-your talk-on.
+You can walk around with your pilot using your joystick and rudder axes. The movement is not visible for other players in the current DCS version. If the RESCUE BIRD lands, walk into it where the doors are open. You will now be inside (with your head sticking out). Make sure the Mi-8 pilot can close the doors. DONT MOVE WHILE INSIDE (as there is a risk of you falling out). Note that the Mi-8 pilot is not able to see you if you have moved from your position, and is 100% reliant on your talk-on.
 
 EXAMPLE ( Watch from 10:01 onwards)
 https://youtu.be/mrxCmf_FLos?t=
 
 SPINS will contain more detailed CSAR information
 
-### Airfield operations
+# Airfield operations
 
-```
-All movement on the airfield will be according to Aerodrome charts (GND charts) by ARIES.
-```
-```
-Airspace Control Zone. All movement within an airfields Airspace Control Zone shall be
-broadcasted on the Airfields UR frequency. Airspace Control Zone is shown in the Visual
-Approach and Departure Charts (VAD Charts A-10).
-```
-```
-ATC. When possible there will be a human ATC / AWACS operator supporting the mission.
-When there won't be a human ATC, all calls on the airport should still be transmitted blindly, so
-that other people can act accordingly when they know your intentions. In this scenario you
-inform other pilots of your operations rather than ask for clearances.
-```
-### ATC procedures
 
-```
-ATC Ope rations is one of the strong point s of the 132nd, and relative ly unique in the DCS
-community. Please refer to the document 132-TTP-5-ATC and Airbase Operations, found in the
-Downl oa ds s ection of t he 132nd for ums.
-```
-#### Lightpolicy on airports under 176th Virtual Air Control Squadron Control:
+**All movement on the airfield will be according to Aerodrome charts (GND charts) by ARIES.**
 
-```
-Lights FW – Startup/taxi/departure:
-```
 
-```
-132nd Virtual Wing, 2013:
-```
-```
-Startup. Position lights: FLASH, Taxi light: OFF, Anti Collision: OFF
-```
-```
-Taxi. Position lights: STEADY, Taxi light: TAXI, Anti Collision: OFF
-```
-```
-Departure. Position lights: STEADY, Taxi light: LANDING, Anti Collision: ON
-```
-Lights FW – Approach/landing/taxi
+## Airspace Control Zone
+All movement within an airfields Airspace Control Zone shall be broadcasted on the Airfields UR frequency. Airspace Control Zone is shown in the Visual Approach and Departure Charts (VAD Charts A-10).
 
-```
-Approach. Position lights: STEADY, Taxi light: LANDING, Anti Collision: ON
-```
-```
-Taxi. Position lights: STEADY, Taxi Light: TAXI, Anti Collision: OFF.
-```
-```
-Shutdown. Position lights: FLASH, Taxi light: OFF. Anti Collision OFF.
-```
-### Appendix 1 Explanation of ATO signal view
+## ATC
+When possible there will be a human ATC / AWACS operator supporting the mission. When there won't be a human ATC, all calls on the airport should still be transmitted blindly, so that other people can act accordingly when they know your intentions. In this scenario you inform other pilots of your operations rather than ask for clearances.
+
+## ATC procedures
+ATC Operations is one of the strong point s of the 132nd, and relative ly unique in the DCS community. Please refer to the document 132-TTP-5-ATC and Airbase Operations, found in the Downloads section of the 132nd forums.
+
+## Lights policy on airports under 176th Virtual Air Control Squadron Control
+
+
+### Lights FW – Startup/taxi/departure
+
+ - Startup:
+  - Position lights: FLASH
+  - Taxi light: OFF
+  - Anti Collision: OFF
+
+ - Taxi:
+  - Position lights: STEADY
+  - Taxi light: TAXI
+  - Anti Collision: OFF
+
+ - Departure:
+  - Position lights: STEADY
+  - Taxi light: LANDING
+  - Anti Collision: ON
+
+### Lights FW – Approach/landing/taxi
+
+
+ - Approach:
+  - Position lights: STEADY
+  - Taxi light: LANDING
+  - Anti Collision: ON
+
+ - Taxi:
+   - Position lights: STEADY
+   - Taxi Light: TAXI
+   - Anti Collision: OFF.
+
+ - Shutdown:
+   - Position lights: FLASH
+   - Taxi light: OFF
+   - Anti Collision OFF.
+
+# Appendix 1 Explanation of ATO signal view
 
 ```
 VTASK/Tasked Unit ID/Mission number/Briefing time (Real-world time)//
