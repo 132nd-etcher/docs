@@ -175,38 +175,38 @@ ATC Operations is one of the strong point s of the 132nd, and relative ly unique
 
 ### Lights FW – Startup/taxi/departure
 
-    * Startup:
-        - Position lights: FLASH
-        - Taxi light: OFF
-        - Anti Collision: OFF
+   * Startup:
+       - Position lights: FLASH
+       - Taxi light: OFF
+       - Anti Collision: OFF
 
-    * Taxi:
-        - Position lights: STEADY
-        - Taxi light: TAXI
-        - Anti Collision: OFF
+   * Taxi:
+       - Position lights: STEADY
+       - Taxi light: TAXI
+       - Anti Collision: OFF
 
-    * Departure:
-        - Position lights: STEADY
-        - Taxi light: LANDING
-        - Anti Collision: ON
+   * Departure:
+       - Position lights: STEADY
+       - Taxi light: LANDING
+       - Anti Collision: ON
 
 ### Lights FW – Approach/landing/taxi
 
 
-    * Approach:
-        - Position lights: STEADY
-        - Taxi light: LANDING
-        - Anti Collision: ON
+   * Approach:
+       - Position lights: STEADY
+       - Taxi light: LANDING
+       - Anti Collision: ON
 
-    * Taxi:
-        - Position lights: STEADY
-        - Taxi Light: TAXI
-        - Anti Collision: OFF.
+   * Taxi:
+       - Position lights: STEADY
+       - Taxi Light: TAXI
+       - Anti Collision: OFF.
 
-    * Shutdown:
-        - Position lights: FLASH
-        - Taxi light: OFF
-        - Anti Collision OFF.
+   * Shutdown:
+       - Position lights: FLASH
+       - Taxi light: OFF
+       - Anti Collision OFF.
 
 # Appendix 1 Explanation of ATO signal view
 
