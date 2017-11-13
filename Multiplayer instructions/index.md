@@ -5,21 +5,21 @@ author:
  - Entropy
 author-meta: Neck
 applies:
- - EXTERNAL ORGANIZATIONS
+ EXTERNAL ORGANIZATIONS
 status: in writing
 title_pictures: //all_logos
 subtitle:
 type: Operating Instruction
 version: 1.6
 published_date: 28/09
-responsible: etcher
+responsible: Neck
 summary_of_changes:
- - Version 1.1: Deleted TARS, inserted ARIES
- - Version1.2: Added CSAR information, Added ATC procedures
- - Version 1.3: Added pictures for the steps in sign-up, flightplan and after action review
- - Version 1.4: Deleted ARIES, inserted UniversRadio (UR). Minor corrections
- - Version 1.5: Included OVGME repository for required files
- - Version 1. 6 : Remove Squadron Logos, refer to ATC Document
+ Version 1.1: Deleted TARS, inserted ARIES
+ Version1.2: Added CSAR information, Added ATC procedures
+ Version 1.3: Added pictures for the steps in sign-up, flightplan and after action review
+ Version 1.4: Deleted ARIES, inserted UniversRadio (UR). Minor corrections
+ Version 1.5: Included OVGME repository for required files
+ Version 1.6 : Remove Squadron Logos, refer to ATC Document
 ---
 
 # Introduction
