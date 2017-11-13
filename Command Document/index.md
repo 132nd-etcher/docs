@@ -1,225 +1,114 @@
-# MULTIPLAYER INSTRUCTIONS
+---
+title: "MULTIPLAYER INSTRUCTIONS"
+author:
+ - Neck
+ - Entropy
+author-meta: Neck
+applies:
+ - EXTERNAL ORGANIZATIONS
+status: in writing
+title_pictures: //all_logos
+subtitle:
+type: Operating Instruction
+version: 1.6
+published_date: 28/09
+responsible: etcher
+summary_of_changes:
+ - Version 1.1: Deleted TARS, inserted ARIES
+ - Version1.2: Added CSAR information, Added ATC procedures
+ - Version 1.3: Added pictures for the steps in sign-up, flightplan and after action review
+ - Version 1.4: Deleted ARIES, inserted UniversRadio (UR). Minor corrections
+ - Version 1.5: Included OVGME repository for required files
+ - Version 1. 6 : Remove Squadron Logos, refer to ATC Document
+---
 
-### EXTERNAL ORGANIZATIONS
+# Introduction
 
-### Operating Instruction
+## Scope
+These Multiplayer Instructions gives information to external organizations with regards to 132nd Virtual Wing events. NOTE: These Multiplayer Instructions will not replace each participating squadron own SOP's but will make sure that all participating pilots have a common understanding on how to operate during 132nd Virtual Wing hosted events.
 
-### 132nd Virtual Wing
+## Deviations
+Deviations from these procedures require specific approval from participating squadrons/organizations and should be discussed in the 132nd Virtual Wing forum.
 
-```
-http://www.132virtualwing.org
-```
-```
-132nd Virtual Wing, 2013:
-This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
-```
 
-```
-132nd Virtual Wing, 2013:
-```
-## MULTIPLAYER INSTRUCTIONS
-
-```
-APPLIES TO: EXTERNAL ORGANIZATIONS
-TYPE: Operating Instruction
-VERSION: Version 1. 6
-PUBLISHED DATE: 28 .09.
-DOCUMENT RESPONSIBLE: Neck, Entropy
-REFERENCE:
-SUMMARY OF CHANGES: Version 1.1: Deleted TARS, inserted ARIES
-Version1.2: Added CSAR information, Added ATC procedures
-Version 1.3: Added pictures for the steps in sign-up, flightplan and after
-action review
-Version 1.4: Deleted ARIES, inserted UniversRadio (UR). Minor corrections
-Version 1.5: Included OVGME repository for required files
-Version 1. 6 : Remove Squadron Logos, refer to ATC Document
-```
-
-```
-132nd Virtual Wing, 2013:
-```
-### Introduction
-
-```
-Scope. These Multiplayer Instructions gives information to external organizations with regards to
-132nd Virtual Wing events. NOTE: These Multiplayer Instructions will not replace each
-participating squadron own SOP's but will make sure that all participating pilots have a common
-understanding on how to operate during 132nd Virtual Wing hosted events
-```
-```
-Deviations. Deviations from these procedures require specific approval from participating
-squadrons/organizations and should be discussed in the 132nd Virtual Wing forum.
-```
-```
-Recommended changes. Recommendations for changes to these instructions should be addressed
+## Recommended changes
+Recommendations for changes to these instructions should be addressed
 at the 132nd Virtual Wing forums.
-```
-```
-Governing documents: For all units flying in 132nd Virtual Wing events, everyone must adhere to
+
+## Governing documents
+For all units flying in 132nd Virtual Wing events, everyone must adhere to
 the following documents:
-```
+
 - SPINS: Special Instructions
 
-### Required Mods, Files and Skins
+## Required Mods, Files and Skins
 
-```
-Mods and Skins. All required mods, files and skins are obtainable via an OVGME repository.
+### Mods and Skins
+All required mods, files and skins are obtainable via an OVGME repository.
 Please download OVGME-link and refer to the instructions-link how to obtain the files required.
-```
-```
-Ground and Airport Charts. For all ATC operations, it is required pilots have airport charts
-including taxiway designations and parking positions available. Maps are available here-link.
-```
-```
-Optional Google Earth Link. Optional for Mission Planning-link.
-```
-### Real world information
 
-```
-Settings. 132nd Virtual Wing combat events will be flown as realistic missions, with random
-failures on, external views off. In training events, externals views and F10 map are accessible.
-```
-```
-UniversRadio. All missions during 132nd Virtual Wing hosted events will be flown using
-UniversRadio (UR). It is highly recommended that each player test their UR plugin prior to the
-mission.
-```
-```
-Respawn. Pilots that are killed during a mission are not allowed to respawn. Pilots that eject, and
-are picked up by friendly forces (helicopter landing close to their position) are allowed to
-respawn. Killed pilots are however allowed to play on the next mission. Exception to this is
-training missions, where pilots are allowed to respawn. If you are experiencing technical issues it
-is also allowed to respawn.
-```
+### Ground and Airport Charts
+For all ATC operations, it is required pilots have airport charts including taxiway designations and parking positions available. Maps are available here-link.
 
-```
-132nd Virtual Wing, 2013:
-```
-```
-Mission time. Most missions in 132nd Virtual Wing hosted events will be started on the
-flightlead's discretion based on their own preparation and start up time. Take-off times and latest
-landing times will be given and all flights must adhere to these.
-```
-```
-Timezone. Timezone for all event timings will be UTC/GMT timezone (ZULU time)
-```
-### Mission flow.
+### Optional Google Earth Link
+Optional for Mission Planning-link.
 
-```
-Signup. Signup on missions is highly recommended. This is the only chance to guarantee
-that an aircraft will be ready for you during the mission. Signups are mandatory for flying
-combat missions. Signup for training missions is highly recommended. Sign up as early as
-possible in order to make it easier for an event host/mission commander/mission designer to
-plan for the event/mission
-```
-```
-First step is to click on the event tab on the website
-```
-```
-Second step is to select your preferred event:
-```
-```
-Third step is to sign up at the desired flight: Scroll down until you see the pilot roster, and
-select your preferred flight. Sign up for a specific flight when able, as it will ease the
-workload of the host when pilots select their own flights. Also, by if selecting the flight, you
-are accepting both flightlead and wingman position. If you require a specific position, sign up
-for that position, or state it in the comms-chatter.
-```
+# Real world information
 
-```
-132nd Virtual Wing, 2013:
-```
-Fourth step is to review your flight tasking information on the ATO:
+## Settings
+132nd Virtual Wing combat events will be flown as realistic missions, with random failures on, external views off. In training events, externals views and F10 map are accessible.
 
-Once you are looking at the ATO, find your flight(Under documents on the 132nd website
-you will find a link to ATO Manual, which describes the ATO in more detail for an
-explanation what everything means. Here you will find all necessary information for your
-flight):
+## UniversRadio
+All missions during 132nd Virtual Wing hosted events will be flown using UniversRadio (UR). It is highly recommended that each player test their UR plugin prior to the mission.
+
+## Respawn
+Pilots that are killed during a mission are not allowed to respawn. Pilots that eject, and are picked up by friendly forces (helicopter landing close to their position) are allowed to respawn. Killed pilots are however allowed to play on the next mission. Exception to this is training missions, where pilots are allowed to respawn. If you are experiencing technical issues it is also allowed to respawn.
+
+## Mission time
+Most missions in 132nd Virtual Wing hosted events will be started on the flightlead's discretion based on their own preparation and start up time. Take-off times and latest landing times will be given and all flights must adhere to these. 
+
+## Timezone
+Timezone for all event timings will be UTC/GMT timezone (ZULU time)
+
+# Mission flow.
 
 
-```
-132nd Virtual Wing, 2013:
-```
-Fifth step is to fill out a flightplan. Click on your flights mission number to enter your flights
+## Signup
+Signup on missions is highly recommended. This is the only chance to guarantee that an aircraft will be ready for you during the mission. Signups are mandatory for flying combat missions. Signup for training missions is highly recommended. Sign up as early as possible in order to make it easier for an event host/mission commander/mission designer to plan for the event/mission.
+
+ 1. First step is to click on the event tab on the website
+
+ 2. Second step is to select your preferred event:
+
+ 3. Third step is to sign up at the desired flight: Scroll down until you see the pilot roster, and select your preferred flight. Sign up for a specific flight when able, as it will ease the workload of the host when pilots select their own flights. Also, by if selecting the flight, you are accepting both flightlead and wingman position. If you require a specific position, sign up for that position, or state it in the comms-chatter. 
+
+
+  4. Fourth step is to review your flight tasking information on the ATO; once you are looking at the ATO, find your flight(Under documents on the 132nd website you will find a link to ATO Manual, which describes the ATO in more detail for an explanation what everything means. Here you will find all necessary information for your flight):
+
+ 5. Fifth step is to fill out a flightplan. Click on your flights mission number to enter your flights
 planning page:
 
-Inside your flights planning page, fill out the desired flightplan information to aid the
-controllers support you in your mission: (Fill out your enroute intentions, and your estimated
-landing time.
+ 6. Inside your flights planning page, fill out the desired flightplan information to aid the controllers support you in your mission: (Fill out your enroute intentions, and your estimated landing time.
+    Example:
+    Inside your flights planning page, there is also a comms chatter, for internal planning within the flight. NOTE: In order to keep main comschatter as easy to overlook, please keep internal coms in the internal flight comschatter.
 
+## Brief
+Prior to server start, all players are encouraged to perform flightbriefs prior to the mission. Flightlead will be in charge of conducting a flightbrief, and Package commanders will be responsible to conduct a package brief. If conducting training missions, flightbriefs may be skipped, or can be taken in pit.
 
-```
-132nd Virtual Wing, 2013:
-```
-Example:
+## Server start
+Server will be unpaused at timing set in event information, normally 60 minutes prior to first scheduled takeoff.
 
-Inside your flights planning page, there is also a comms chatter, for internal planning within
-the flight. NOTE: In order to keep main comschatter as easy to overlook, please keep internal
-coms in the internal flight comschatter.
+## Conduct of mission
+Every flight will conduct their mission according to these Multiplayer instructions, SPINS and internal SOP's/operating instructions.
 
+## After Action Report (AAR)
+After completion of the mission all pilots are highly encouraged to fill out an After Action Report on the event section of the 132nd Virtual Wing website. Once you enter the event page, find the event under previous events, and it shows that AAR is pending in red when you have not filled out the AAR. Find your flight and callsign, and click to enter the After Action Report page of your sortie.  Fill out the information you have (Fill out how long you have been in the pit, your mission outcome, your objectives and if you reached them, on the tactical feedback, give a quick summary of your mission, provide any intelligence information you might have, as this can help other flights later, and also any feedback on own performance, or others. If you have any feedback to mission design you can state that, and for administrative feedback you can add issues with the hosting of the event, rubber banding, lagging, UR/TS/DCS issues, or other administrative aspects of the event).
 
-```
-132nd Virtual Wing, 2013:
-```
-Brief. Prior to server start, all players are encouraged to perform flightbriefs prior to the
-mission. Flightlead will be in charge of conducting a flightbrief, and Package commanders
-will be responsible to conduct a package brief. If conducting training missions, flightbriefs
-may be skipped, or can be taken in pit.
+## Air Tasking Order
 
-Server start. Server will be unpaused at timing set in event information, normally 60 minutes
-prior to first scheduled takeoff.
+132nd Virtual Wing will use an Air Tasking Order to task flights. The ATO is published on the 132nd Virtual Wing website. The ATO can be found under Event, View full ATO. There is also a shortcut to View ATO, if you click into one of the events. See pictures above. After users have signed up on the event page on the 132nd Virtual Wing website, they should check in on the website regularly until mission start. Once signed up, please note the missionnumber on the tasking. Also look at the tasking information, as there might be information there that are needed for your mission. See appendix 1 for explanation of the signal view of taskings. In addition, under documents on the 132nd website you will find a link to ATO Manual, which describes the ATO in more detail.
 
-Conduct of mission. Every flight will conduct their mission according to these Multiplayer
-instructions, SPINS and internal SOP's/operating instructions.
-
-After Action Report (AAR). After completion of the mission all pilots are highly
-encouraged to fill out an After Action Report on the event section of the 132nd Virtual Wing
-website.
-
-Once you enter the event page, find the event under previous events, and it shows that AAR
-is pending in red when you have not filled out the AAR:
-
-
-```
-132nd Virtual Wing, 2013:
-```
-Find your flight and callsign, and click to enter the After Action Report page of your sortie:
-
-Then fill out the information you have (Fill out how long you have been in the pit, your
-mission outcome, your objectives and if you reached them, on the tactical feedback, give a
-quick summary of your mission, provide any intelligence information you might have, as this
-can help other flights later, and also any feedback on own performance, or others. If you have
-any feedback to mission design you can state that, and for administrative feedback you can
-add issues with the hosting of the event, rubber banding, lagging, UR/TS/DCS issues, or
-other administrative aspects of the event):
-
-
-```
-132nd Virtual Wing, 2013:
-```
-### Air Tasking Order
-
-```
-132nd Virtual Wing will use an Air Tasking Order to task flights. The ATO is published on
-the 132nd Virtual Wing website. The ATO can be found under Event, View full ATO. There
-is also a shortcut to View ATO, if you click into one of the events. See pictures above
-```
-```
-After users have signed up on the event page on the 132nd Virtual Wing website, they should
-check in on the website regularly until mission start. Once signed up, please note the mission
-number on the tasking. Also look at the tasking information, as there might be information
-there that are needed for your mission. See appendix 1 for explanation of the signal view of
-```
-
-```
-132nd Virtual Wing, 2013:
-```
-```
-taskings. In addition, under documents on the 132nd website you will find a link to ATO
-Manual, which describes the ATO in more detail.
-```
-### Airspace information
-
+## Airspace information
 ```
 Airport airspace. For all airspace users in 132nd Virtual Wing hosted events, airport airspace is
 described in GND and VAD CHARTS A10C by ARIES.
