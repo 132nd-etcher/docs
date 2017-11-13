@@ -150,9 +150,9 @@ If & when the rescue helicopter approached the downed pilots location, the downe
 
 ## Getting inside the rescue chopper
 
-You can walk around with your pilot using your joystick and rudder axes. The movement is not visible for other players in the current DCS version. If the RESCUE BIRD lands, walk into it where the doors are open. You will now be inside (with your head sticking out). Make sure the Mi-8 pilot can close the doors. DONT MOVE WHILE INSIDE (as there is a risk of you falling out). Note that the Mi-8 pilot is not able to see you if you have moved from your position, and is 100% reliant on your talk-on.
+You can walk around with your pilot using your joystick and rudder axes. The movement is not visible for other players in the current DCS version. If the RESCUE BIRD lands, walk into it where the doors are open. You will now be inside (with your head sticking out). Make sure the Mi-8 pilot can close the doors. **Do not move while inside** (as there is a risk of you falling out). Note that the Mi-8 pilot is not able to see you if you have moved from your position, and is 100% reliant on your talk-on.
 
-Example video ( Watch from 10:01 onwards): https://youtu.be/mrxCmf_FLos?t=
+Example video ( Watch from 10:01 onwards): https://youtu.be/mrxCmf_FLos?t=10:01s
 
 SPINS will contain more detailed CSAR information.
 
