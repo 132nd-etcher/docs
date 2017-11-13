@@ -140,7 +140,7 @@ Guard frequency for all FW operations will be 243.000 MHZ. When calling on Guard
 In the 132nd Virtual Wing, the Mi-8 is used as a CSAR plattform that can pick-up downed pilots.
 The procedure to be able to be picked up is explained here:
 
-# WHAT TO DO WHEN EJECTED
+# What to do when ejected
  1. Initial call will be on UHF GUARD (243.000). This can be a mayday call from the pilot in trouble or a call by another flight member.
  2. The flight lead is responsible for passing on as much details about their downed pilot's position to AWACS.
  3. Downed pilot can also communicate with AWACS (see below)
@@ -148,19 +148,17 @@ The procedure to be able to be picked up is explained here:
 
 If & when the rescue helicopter approached the downed pilots location, the downed pilot (Skinny) will communicate with the rescue helicopter for talk-on and terminal guidance.
 
-## GETTING IN
+## Getting inside the rescue chopper
 
 You can walk around with your pilot using your joystick and rudder axes. The movement is not visible for other players in the current DCS version. If the RESCUE BIRD lands, walk into it where the doors are open. You will now be inside (with your head sticking out). Make sure the Mi-8 pilot can close the doors. DONT MOVE WHILE INSIDE (as there is a risk of you falling out). Note that the Mi-8 pilot is not able to see you if you have moved from your position, and is 100% reliant on your talk-on.
 
-EXAMPLE ( Watch from 10:01 onwards)
-https://youtu.be/mrxCmf_FLos?t=
+Example video ( Watch from 10:01 onwards): https://youtu.be/mrxCmf_FLos?t=
 
-SPINS will contain more detailed CSAR information
+SPINS will contain more detailed CSAR information.
 
 # Airfield operations
 
-
-**All movement on the airfield will be according to Aerodrome charts (GND charts) by ARIES.**
+`All movement on the airfield will be according to Aerodrome charts (GND charts) by ARIES.`
 
 
 ## Airspace Control Zone
