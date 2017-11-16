@@ -11,12 +11,12 @@ applies:
 title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Installation
 type: Operating Instructions
-version: 1
+version: 1.1
 published_date: 22/09/2017
 responsible: //etcher
 audience: pilots
 summary_of_changes:
- - nil
+ - 171116: updated link to 132nd repository (removed extra spaces for copy-paste)
 ---
 
 # Introduction to OvGME
@@ -151,9 +151,7 @@ The following dialog opens:
 
 Copy paste the following line in the "URL" field, then click "Add":
 
-```
-http://132virtualwing.org/files/ovgme/132nd
-```
+> http://132virtualwing.org/files/ovgme/132nd
 
 ![Add the //wing repository](image14.png)
 
