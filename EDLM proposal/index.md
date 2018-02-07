@@ -65,22 +65,22 @@ My first goal is to get rid of this ambiguity, and have one and only one way to 
 
 This would also have the beneficial side effect of freeing editors from worrying about formatting their content while they are writing it, giving them more brain power for the actual content creation
 
-Decoupling content and format also means that any older document, even one that hasn't been touched in years, will be automatically updated to the latest format/layout whenever the format/layout is updated, since their content has not changed.
+Decoupling content and format also means that any older document, even one that hasn't been touched in years, will be automatically updated to the latest format/layout whenever the format/layout is updated, since their content has not changed (more on this later).
 
 #### Specification
 
 Once the content has been created by the editors, my goal is to provide a system that will take that "raw" content, and format it, consistently, into different formats that will later be published. A choice format is of course PDF, but we can also convert to Microsoft Word format, HTML (create a website automatically for our documentation), EPUB (books that can be read easily on readers/mobile), you-name-it.
 
-Here is a non-exhaustive list of the *output* format supported: (more *input* formats are available still)
+Here is a non-exhaustive list of the *output* format supported by my proposed implementation as of today: (more *input* formats are available still)
 
-> Pandoc can write plain text, Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, OPML, DocBook, OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup, DokuWiki markup, ZimWiki markup, Haddock markup, EPUB (v2 or v3), FictionBook2, Textile, groff man pages, Emacs Org mode, AsciiDoc, InDesign ICML, TEI Simple, and Slidy, Slideous, DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF output on systems where LaTeX, ConTeXt, or wkhtmltopdf is installed.
+> Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, OPML, DocBook, OpenDocument, ODT, Word docx, GNU Texinfo, MediaWiki markup, DokuWiki markup, ZimWiki markup, Haddock markup, EPUB (v2 or v3), FictionBook2, Textile, groff man pages, Emacs Org mode, AsciiDoc, InDesign ICML, TEI Simple, and Slidy, Slideous, DZSlides, reveal.js or S5 HTML slide shows. It can also produce PDF output on systems where LaTeX, ConTeXt, or wkhtmltopdf is installed.
 
 The output should be:
 
 * Consistent across builds: the same content must **always** yield the same result, even on different computers, operating systems, or software versions
 * Uniformly formatted: **all** the documents in the library should have the same general layout, giving all documentation published by the //wing a visual identity of their own
 * Retroactively managed: all documents that have been published in the past should be **updated without human intervention**. If a logo changes, if we decide to change the title page, or the space after paragraphs, those changes should be **automatically propagated across the entire library**
-* Adapted to our needs: the documentation should not look "generic" or bland; each document should bear ## 
+* Adapted to our needs: the documentation should not look "generic" or bland; each document should bear a distinct *132nd touch*, and that *touch* should be found on **every** document produced by the //wing. 
 
 ## Pros and cons
 
@@ -91,7 +91,7 @@ This section objectively (as much as I could) describes the pros and cons of the
 Allow me to start with the cons, and provide, for each of them, a way to mitigate them.
 
 #### No WYSIWYG ("What you see is what you get")
-Markdown is pure text, therefore an editor who is busy writing documentation does not see the result appear as he types. Font does not resize for headings, pictures do not appear, tables do not build, etc.
+In my current proposition, I plan to use the Markdown syntax to write the actual content. Markdown is (very) simple; it's pretty much pure text, and very similar to the syntax we're using for the forum. Since Markdown is pure text, an editor who is busy writing documentation does not see the result appear as he types. Font does not resize for headings, pictures do not appear, tables do not build, etc.
 
 ##### *Mitigation*
 
@@ -103,7 +103,7 @@ Markdown is pure text, therefore an editor who is busy writing documentation doe
 
 ##### *Mitigation*
 
-* The rendering, formatting and layout is done by a professional (although free) typesetting application that has been in existence since 1985: [Latex](https://en.wikipedia.org/wiki/LaTeX). 32 years of development, testing and improvements have made it quite robust. It has been in use for decades by the scientific and teaching community all around the world for papers, essays, reports, etc. Even if we might disagree with some of the minor formatting choices it makes when it comes to typesetting the document (I sometimes do myself, with the placement of pictures for example), we can at least be sure that the standard it follows is accepted world-wide, and is the result of decades of professional work.
+* In my current proposition, the rendering, formatting and layout is done by a professional (although free) typesetting application that has been in existence since 1985: [Latex](https://en.wikipedia.org/wiki/LaTeX). 32 years of development, testing and improvements have made it quite robust. It has been in use for decades by the scientific and teaching community all around the world for papers, essays, reports, etc. Even if we might disagree with some of the minor formatting choices it makes when it comes to typesetting the document (I sometimes do myself, with the placement of pictures for example), we can at least be sure that the standard it follows is accepted world-wide, and is the result of decades of professional work.
 * The layout/format will be 100% identical for all documentation published by the //wing, branding our documents with a unique "personality", and giving an overall "neat" picture of the Wing to the external world.
 * In case it becomes necessary, when part of the output does not fit a specific need of ours, we can take advantage of the maturity of the tools and customize every little detail to our needs (this would of course be my job, unless someone else feels like diving in the gory implementation details =)).
 
@@ -117,7 +117,7 @@ To give an example, if I wanted to include a file named `picture.png` in a docum
 * Declaring pictures by name offers a finer grained controls on their size, and allow for dynamic resizing of pictures from all origins: one could, instead of providing a picture file in the `media` folder and give its name, include an arbitrary URL, for example: `[My cool picture](https://www.all-about-atc.com/the_pattern.png){width:8cm}`. The system is very flexible.
 * Updating pictures can be done without even opening the source. A file named `picture.png` will be included in the final document, whatever that file contains. Updating batch of pictures is thus very easy, and does not require updating them one by one in every Word document (imagine how easy it would be to be able to run batch updates on the pictures' library ...).
 * Pictures are automatically indexed and referenced in the final document, and an automatic "Table of figures" is automatically generated, with hyperlinks to the pictures within the text.
-* Pictures (and other media) are shared across document (if we want to). There is a `media` folder per document, containing pictures that are relevant to that specific document only. Then there is a `media` folder for the //696 (for example), which contains all media relevant to the //696 and is accessible to all documents of the //696. And, finally, there is a "root" `media` folder, that contains pictures shared across *all* documents (for example, the squadrons logos). If a logo picture is updated (for any reason, this is just an example), updating the picture file in the root folder would propagate to *all* the documents of the //wing, updating that picture in each one of them.
+* Pictures (and other media) are shared across document (if we want to). There is a `media` folder per document, containing pictures that are relevant to that specific document only. Then there is a `media` folder for the //696 (for example), which contains all media relevant to the //696 and is accessible to all documents of the //696. And, finally, there is a "root" `media` folder, that contains pictures shared across *all* documents (for example, the squadrons logos). If a logo picture is updated (for any reason, this is just an example), updating the picture file in the root folder would propagate to *all* the documents of the //wing, updating that picture in each one of them **in a completely automated way**.
 
 
 #### New technologies
@@ -128,16 +128,16 @@ For this project, I plan on using two pieces of software for the front-end (the 
 
 ##### *Mitigation*
 
-* While switching to new software always implies somewhat of a **learning curve**, I used the following criteria to select them:
- * Free (as in *no dinero*)
- * Open source
- * Mature
- * Widely used across the world
- * Well documented
- * Will be supported for years to come
- * Easy enough for the intended usage
- * Has a luxuriant and flourishing ecosystem of tools around them
- * Resilient
+While switching to new software always implies somewhat of a **learning curve**, I used the following criteria to select them:
+  * Free (as in *no dinero*)
+  * Open source
+  * Mature
+  * Widely used across the world
+  * Well documented
+  * Will be supported for years to come
+  * Easy enough for the intended usage
+  * Has a luxuriant and flourishing ecosystem of tools around them
+  * Resilient
 
 The initial learning curve should be very much dampened by the *huge* amount of documentation around both *Markdown*, and *Git/Github*. Tutorials and documentation is all over the web, and, more importantly, **mistakes are free**. Even if someone completely nukes all our documentation (and the chances for that to happen are almost none) while toying around trying to learn, it can be restored in seconds.
 
@@ -151,7 +151,7 @@ Before I can present you with examples, I need to explain a few basics about the
 
 Every document lives in its own folder, and is composed of three parts:
 
-1. The document itself, `index.md`; this file can contain text, pictures, and include other Markdown files in the same folder (that's useful to split the documents into different parts, and assemble them later, but totally optionla of course).
+1. The document itself, `index.md`; this file can contain text, pictures, and include other Markdown files in the same folder (that's useful to split the documents into different parts, and assemble them later, but totally optional).
 2. A `settings.yml` file; this file contains information about the document. It is optional too, but can be used to change some settings. For example, you can define aliases, stating that all "//jf" in the document should be replaced by "J-TAC/FAC(A)" (it just saves a lot of typing and help reduce typos).
 3. A `media` folder; his folder contains resources for the document, mainly pictures.
 
@@ -159,18 +159,19 @@ In addition to those three parts, there are also the global settings and the glo
 
 Example:
 
-* media/
- * picture1.png
- * picture2.png
-* settings.yml (global)
+* media/  *<-- global "media" folder for the whole Wing*
+    * logo132nd.png
+    * logo617th.png
+    * ...
+* settings.yml *<-- global "settings" for all documents*
 * SOME_DOCUMENT
- * media/
- * picture3.png
- * picture4.png
- * settings.yml
- * index.md
- * part1.md
- * part2.md
+    * media/ *<-- "media" folder specific to this document*
+        * picture1.png
+        * picture2.png
+  * settings.yml *<-- settings specific to this document*
+  * index.md *<-- main file*
+  * part1.md
+  * part2.md
 
 This architecture allows defining settings and provide pictures at the global level, and overrides them at the document level if desired.
 
@@ -193,7 +194,7 @@ Automation also gives us a lot of flexibility. Let us say we decide to change th
 * First scenario, we're using Word. We need to open each document, change the style to use the new font, and hope that all the other styles used in the document depend on the main style. We visually check for that, and hope we won't miss a line. This will take a little bit of time (pun intended) and is very error-prone.
 * Second scenario, we're using Markdown. We pull the repo (one click), change one line (10 seconds), then push the repo back (one click). This change is absolute over the entire document library, every single character is guaranteed to have been updated.
 
-This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to "//wing" in the Markdown text file. Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist).
+This stands not only for the font, but for pretty much everything else too. Another use case: the application I'm writing lets us define "aliases" for recurrent terms. For example, the words "132^nd^ Virtual Wing" can be abbreviated to `//wing` in the Markdown text file (which is what I'm actually using in this very document). Those aliases can be defined globally and for each document in a settings files. If we ever decide to become the 131^st^ Virtual Wing, all it takes to update *all* the documents in the library is to change the alias *once* in the root settings file (this is a silly example of course, but you get the gist). Another advantage is that we won't have a mix of //wing, 132nd Virtual Wing, 132nd vWing, 132 Wing, 132nd, etc...
 
 The same goes for pictures: imagine we decide to include the GRG made by Looney (respect, sir) into the //617 TRP. We drop the file "dush_grg.png" into a "media" folder next to our markdown, and simply type `[Dusheti GRG](dush_grg.png){width: 6cm}` in our Markdown text (the part between `[]` is the "caption" of the picture). Note as well that the `{width: 6cm}` is totally optional and included here only because I'm a nerd =) Now every time Looney updates his GRG, all there is to do is drop the new file in place of the old one, and commit the change. No worries about resizing, aligning, formatting, publishing. Pull, change, commit, push, and grab a coffee; 2 minutes top, coffee included, worry free.
 
@@ -219,14 +220,14 @@ All markdown documents are transformed into PDF with a master template. This mea
 Basically, what happens during the conversion is:
 
 1. Grab the settings from the global `settings.yml` file
-2. Update those settings with the document `settings.yml' file
- * All settings that were in the global settings are preserved, unless a setting with the same name is declared for the document, in which case the global settings are overwritten
- * All settings present in the document file that are not in the global settings will simply be added
+2. Update those settings with the document `settings.yml` file
+    * All settings that were in the global settings are preserved, unless a setting with the same name is declared for the document, in which case the global settings are overwritten
+    * All settings present in the document file that are not in the global settings will simply be added
 3. Using those settings, pre-process the markdown text files; settings may include:
- * aliases to replace some text in the document with predefined string
- * a new title for the document, different from the folder name; maybe some characters you want in the title aren't allowed as a folder name on Windows? **Note**: at the time this proposal were written, those were the only two possible settings; many others will probably come in the future
+    * aliases to replace some text in the document with predefined string
+    * a new title for the document, different from the folder name; maybe some characters you want in the title aren't allowed as a folder name on Windows? **Note**: at the time this proposal were written, those were the only two possible settings; many others will probably come in the future
 4. Still using the settings, pre-process the Latex template; this will, for example:
- * compute the path to the media file
+    * compute the path to the media file
 5. Using the resulting template and markdown text, build the final PDF.
 
 [Processing](image2)
@@ -248,6 +249,7 @@ We now have a pre-processed Markdown, and a pre-processed template. We can use P
 All documents live in one repository, that is itself hosted on Github.
 
 The advantages are plenty:
+
 * Automated recording of all changes
 * Automated and constant backup
 * The library is accessible to all; everyone can suggest a change or add content
@@ -367,9 +369,6 @@ Then install the following:
 
 That's it ! Create an account on https://github.com/, start your local Git client, and you're ready to rock !
 
-#### The work flow
-
-
 ## Transition
 
 Transitioning from the current documentation library to EDLM will not be painless, but it should not be painful either, nor take an unreasonable amount of time.
@@ -377,8 +376,8 @@ Transitioning from the current documentation library to EDLM will not be painles
 I'm providing tools to convert from Word/PDF to Markdown, but that process is error-prone. So, far, the issues I've been able to identify are:
 
 * The format
- * Tables
- * Lists
+    * Tables
+    * Lists
 * The pictures (the pictures are correctly extracted from the Word/PDF document, and put in the media folder, but their format and/or positioning might need to be adjusted)
  On big document, like the //617 SOP, this could take a couple of hours. On more simple document, it might take only a few minutes.
 
@@ -404,3 +403,11 @@ The crash course should take about 30 minutes on TS, getting people to install t
 
 The written tutorial would be much of the same, covering the installation of tools, the publishing process and a little syntax related guidelines.
  
+ ## Closing words
+ 
+ Thank you for reading that huge blob of text, I hope I managed to make sense most of the time.
+ 
+ Now that this proposal is out for review within CMD, the next step, in my opinion, could be one of those two:
+ 
+ 1. The proposal is rejected by CMD, in which case the project dies right here.
+ 2. The proposal is accepted by CMD, and is pushed to all IPs for review; I'm suggesting this supplementary review step because a lot of our documentation is actually written by IPs, it would make sense for them to have a say in the matter.
