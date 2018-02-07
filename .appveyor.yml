@@ -37,10 +37,10 @@ init:
   - set PATH=%PYTHON%;%PYTHON%\Scripts;C:\MinGW\msys\1.0\bin;%PATH%
   - "git config --system http.sslcainfo \"C:\\Program Files\\Git\\mingw64\\ssl\\certs\\ca-bundle.crt\""
 
-cache:
-  - C:\Miniconda36-x64\Scripts\ -> .invalidate_av_cache
-  - C:\Miniconda36-x64\conda-meta -> .invalidate_av_cache
-  - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
+# cache:
+#   - C:\Miniconda36-x64\Scripts\ -> .invalidate_av_cache
+#   - C:\Miniconda36-x64\conda-meta -> .invalidate_av_cache
+#   - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
 
 install:
   - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
