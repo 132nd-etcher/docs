@@ -35,7 +35,7 @@ $for(fontfamilies)$
   \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
 $endfor$
 $if(euro)$
-  \newcommand{\euro}{â‚¬}
+  \newcommand{\euro}{€}
 $endif$
 $if(mainfont)$
     \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
@@ -454,17 +454,22 @@ $endif$
 \iftotalfigures\pdfbookmark[section]{List of figures}{lof}\listoffigures\newpage\fi
 \iftotaltables\pdfbookmark[section]{List of tables}{lot}\listoftables\newpage\fi
 
-%$if(lot)$
-%    \pdfbookmark[section]{List of tables}{lot}
-%    \listoftables
-%    \newpage
-%$endif$
-%
-%$if(lof)$
-%    \pdfbookmark[section]{List of figures}{lof}
-%    \listoffigures
-%    \newpage
-%$endif$
+$if(refs)$
+	\pdfbookmark[section]{List of references}{refs}
+	\section*{List of references}
+	\begin{itemize}
+		$for(refs)$ \item $refs$ \\ $endfor$
+	\end{itemize}
+	
+	\newpage
+$endif$
+
+
+% \pdfbookmark[section]{Index}{index}
+% \section*{Index}
+% \printindex
+% \newpage
+
 
 $if(biblatex)$
     \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
@@ -475,6 +480,7 @@ $for(include-after)$
     $include-after$
     \newpage
 $endfor$
+
 \newpage
 \thispagestyle{empty}
 \clearpage
@@ -486,4 +492,5 @@ $endfor$
 \end{center}
 \vfill % equivalent to \vspace{\fill}
 \clearpage
+
 \end{document}
