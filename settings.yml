@@ -9,8 +9,40 @@ aliases:
   //259: 259^th^ POLAR BEARS
   //765: 765^th^ THE DREAD PANTHERS
   //all_logos: "[logo617th.png,logo696th.png,logo176th.png,logo23rd.png,logo259th.png,logo765th.png]"
-
-default_pic_width: "8cm"
+  
+references:
+  //ttp1: "132-TTP-1 CAS Manual, https://www.dropbox.com/s/ee8pwhyta66zwwr/132-TTP-1%20CAS%20Manual%20v1.1.pdf?dl=0"
+  //ttp1a: "132-TTP-1-A CAS Formats, https://www.dropbox.com/s/tkw6cnljkjalozv/132-TTP-1-A%20CAS%20Formats%20version%201.0.pdf?dl=0"
+  //ttp4: "132-TTP-4 Brevity, https://www.dropbox.com/s/lsp4c41r0l8vjs4/132-TTP-4%20Brevity%20v1.1%20.pdf?dl=0"
+  //ttp5: "132-TTP-5-ATC and Airbase operations, https://www.dropbox.com/s/45dreiquxakkgs7/132-TTP-5%20ATC%20and%20Airbase%20operations%20v1.0.pdf?dl=0"
+  //ttp6: "132-TTP-6 SCAR, https://www.dropbox.com/s/fgjn3wgn5aoit5w/132-TTP-6%20SCAR%20v2.0.pdf?dl=0"
+  //ttp7: "132-TTP-7 Flight Lead, https://www.dropbox.com/s/l8fbwvzydh15wdm/132-TTP-7%20Flight%20Lead%20v1.0.pdf?dl=0"
+  //ttp8: "132-TTP-8 Briefing Guide, https://www.dropbox.com/s/5tog1wm25lv4uxy/132-TTP-8%20Briefing%20Guide%20v1.1.pdf?dl=0"
+  //ttp9: "132-TTP-9-Range Control Officer, https://www.dropbox.com/s/bffzxrc5tigo9t8/132-TTP-9-Range%20Control%20Officer%20v1.0.pdf?dl=0"
+  //ttp10: "132-TTP-10-AWACS Procedures, https://www.dropbox.com/s/udeqz9vxqawkiui/132-TTP-10-AWACS%20v2.0.pdf?dl=0"
+  //ttp12: "132-TTP-12 Armed Reconnaissance, https://www.dropbox.com/s/0020j7nv0gaeav6/132-TTP-12%20Armed%20Reconnaissance%20v1.0.pdf?dl=0"
+  //ttp13: "132-TTP-13 Air Interdiction, https://www.dropbox.com/s/b7ppa1vzba778f0/132-TTP-13%20Air%20Interdiction%20v1.0.pdf?dl=0"
+  //sop617: "132-617- SOP, https://www.dropbox.com/s/u9gu9x5hayaht9g/132%20617th%20SOP%202.1.pdf?dl=0"
+  //qr617: "132-617-Quick Reference, https://www.dropbox.com/s/qsbxb2zao9dlpqc/132-617th-%20Quick%20Reference%202.0.pdf?dl=0"
+  //sop696: "696th SOP, https://www.dropbox.com/s/pvz7jcr94c2x83s/132%20696th%20SOP.pdf?dl=0"
+  //sop176: "176th SOP, https://www.dropbox.com/s/k4t3w02g9g29k3t/132-176-SOP%20v1.0.pdf?dl=0"
+  //sop259: "132-259 SOP, https://www.dropbox.com/s/r68pxkvtvgjm5zn/132-259%20SOP%20v1.0.pdf?dl=0"
+  //dp1: "132-DP-1 Air Warfare Doctrine, https://www.dropbox.com/s/wd0ppnsrje63cux/132-DP-1%20132nd%20Air%20Warfare%20Doctrine%20v1.0.pdf?dl=0"
+  //geospins: "Special Instructions(SPINS) Georgian Airspace, https://www.dropbox.com/s/xsp1d5xu8wxv9s2/Special%20Instructions%20%28SPINS%29%20Georgian%20airspace%20v1.2.pdf?dl=0"
+  //multi_instr: "Multiplayer Instructions - External, https://www.dropbox.com/s/58g2cvbmg70529x/132%20Multiplayer%20Instructions%20-%20External%20v1.6.pdf?dl=0"
+  //freqs: "132nd Operational Frequencies, http://132virtualwing.org/index.php/page/freqlist"
+  //ato_manual: "ATO Manual, http://132virtualwing.org/index.php/page/ato_manual"
+  //killbox_overview: "Killbox overview, https://www.dropbox.com/s/nnwrtfoub172q3m/132nd%20Airspace%20kopi.miz?dl=0"
+  //oi1: "132-OI-1 Dusheti Range Order, https://www.dropbox.com/s/8biwpugqbj4n2tv/132-OI-1-DUSHETI%20Range%20Order%20version%201.1.pdf?dl=0"
+  //oi2: "132-OI-2 Marnueli Range Order, https://www.dropbox.com/s/8t9ecaj7l26a7dl/132-OI-2-MARNEULI%20Range%20Order%20version%201.2.pdf?dl=0"
+  //oi3: "132-OI-3 Tianeti Range Order, https://www.dropbox.com/s/uciyhbiobuqul6o/132-OI-3-TIANETI%20Range%20Order%20version%201.1.pdf?dl=0"
+  //oi4: "132-OI-4 Tetra Range Order, https://www.dropbox.com/s/pejdahixkts8z6t/132-OI-4-TETRA%20Range%20Order%20version%201.1.pdf?dl=0"
+  //dep_muk: "Mukhrani departure, https://www.dropbox.com/s/wj36la95tmhn2ua/Mukrhani%202%20departure%20v2.pdf?dl=0"
+  //dep_lag: "Lagas departure, https://www.dropbox.com/s/3zw6gi7dh5gssie/2015-01-25%20LAGAS%202%20Departure.pdf?dl=0"
+  //welcome_letter: "Welcome Letter, https://www.dropbox.com/s/7i46xhm1owfefgc/132Welcome%20Letter_Version%20v1.5.pdf?dl=0"
+  //cmd_doc: "Command Document, https://www.dropbox.com/s/sj50684a3hggm1e/132%20Command%20Document%20version%201.4.pdf?dl=0"
+  //charts: "Ground and Airport Charts, http://www.ariescon.com/DCS_GND_VAD_Charts_v36_030513x.zip"
+  
 
 papersize:
   - a4
