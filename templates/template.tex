@@ -280,6 +280,12 @@ $endif$
     linewidth=\textwidth
 }
 
+\usepackage{framed}
+\let\oldquote=\quote
+\let\endoldquote=\endquote
+\colorlet{shadecolor}{gray!30}
+\renewenvironment{quote}{\begin{shaded*}\begin{oldquote}}{\end{oldquote}\end{shaded*}}
+
 \begin{document}
 
 \thispagestyle{empty}
