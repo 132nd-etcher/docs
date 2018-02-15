@@ -1,4 +1,6 @@
 .idea
-/OUTPUT/
 /logs/
 /tmp*/
+*.log
+*.pdf
+__TMP*
