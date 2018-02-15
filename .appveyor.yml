@@ -43,9 +43,9 @@ init:
 #   - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
 
 install:
-  - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
-  - "%PYTHON%/Scripts/conda.exe update conda -y"
-  - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
+  # - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
+  # - "%PYTHON%/Scripts/conda.exe update conda -y"
+  # - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
 
 build_script:
