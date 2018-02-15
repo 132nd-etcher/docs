@@ -50,12 +50,11 @@ install:
 
 build_script:
   - cmd: edlm convert pdf .
-  - cmd: REN OUTPUT docs
   - cmd: xcopy C:/Users/appveyor/AppData/Local/MiKTeX/*/miktex/log/pdflatex.log pdflatex.log 
 
 
 artifacts:
-  - path: '**/*.pdf'
+  - path: '*.pdf'
     name: document
     type: File
   - path: '*.log'
