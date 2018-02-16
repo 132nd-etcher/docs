@@ -42,15 +42,14 @@ install:
 
 build_script:
   - cmd: edlm --debug convert pdf .
-  - cmd: xcopy "C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log" pdflatex.log 
 
 
 artifacts:
   - path: '*.pdf'
     name: document
     type: File
-  - path: '*.log'
-    name: logs
+  - path: 'C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log'
+    name: miktex_logs
     type: File
 
 deploy:
