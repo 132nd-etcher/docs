@@ -23,11 +23,6 @@ matrix:
     fast_finish: true
 
 init:
-  # If there is a newer build queued for the same PR, cancel this one.
-  # The AppVeyor 'rollout builds' option is supposed to serve the same
-  # purpose but is problematic because it tends to cancel builds pushed
-  # directly to master instead of just PR builds.
-  # credits: JuliaLang developers.
   - ps: if ($env:APPVEYOR_PULL_REQUEST_NUMBER -and $env:APPVEYOR_BUILD_NUMBER -ne ((Invoke-RestMethod `
         https://ci.appveyor.com/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/history?recordsNumber=50).builds | `
         Where-Object pullRequestId -eq $env:APPVEYOR_PULL_REQUEST_NUMBER)[0].buildNumber) { `
@@ -43,14 +38,11 @@ init:
 #   - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
 
 install:
-  # - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
-  # - "%PYTHON%/Scripts/conda.exe update conda -y"
-  # - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
   - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
 
 build_script:
   - cmd: edlm --debug convert pdf .
-  - cmd: xcopy C:/Users/appveyor/AppData/Local/MiKTeX/*/miktex/log/pdflatex.log pdflatex.log 
+  - cmd: xcopy "C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log" pdflatex.log 
 
 
 artifacts:
