@@ -11,12 +11,13 @@ applies:
 title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Installation
 type: Operating Instructions
-version: 1.1
+version: 1.2
 published_date: 22/09/2017
 responsible: //etcher
 audience: pilots
 summary_of_changes:
  - 171116: updated link to 132nd repository (removed extra spaces for copy-paste)
+ - 180216: update for 2.5
 ---
 
 # Quick reference
@@ -36,7 +37,7 @@ http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
 
 # Introduction to OvGME
 
-Extract from OvGME's homepage: [^1][]
+Extract from OvGME's homepage:
 
 > OvGME is a free and open source standalone Mod Manager based on the idea
 and concept of the old well known JSGME, it takes the GME acronym from
@@ -152,15 +153,15 @@ Click the `<<` button, and confirm:
 ### Migrate your mods from JSGME to OvGME
 
 Transfer all your mods from JSGME's mod folder to OvGME mod(s) folder
-(defined in step 3.2.1 OvGME configuration for DCS as "Configuration
-mods folder").
+(defined in step [OvGME configuration for DCS](#ovgme-configuration-for-dcs)
+ as "Configuration mods folder").
 
 ### Re-install your mods
 
 All your mods should now appear in OvGME's main window. With a clean DCS
 installation, you may now install them again, using OvGME. In case you
 forgot which one were activated, you can use the backup `*.mep` file
-created during 3.2.3.1 Save the current JSGME profile, it is a simple text file listing installed mods by name).
+created during step [Save the current JSGME profile](#save-the-current-jsgme-profile), it is a simple text file listing installed mods by name).
 
 ## Add the 132^nd^ Virtual Wing repositories
 
@@ -285,8 +286,9 @@ For the sake of demonstration, let us assume there is a mod,
 ![Dummy mod](image24.png)
 
 CMD staff releases a NOTAM stating that pilots should update this very
-mod via OvGME. Following the procedure in 3.3 Download the mods and
-skins from the repositories, I update my local mods.
+mod via OvGME. Following the procedure in [Download the mods and
+skins from the repositories](#download-the-mods-and-skins-from-the-repositories)
+, I update my local mods.
 
 During the query, OvGME informs me that "dummymod" had been updated:
 
