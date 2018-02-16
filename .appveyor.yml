@@ -48,9 +48,9 @@ artifacts:
   - path: '*.pdf'
     name: document
     type: File
-  - path: 'C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log'
-    name: miktex_logs
-    type: File
+  # - path: 'C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log'
+    # name: miktex_logs
+    # type: File
 
 deploy:
   provider: FTP
