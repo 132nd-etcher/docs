@@ -26,19 +26,23 @@ and need quick access to the information it contains.
 
 ## Repositories links:
 
-> http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
+```
+http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
+```
 
-> http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+```
+http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+```
 
 # Introduction to OvGME
 
 Extract from OvGME's homepage: [^1][]
 
 > OvGME is a free and open source standalone Mod Manager based on the idea
-> and concept of the old well known JSGME, it takes the GME acronym from
-> JSGME which stands for Generic Mod Enabler. The main purpose of OvGME is
-> to provide an easy way enable and disable mods with automatic backup
-> mechanism.
+and concept of the old well known JSGME, it takes the GME acronym from
+JSGME which stands for Generic Mod Enabler. The main purpose of OvGME is
+to provide an easy way enable and disable mods with automatic backup
+mechanism.
 
 OvGME will eventually replace the Skinstaller for the installation and
 updates of skins and mods within the 132^nd^ Virtual Wing.
@@ -56,7 +60,7 @@ The documentation for //ovgme is split into two parts:
 
 "Download" page of OvGME's website:
 
-> [http://www.ovoid.org/ovgme/downl.htm](http://www.ovoid.org/ovgme/downl.htm)
+[http://www.ovoid.org/ovgme/downl.htm](http://www.ovoid.org/ovgme/downl.htm)
 
 Latest version as of 2017, September 1^st^: **1.7.3**
 
@@ -70,16 +74,16 @@ desktop if the option was selected.
 OvGME concept: "Configuration"
 
 > A configuration in OvGME is strongly linked to the folder in which the
-> mods will be installed (for example, a DCS installation). There can be
-> only one configuration pointing to any given destination folder.
+mods will be installed (for example, a DCS installation). There can be
+only one configuration pointing to any given destination folder.
 
 OvGME concept: "Mods folder"
 
 > The mods folder is the folder containing the mods that can be
-> installed in the destination folder; it is the "source" for the mods.
-> It is also the folder in which the mods will be downloaded when using
-> the repository feature of OvGME. The mod folder can be shared by
-> multiple configurations.
+installed in the destination folder; it is the "source" for the mods.
+It is also the folder in which the mods will be downloaded when using
+the repository feature of OvGME. The mod folder can be shared by
+multiple configurations.
 
 ## OvGME configuration for DCS
 
@@ -101,7 +105,9 @@ installation
 Create a second configuration names "Saved Games" (or any other name
 of your choosing, replacing <YOUR DCS INSTALLATION> with:
 
-> ..\Saved Games\DCS
+```
+..\Saved Games\DCS
+```
 
 **Note**: `..\Saved Games\DCS` is an abbreviated version of the path,
 you'll need the full path to your `Saved Games\DCS` folder.
@@ -164,10 +170,10 @@ and updates the mod.
 OvGME concept: "Repository"
 
 > A repository is a list of mods and skins, located on a web server.
-> Clients can subscribe to a repository in order to download the mods
-> and skins that it offers. Maintainers of a repository can then update
-> the mods and skins in a repository, propagating the updates to the
-> repository's clients.
+Clients can subscribe to a repository in order to download the mods
+and skins that it offers. Maintainers of a repository can then update
+the mods and skins in a repository, propagating the updates to the
+repository's clients.
 
 Fire up OvGME, select your "DCS stable" configuration, 
 and go to "Mods", "Repositories", "Configure...".
@@ -178,7 +184,9 @@ and go to "Mods", "Repositories", "Configure...".
 
 Copy paste the following line in the "URL" field, then click "Add":
 
-> http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
+```
+http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
+```
 
 ![Add the //wing repository](image14.png)
 
@@ -187,7 +195,9 @@ Copy paste the following line in the "URL" field, then click "Add":
 Now select your "Saved Games" configuration, 
 and go to "Mods", "Repositories", "Configure...".
 
-> http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+```
+http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+```
 
 The repositories are now added and ready to go!
 
@@ -259,10 +269,10 @@ To uninstall a mod, follow the steps in the previous section, but select
 To select multiple mods for (un)installation, you can use the usual
 SHIFT/CTRL selection schemes:
 
--   Hold CTRL and click on a mod to add/remove it to/from the selection
+- Hold CTRL and click on a mod to add/remove it to/from the selection
 
--   Select a mod, then hold SHIFT a select another to add all the mods
-    between them in the list to the selection
+- Select a mod, then hold SHIFT a select another to add all the mods
+between them in the list to the selection
 
 # Updating the mods and skins
 
