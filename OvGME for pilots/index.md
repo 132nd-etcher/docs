@@ -19,6 +19,17 @@ summary_of_changes:
  - 171116: updated link to 132nd repository (removed extra spaces for copy-paste)
 ---
 
+# Quick reference
+
+This section if for those who have already followed the setp-by-step guide
+and need quick access to the information it contains.
+
+## Repositories links:
+
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
+
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+
 # Introduction to OvGME
 
 Extract from OvGME's homepage: [^1][]
@@ -77,16 +88,33 @@ On OvGME's main window, click the "New" button on the top-right:
 ![Create a new configuration](image8.png)
 
 In the pop-up window, fill in the fields "Configuration title",
-"Configuration root folder", and "Configuration mods folder", then click
-"Create".
+"Configuration root folder", and "Configuration mods folder", 
+**with the values that are relevant to your current setup**,
+then click "Create".
+
+**Note**: from now on, I will refer to this OvGME configuration
+as "DCS stable"; this is the one that points to your main DCS
+installation
 
 !["New configuration" window](image9.png)
+
+Create a second configuration names "Saved Games" (or any other name
+of your choosing, replacing <YOUR DCS INSTALLATION> with:
+
+> ..\Saved Games\DCS
+
+**Note**: `..\Saved Games\DCS` is an abbreviated version of the path,
+you'll need the full path to your `Saved Games\DCS` folder.
+
+**Note**: from now on, I will refer to this OvGME configuration
+as "Saved Games"; this is the one that points to your `Saved Games\DCS`
+folder.
 
 ## (optional) OpenBeta/OpenAlpha
 
 If you have the OpenBeta and/or the OpenAlpha version(s) of DCS
-installed, repeat step 3.2.1 OvGME configuration for DCS for each of
-them.
+installed, repeat step [OvGME configuration for DCS](#ovgme-configuration-for-dcs)
+for each of them.
 
 Note that the "Configuration mods folder" **may** be identical for all
 three versions, to ease the management of the (many) compatible mods.
@@ -141,25 +169,31 @@ OvGME concept: "Repository"
 > the mods and skins in a repository, propagating the updates to the
 > repository's clients.
 
-Fire up OvGME, and go to "Mods", "Repositories", "Configure..."
+Fire up OvGME, select your "DCS stable" configuration, 
+and go to "Mods", "Repositories", "Configure...".
 
 ![Configure repositories](image12.png)
-
-The following dialog opens:
 
 ![Repositories dialog](image13.png)
 
 Copy paste the following line in the "URL" field, then click "Add":
 
-> http://132virtualwing.org/files/ovgme/132nd
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
 
 ![Add the //wing repository](image14.png)
 
 ![Properly configured repositories dialog](image15.png)
 
-The repository is now added and ready to go!
+Now select your "Saved Games" configuration, 
+and go to "Mods", "Repositories", "Configure...".
+
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
+
+The repositories are now added and ready to go!
 
 # Download the mods and skins from the repositories
+
+Fire up OvGME, and select your "DCS stable" configuration.
 
 Open "Mods", "Repositories", "Query"
 
@@ -179,6 +213,8 @@ Click "Close".
 The mods and skins now appear in OvGME's main window
 
 ![Populated mods window](image20.png)
+
+Repeat the process for your "Saved Games" configuration.
 
 # Install the mods and skins
 
@@ -285,4 +321,8 @@ In case you do not want to use //ovgme for some reason, you will still need to d
 The files are available for direct download on the [//wing's server](http://132virtualwing.org/files/ovgme/132nd/).
 
 Please note that you will be responsible for keeping your own installation up to date.
+
+
+
+
 
