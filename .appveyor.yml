@@ -57,11 +57,9 @@ deploy:
   protocol: sftp
   host:
     secure: 5ySqGu0Sy46I/vsKje7UrC3zMHw8+ouvqbc3wbSkpUg=
-  username:
-    secure: vOm0pZ5UvoCSV2Mull9CJA==
+  username: 'docs'
   password:
-    secure: +HzR0kgPuDBOKdX8+Ucfzp4n2sU2LxVOKabFpzs6n2g=
-  folder:
-    secure: ravvRrFksxyhvZ3hLgzDUbg0HesC+lxPdQdGo5jh89s=
+    secure: 3UqjnpgLIcOlO+lXGID86Q==
+  folder: 'docs'
   on:
     branch: master
