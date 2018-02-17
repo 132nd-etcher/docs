@@ -257,7 +257,7 @@ $endif$
 \interfootnotelinepenalty=10000
 
 % Increase spacing of tables rows
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.5}
 
 \lstset{
     basicstyle=\ttfamily,
@@ -412,6 +412,21 @@ $if(applies)$
     \newpage
 $endif$
 
+
+%# This section includes references from the context
+%% if ctx.used_references|length > 0
+	\vspace*{5em}
+	\pdfbookmark[section]{List of references}{refs}
+	\section*{List of references}
+	\begin{itemize}
+	    %% for ref in ctx.used_references
+			\item \VAR{ref.to_latex()} \\
+		%% endfor
+	\end{itemize}
+	\newpage
+%% endif
+
+
 %$for(include-before)$
 %    $include-before$
 %    \newpage
@@ -450,19 +465,6 @@ $endif$
 
 \iftotalfigures\pdfbookmark[section]{List of figures}{lof}\listoffigures\newpage\fi
 \iftotaltables\pdfbookmark[section]{List of tables}{lot}\listoftables\newpage\fi
-
-
-%# This section includes references from the context
-%% if ctx.used_references|length > 0
-	\pdfbookmark[section]{List of references}{refs}
-	\section*{List of references}
-	\begin{itemize}
-	    %% for ref in ctx.used_references
-			\item \VAR{ref.to_latex()} \\
-		%% endfor
-	\end{itemize}
-	\newpage
-%% endif
 
 
 $if(biblatex)$
