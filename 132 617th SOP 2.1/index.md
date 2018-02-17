@@ -4,7 +4,7 @@ author:
 title: SOP
 applies:
     - //617
-subtitle: Standard Operating Procedures
+subtitle: //617 Standard Operating Procedures
 title_pictures:
     - logo617th.png
 header_picture: logo617th.png
@@ -56,19 +56,30 @@ and the optimal climb rate is 200kts at 0ft MSL, 195kts at 5000ft MSL
 and 190kts at 10 000ft MSL.
 
 ### Fuel estimation
+	
+Table: Fuel estimation
+	
+--- ------------------------------------------------------------------------
+  1	Note fuel flow at cruise speed from the fuel flow indicators (PPH = 
+    lbs per hr)
+	
+  2 Go to the CDU Steerpoint page for `home plate` and check TOT to get 
+    return flight time
+ 
+  3 Multiply return flight time with fuel flow for both engines at cruise 
+    speed and add reserve to get an estimate of Bingo:
+	
+    **\[fuel flow x 2\] x \[return time in mins/60\] + reserve = bingo**
+	
+  4 Subtract Bingo from current total quantity and divide by fuel flow for 
+    both engines at cruise speed. Multiply by 60 to get estimated playtime 
+    in minutes:
+	
+	**\[\[total qty -- reserve -- bingo\] / \[fuel flow x 2\]\] 
+	x 60 = playtime**
+--- ------------------------------------------------------------------------
 
-1. Note fuel flow at cruise speed from the fuel flow indicators (PPH = 
-lbs per hr)
-2. Go to the CDU Steerpoint page for *home plate* and check TOT to get 
-return flight time 
-3. Multiply return flight time with fuel flow for both engines at cruise 
-speed and add reserve to get an estimate of Bingo:
-	* **\[fuel flow x 2\] x \[return time in mins/60\] + reserve = Bingo**
-4. Subtract Bingo from current total quantity and divide by fuel flow for 
-both engines at cruise speed. Multiply by 60 to get estimated playtime 
-in minutes:
-	* **\[\[Total qty -- reserve -- Bingo\] / \[fuel flow x 2\]\] x 60 = playtime**
-
+*This table is replicated in the //qr617*
 
 The wingman uses about 500lbs more than lead on longer missions. The
 less experienced the wingman, the more fuel he uses. In a four-ship, the
@@ -87,8 +98,6 @@ as buddylasing and sending targets via datalink.
 
 Standard setup of datalink and laser codes are derived from the flight's
 call sign as follows:
-
-\pagebreak
 
 Table: Datalink and laser codes
 
@@ -123,9 +132,9 @@ informational calls.
 Bullseye is also the quickest way to get location data in an emergency,
 especially if ejecting.
 
-**Note**: *in the event of loss of avionics (HUD/ TAD), you can quickly get
+**Note**: in the event of loss of avionics (HUD/ TAD), you can quickly get
 Bullseye information in the HSI and ADI by pressing the "ANCHR" button
-on the NSMP.*
+on the NSMP.
 
 ### Other systems
 
@@ -166,7 +175,7 @@ Table: External lights settings 2
 																	  receiving 
 																	  taxi-clearance
  
- **t/O,       STEADY    ON            LANDING        AS BRIEFED
+ **T/O,       STEADY    ON            LANDING        AS BRIEFED
  LANDING**
  
  **ENROUTE**  STEADY    ON            OFF            AS BRIEFED
@@ -260,31 +269,31 @@ Table: Take-off sequence
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 *Command*                        *Action*
 -------------------------------- -----------------------------------------------------------------------------------------------------------------------
-Lead: *"Run'em up"*              * Full toe-brakes
+FL: *"Run'em up"*                * Full toe-brakes
 							   
 							     * Run engines to 90% core speed rpm
 							   
 							     * Verify engine instruments in the green
 							   
 
-Wingman: *"Two, in the green"*   This is Lead's indication that the flight is good to go.
+WM: *"Two, in the green"*        This is Lead's indication that the flight is good to go.
 
-Lead: *"Release"*                * Release toe-breaks
+FL: *"Release"*                  * Release toe-breaks
 							   
 							     * Full throttle ("Buster")
 							   
 							     * Wingman: Maintain wingtip clearance
 							   
 
-Lead: *"Rotate"*                 * Rotate, i.e. lift the nose wheel and take off.
+FL: *"Rotate"*                   * Rotate, i.e. lift the nose wheel and take off.
 							   
 							     * Wingman maintains deconfliction
 							   
 
-Two: *"Airborne"*                * Once stabilised, raise gear and flaps
+WM: *"Airborne"*                 * Once stabilised, raise gear and flaps
 							   
 
-Two: *"Gear up"*                 * Lead sets power 750°C ITT and adjusts pitch to maintain 200kts IAS
+WM: *"Gear up"*                  * Lead sets power 750°C ITT and adjusts pitch to maintain 200kts IAS
 							   
 							     * No Turns below 2000ft AGL
 							   
@@ -293,7 +302,7 @@ Two: *"Gear up"*                 * Lead sets power 750°C ITT and adjusts pitch 
 							     * Wingman transitions to Echelon formation, same side as was used for take-off.
 							   
 
-Two: *"Saddled"*                 - This is the Wingman's call to make in order to indicate to Lead that WM is in formation and throttle can be increased
+WM: *"Saddled"*                  This is the Wingman's call to make in order to indicate to Lead that WM is in formation and throttle can be increased
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **With spacing**
