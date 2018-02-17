@@ -28,13 +28,9 @@ and need quick access to the information it contains.
 
 ## Repositories links:
 
-```
-http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
-```
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Main
 
-```
-http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
-```
+> http://132virtualwing.org/files/ovgme/132nd_DCS2_Saved_Games
 
 # Introduction to OvGME
 
