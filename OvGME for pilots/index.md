@@ -11,13 +11,14 @@ applies:
 title_pictures: //all_logos
 subtitle: Operating Instructions for Mods and Skins Installation
 type: Operating Instructions
-version: 1.2
+version: 1.3
 published_date: 22/09/2017
 responsible: //etcher
 audience: pilots
 summary_of_changes:
  - '171116: updated link to 132nd repository (removed extra spaces for copy-paste)'
  - '180216: update for 2.5'
+ - '180217: update recommended OvGME version'
 ---
 
 # Quick reference
@@ -63,7 +64,7 @@ The documentation for //ovgme is split into two parts:
 
 [http://www.ovoid.org/ovgme/downl.htm](http://www.ovoid.org/ovgme/downl.htm)
 
-Latest version as of 2017, September 1^st^: **1.7.3**
+Latest version as of 2017, November 11^th^: **1.7.4**
 
 Simply run the setup to install OvGME on your system.
 
