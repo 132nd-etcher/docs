@@ -33,7 +33,7 @@ computer connected to the web, and directly share their work for review**.
 some of use will be comfortable with Notepad++, others might prefer Atom,
 SublimeText, Vim (sic), ... .
 
-#### Less liberty when it comes to customizing the format/layout
+#### Less liberty when it comes to customizing the format and layout
 
 Having a common template for the layout/format of our document effectively 
 "castrates" editors, denying them the liberty to get creative with the way 
@@ -52,7 +52,8 @@ the world for papers, essays, reports, etc. Even if we might disagree with
 some of the minor formatting choices it makes when it comes to typesetting 
 the document (I sometimes do myself, with the placement of pictures for example), 
 we can at least be sure that the standard it follows is accepted world-wide, 
-and is the result of decades of professional work;
+and is the result of decades of professional work. Using Latex is also a *major*
+pro, as explained in [Professional typesetting](#professional-typesetting);
 * The layout/format will be 100% identical for all documentation published by 
 the //wing, branding our documents with a unique "personality", and giving an 
 overall "neat" picture of the Wing to the external world;
@@ -82,6 +83,12 @@ document named `index.md`, I would have to write the following in `index.md`:
 "Picture caption" simply describes the picture, and can be any sort of text. 
 
 "picture.png" is the file itself. I will explain later how the picture is "found".
+
+Links to external resources are also valid:
+
+```
+[Picture caption](https://some.server.com/some/picture.png)
+```
 
 ##### Mitigation
 

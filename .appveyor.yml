@@ -38,7 +38,8 @@ init:
 #   - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
 
 install:
-  - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
+  # - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
+  - cmd: pip install edlm
 
 build_script:
   - cmd: edlm --debug convert pdf .

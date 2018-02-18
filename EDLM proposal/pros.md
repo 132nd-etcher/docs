@@ -55,9 +55,9 @@ and a link to them is supplied on the Pull Request page automatically.
 We can then review the output, and discuss about it.
 
 The common way to
-do this is to create branch and make a "Pull Request" from it 
+do this is to create a branch and make a "Pull Request" from it 
 on Github, then push changes to it,
-discuss the changes, change so more, discuss some more, etc... until
+discuss the changes, change so more, discuss some more, etc. until
 everyone is happy with the changes.
 
 **Commits that happen on the "master" branch**: Once everyone is happy 
@@ -114,7 +114,7 @@ document in a settings files. If we ever decide to become the
 in the library is to change the alias *once* in the root 
 settings file (this is a silly example of course, but you get 
 the gist). Another advantage is that we won't have a mix of 
-//wing, 132nd Virtual Wing, 132nd vWing, 132 Wing, 132nd, etc...,
+//wing, 132nd Virtual Wing, 132nd vWing, 132 Wing, 132nd, etc.,
 so it increases the overall consistency of our documentation.
 
 The same goes for pictures: imagine we decide to include the 
@@ -210,6 +210,72 @@ to take a look (one click).
 
 If everyone likes my changes, we can make them happen officially
 by merging back into "master" (still one click).
+
+#### Professional typesetting
+
+In this implementation, I'm using [Latex](https://www.latex-project.org/) to
+render the PDFs. Latex is *the* most used *de facto* standard
+for uncountable thesis, essays, scientific papers, resumes, etc.
+for decades.
+
+Latex basically takes care of everything that is style-related in the
+document.
+
+It will try and make the most of all pages, subtly adjusting size, 
+positions, spacing, etc .. to try and make the best output as possible.
+
+Have a look at this very document, and try to find defects in the layout.
+If you manage to find one that is not purely opinionated, it's probably my fault,
+report it and I'll fix it =)
+
+Since it's been in production for so long, the amount of community-driven
+(read: free) packages is staggering. The possibilities are truly end-less.
+The amount of customization that we can get out of it is staggering.
+Just keeping up-to-date and reading about would be more than a full-time job.
+
+**Also, many members of the //wing are already using Latex.** I'm not
+proposing some obscure, hacky back-water little program. When I'm 
+unavailable and there is an issue with Latex, someone will be able
+to take a look at it and hopefully fix it.
+
+For example, this has been done in latex:
+
+[http://wpage.unina.it/agodemar/DSV-DQV/DSV-DQV_Quaderno_1.pdf](http://wpage.unina.it/agodemar/DSV-DQV/DSV-DQV_Quaderno_1.pdf)
+
+And this:
+
+[https://tug.org/texshowcase/cheat.pdf](https://tug.org/texshowcase/cheat.pdf)
+
+Or this:
+
+[https://tug.org/texshowcase/tabela_periodica.pdf](https://tug.org/texshowcase/tabela_periodica.pdf)
+
+Even maps:
+
+[https://tug.org/texshowcase/maps.pdf](https://tug.org/texshowcase/maps.pdf)
+
+3D calculus?:
+
+[https://tug.org/texshowcase/lee-wilczynski.pdf](https://tug.org/texshowcase/lee-wilczynski.pdf)
+
+Some icons?:
+
+[https://tug.org/texshowcase/cubs_v_cards_8sep98.pdf](https://tug.org/texshowcase/cubs_v_cards_8sep98.pdf)
+
+Graphs?:
+
+[https://tug.org/texshowcase/diagram.pdf](https://tug.org/texshowcase/diagram.pdf)
+
+Posters?
+
+[https://tug.org/texshowcase/program_sample.pdf](https://tug.org/texshowcase/program_sample.pdf)
+
+Music sheets?:
+
+[https://tug.org/texshowcase/kv315f.pdf](https://tug.org/texshowcase/kv315f.pdf)
+
+Latex is an incredibly flexible language. We can give it raw data (for example, the areas, ranges
+and altitude for a FLIP), and it'll make consistently beautifully rendered PDFs 
 
 #### Extensibility
 

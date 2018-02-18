@@ -1,15 +1,15 @@
-### Intro: the build process
+## The build process
 
 Before I can present you with examples, I need to explain a few basics 
 about the build process I'm proposing.
 
-#### The document folder
+### The document folder
 
 Every document lives in its own folder, and is composed of three parts:
 
 ![Document folder \label{doc_folder}](https://www.planttext.com/plantuml/img/ROzB2W8n343tEKNe0GfwWbcuzGnIsZW4-XdI51IPkrix3kF2RF9vZuHCLPreIn50MIFXfVYMA2lUImma05j6imE3hc8jJJpX2x37Rbmfi1iuVQel7GRtpMPXhqteP9Syc__iVB0L3bf9bVDidobkvyNV-kp7u1peOLCOU3Im0aoKG__j3G00)
 
-##### **index.md**: the document ("md": "Markdown")
+#### **index.md**: the document ("md": "Markdown")
 
 This file contains the actual text of the document.
 
@@ -18,17 +18,18 @@ to "include" them, for example the //sop617 "include"
 the //qr617.
 
 
-##### **settings.yml**: the document's settings ("yml": "YAML")
+#### **settings.yml**: the document's settings ("yml": "YAML")
 
 This file contains the settings for the document, for example:
-* aliases  
+
+* aliases
 * paper size
 * references
 * title
-* etc...
+* etc.
 
 **aliases** are a neat way to create a placeholder for a "complicated", or 
-rather long text.For example:
+rather long text. For example:
 
 ```
 aliases:
@@ -44,7 +45,7 @@ within the //wing: for example, I'm using this setting in my "settings.yml":
 
 ```
 aliases:
-  //wing: 132^nd^ Virtual Wing
+  // wing: 132^nd^ Virtual Wing
 ```
 
 Whenever I want to reference the Wing, I type `// wing`. If everyone does that,
@@ -87,7 +88,7 @@ If, later, that document's link changes for some reason, there is no need to man
 update all other documents that reference it; all we need to do is update "settings.yml",
 re-build the library, and the link is magically updated everywhere.
 
-##### **media** is a folder that contains the images for this document.
+#### **media** is a folder that contains the images for this document.
 
 If I want to include a picture that is in "media/picture1.png", all I need 
 to do is type the following in my `index.md`:
@@ -101,12 +102,12 @@ Also, if I want to change that picture later, I do not need to edit
 my document; overwriting the old picture with the new one will do!
 
 
-#### The "root" folder
+### The root folder
 
 A "document folder" will "live" inside a "root folder" (it's just the 
 directory that "contains" the "document folder").
 
-![Root folder \label{root_folder}](https://www.planttext.com/plantuml/img/RLBB2i8m4BpdAq8_e505lVRWLV3WlOHaRGDvbCqMAj9_jwQfVMWkOMScExj3oa02gRE6CT9aWDyRuEWzyOSt2f2nwURPJI0uuaeZIFBupBW8l9t05-FZcPLNK5giwCf-W2IAGZqQPSRNlZWUdCfRLsT_o5DnfcOX1xRG0OYqg_EdDRDHDMARCUvWMoC8GbHGggf4xwUP-PoWtpnOUwVE5oyx-zbx0g8y-0ubhDl-fB6FOJ5ljQGEeTWcySCVjlomMs4VIa3v3MLHQQUWpwsAabYa3GTMWbFZLtW3)
+![Root folder \label{root_folder}](https://www.planttext.com/plantuml/img/RP7B2i8m44Nt-OhG3oYqWcwxS2kuS5z2CjP07cKoWOhqtwrfQn-QJSYz1oOdgG89f6WDOwJ90ByzWAFtnE_UA436nfrdLu7WY2kD8CdZC-CYy7OCNumFQoOleBHOrRNz11EKG3qCoenlV74edSfRrsH_ocDneiTIzcof0n1fr-HFQ-P1zP2j20BR6a6G4tG9cOFDLSzUHlin68C41XzHmlgwFrvxeMLigoL5X6BhzDENsxxVsU_r0iglta9ffw3BhKf8EaplrBCAd1e-zGq0)
 
 We can see similarities between the "root folder" and the "document folder":
 
@@ -151,15 +152,13 @@ to create and publish documents, so I'm not afraid
 that no-one would be able to tweak the current template
 should something happen to me.
 
-Finally, this structure can be repeated *ad nauseam* if we need to:
-
-![Nested root folders \label{nested}](https://www.planttext.com/plantuml/img/VPBDYiCW58NtFeNa0KArqDbsCTk1MNHVHE-aWZ_1t41ByTrhJKAQA9DDSk_vv1mFEGye0exM488Q3T3B3MZm7kcVDme28TERDhyYW4EgT029FZmQAWRQvoMZJqBJiw0_eBJ8kdr_BN96TF9eZEyyEtAdsjvrJKKyiI-yhM8agpm0edPT-x0cMwIPRTp_2Se_azJ3yfLOFNijSGnmsCOjzEDMZxkBLPBp8iu5R6y4mf0HdAVhBDV2BKoBSDySgWMPNRwz7EsxfMannV5ZaB2tgBUqeuecMDbKmV2IYPNh5Qq5UKsx2gcTWdjhLSRoi6iWaaZEu5JwtLy0)
-
 \clearpage
 
-#### The build process, step by step
+### The build process, step by step
 
 **Note**: this section is for information and reference only
+
+Starting from a valid `source folder` with an `index.md` files:
 
 1. Gather all media folders
 2. Find the closest "template" folder
@@ -204,6 +203,6 @@ all the recursive includes in them
 		so if we build this file again in the future we can check if something has changed
 		(see 9.4)
 	
-![Processing \label{processing}](https://www.planttext.com/plantuml/img/TLVRRkCs47tdLmpyq4sAh03VZJvirsswHO4D47I3zgM0GKiZcx142XJbooxoxnrUH4cEumV7EdD83WyFPvJFjU7QD6N1c16cGFZ6ouh-P2fjIfG6TYXHSoEK_4_YsGKPaof367rxMV_zyWki9Iyktn5grUYKHWgDgL7wCW9UGssmsemPorMHeORHCzTsrY6fyk0F1lHfcK-O2TuBRqeB198Z2ifpLAYT6aydCaigkHlT22x6IxFlWg-i2zTeZ92xv58MxK8RmWPfl21jcHki7SE4fqq8NsVJnXE3vy60_jfXviSWiTV9YzURxuqCr_llLgr4QXgDuw44R-AJOVprAlThDMgTHZKwbf0PdfCoSnJt4BRsoXWZAucSfuRE-V6B6-1rpNB6KgwpJivVepeRF5Tale13alHGgGZHOhSteF8Ejmk-x36A2uAcekVHjcYmqe8q3Kfhu4KHpLmd3dPVVnaxwhJdnbBKQK04enofKEf00N701pW9imSEHzGNiczDKgL67Ft1Zfm3uHz1LuaNy2_9EFA3Vu8SiHYi-u6MrS8ObAGVVANyppJxNgHxcn5th5JPYtQ6bqk5uLoWu7BNy1sbictygTH8sT1w5IfxPsasgu9TdPBMoBEBenqaRU-EKuA5Ek8z2DFFvqFPag7IwYWoDvn-qx9-VAqAaNLY6wjPlLTDaS41qHz7KyDEsP5ESrg8VXfH8aDQrXvZQu3VLLcwL8JqvaZBZCg3ynPcHHdjPnysOUzri4A1kNF2CERjGDgvMQo6i2lKbeG9MifSx1fVn3p79ld7uzUdDtvef3tiuW9SNfH4EBbTXXtIt5Iv6cstAPKkQG5LXUBuu3XqC7OMhoDcTXlShdz4ASXMZdFY5x8N5KQbgMQ6FS0MpGbHXcEjQvlgdP1KFdbcTxpdHxki8Jyu3Xrq2SeVUEebzOubMG4vUScgVv_qz6TKwjC3bUrspLohigszljpuUn_Yuzi3GgMwCM1oUy3WL5lkz3OtlNP7ovynSZxbEVeYgDr4s75o2xbInKBDWeyVV-xj8zJr0JfX0nCDObD6fXmWCvgwdOu2gh_dzjS0dqPyEi1d4Pyvl9-x5yGL_21l7Nee1NpxOspG35sAlUXjzAgCzaFMCcigVA53MEjIlI6TXRSYNOFGTq8_ulPcjmxqKr5bf1cs22NFl3dvaOk2R-cYaT4jp-tIXTeAEp2cVvqO9_0d9xOUh5Z7ruXnu4s8HuSPwr7VYKIR1DhKqzf-rNKZIve6qioJ1dQoyLc8pnDurYgb2ndNYvnvu2mIeA9MDSOgS0PHabEX5jyxvY8mbzriJrmVCdMIaRCCd5K2lpM2YWvrq1XSKVLKqcXLmCZMBHSuANr0FNytidWtidmtih9bmbzmxoBtzjPpJ8J7h6t74Pem9tPydhBexeZDM4Wx8lE0B2Ao2CWo8ik0h2AoUkjgEp2s0lleNWiKy9IgYihQbx1Cv3cwcbTngjxkf6guMyzy2L_F7s2zUA3taEI-rnwUsmj2rmzuOrH9PJ-bTuRG8lUwaGUm9shRiDBsheINY9ow1eUQsaL1O4NkkAhALcFQsATFGLZttG4J1qmwOEg0QGVC733hWBa3vXsmSC2Y0vOEM7R0oW4h3xWNDlfyfZpfVuF_0G00)
+![Processing \label{processing}](https://www.planttext.com/plantuml/img/TLVRRXit47tdLn1wQEp24Q2xNHHftBef2iI0qHZjIm63tXr9XBZaWilL9ON_lOUNlScs7nplcI5dUEPmXlbSEM5TNIZ6d7IA-3THbFWdDrbTa7PyGvgiSDBeVpKTWv4nRNBYes-Fjtyz_iHljL2dxyGhKziCAwMbp1bx6d5HySfH-JHXR6rKJfQF7eJrkmwToWZ-npX-6izxogNecPyA3oIdu2YHvqYPZPdCfZeVbtepUiEudApSjZE-iCvSaNDIRyQdGZM1de0DqdWa75augeA7IrzFoNoUJMCVEpeE5lHZfvtl4iMHfqXURxzND9oVlujQoipLbYP32bxPfqFxordkvsnKDclPwBoapkauBlBW4ZxIqLuOOv2IN8lCeSvtNyA2o6k-PYmJDk_e_ALbvucE9SINS3uUzr1jW5YvsJfkrXtk0pvkgIMNIso5xz6pggcq4fmcfYqNIhLYhiO13h_-T7xLOIkSTp67WIDt9ZWfOtOmo1rTyODqMoxudkm9ygr0LURaFXPs51J8_vQuIaBnVq3ZA2x-WQ-9r23k1uIrqZdIu8z_HVv7xBwLsTPd989NPln5E_B7KqcfBbm9lQd51gayrx4g5I4Rn2l9-3kBtJmBFZgIjYJoKt3RQHplGY11PVPqoQNhv_EXQ9nvQSrUvc4v_aROkBuoIkOTsSvpLcrDhNA-8uhbg2k-CNvbu1o1yAUJ1J52M5_6HW2_cQ88gKWTnP4LETf3q1RbgcZbvp-Uqjch90L5ww24eItA0To5NJo7VAFCCuX9NEgrtDInYKKVd-JlTr_lN-cXrhxOwiI5FXbD_11EcKw8lT6vQkkFgOqj4C2KgJbU1HyKnkyIUQJS7qFu-7lI4h8AFWTnWhpG68r5pqnduC_a3aGwbRMgVAeNKgDzYjoVU2lsFgo37e8F2brm4mkUHKgZOa4h9m4jUVOlnpt-6LfzjaFRRcAkhIcQtXlRJRptoJvvUq7gL6yicBwzO53LndVsjczshex6VywWVEGv-Y8nRbeu-Amz55eLIpsBV_puO-ySgQyFq2aRY6XWcp68Se3CiNMp7GocV-Rchm4-Q_7P09-t-3pW_TmZ8Q7X9tghD4DXYEEFiS4m32dsh6-ZPssqR_AIkKNZInF2InVz1ZpBA4LSWpHtqZmI_cOt2enReJDYXsVYXSYZECLUI2MUST4WTEyNJXbCJOVj2pE-9luGyBI3Q5NxX9WqJgXYquXQuxHdRCPJDtoynwpdCP2EDyu7opDLvzGP5yduO4s6Q_aw-38veA-LjVCa7Bai85PUoU-Ts-fidtjXTxavwDRXEZdyMajq78pFrdA3rccqiqRnaMzQmN0mTaTsyQvb-QvbzQxb-btBZUyUyTv7SOL7NKz8BJnXpPHkeIaBHMc_PwmLVOlDMJfGYomIicoHPK9MBR9Ao7MBN2VafaLkNilVRzNE3FyPtW-6Ympjn-JDQosNwpM5vbWAjFbGpufVtCvZhxzTNF7RvHKUBEFBtXnvQ6uIxYaNjJC5vaE6nqMQfLjRwnttfVVpsbX_gT9hOutn8dY5kQ80bj1G_vRWLKCMZwkaLBoVCOcgFGqrwp-yRwR0mATFgIQ1cWX41nPBUExJ0wO1c7R0B02p3fW7ODu1Ym0i-Cz0OfputJei0x3iW5K0LXrmtKyrbY_yZa1uH-BdCrZ1Vrd-1m00)
 
 \clearpage

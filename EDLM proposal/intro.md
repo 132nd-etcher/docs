@@ -11,7 +11,7 @@ Please note that this project is in its infancy.
 
 You may not like a part or everything of what you see, but while
 functional, it is still under construction. As a tool, it is meant
-to serve us, be in the lest in the way as possible, and provide
+to serve us, be the least in the way as possible, and provide
 added-value to our current documents library.
 
 That being said, everything that is laid out in this document is
@@ -47,8 +47,8 @@ What I'm mainly trying to achieve:
 
 * Increase the quality and consistency of the (already 
 astonishingly excellent) documentation;
-* Allow for easier collaboration and review of proposed 
-and published documents;
+* Allow for easier collaboration while writing, reviewing 
+and publishing documentation;
 * Maintain an easy work flow for everyone.
 
 What I'm mainly trying to get rid of:
@@ -65,7 +65,15 @@ This section conceptually describes how to achieve the goals outlined above.
 
 ### Decoupling the content from the format
 
-Writing a document with Microsoft Office Word implies formatting it as well.
+First and foremost, in order to have a manageable library of documents without
+involving a metric ton of manual work, we need to decouple the content of our
+documentation from the creation/publishing process.
+
+That way, once the *content* is created, we can still update the *format* or
+the *publishing process*, without having to touch said content.
+
+Writing a document with Microsoft Office Word implies formatting it as well. That
+is true for most editors out there.
 
 Despite the use of a template, guaranteeing a consistent format across a library 
 of dozens of documents, written by many authors, sometimes even multiple authors 
@@ -93,7 +101,7 @@ To reach this goal, the **content** needs to be:
 (Notepad, Notepad++, ...);
 - totally independent of the formatting of the final document.
 
-#### Specification
+### Rendering the content using a consistent format
 
 Once the content has been created by the editors, my goal is to provide a system 
 that will take that "raw" content, and format it, consistently, into different 
@@ -105,8 +113,8 @@ be read easily on readers/mobile), you-name-it.
 
 For the sake of this proposal, I will assume PDF as the default output format.
 
-*Info only*: Here is a non-exhaustive list of the **output** format supported by my proposed 
-implementation as of today (even more **input** formats are available):
+*Info only*: Here is a non-exhaustive list of the *output* format supported by my proposed 
+implementation as of today (even more *input* formats are available):
 
 > Markdown, CommonMark, PHP Markdown Extra, GitHub-Flavored Markdown, MultiMarkdown, 
 reStructuredText, XHTML, HTML5, LaTeX (including beamer slide shows), ConTeXt, RTF, 
@@ -120,7 +128,8 @@ The output should be:
 
 * Consistent: the same content must **always** yield the same result, 
 even on different computers, operating systems, or software versions (no more
-"locale" issue, translation issue, pages that resize themselves, ...);
+"locale" issue, translation issue, pages that resize themselves, pictures
+all over the place, margins error, styling mismatches ...);
 * Uniformly formatted: **all** the documents in the library should have the same 
 general layout, giving all documentation published by the //wing a visual identity 
 of their own;
@@ -129,11 +138,33 @@ be **updated without human intervention**. If a logo changes, if we decide to
 change the title page, or the space after paragraphs, those changes should be 
 **automatically propagated across the entire library**;
 * Adapted to our needs: the documentation should not look "generic" or bland; 
-each document should bear a distinct *132nd touch*, and that *touch* should be 
+each document should bear a distinct *//wing touch*, and that *touch* should be 
 found on **every** document produced by the //wing;
 * Stable: a reference to a document in another document should always
 point to that target document, even if it is updated;
 * Inter-connected: a document should be able to include another (for example,
-a SOP might include a "Quick Reference card" that is also published on the
+the //sop617 might include the //qr617 that is also published on the
 side). When the included document is updated, the document that includes it
 should be automatically updated as well.
+
+## Examples of the finished product
+
+You can find a few documents that have been generated with the method I'm proposing 
+here:
+
+[http://132virtualwing.org/docs/](http://132virtualwing.org/docs/).
+
+And this is the Github repository in which all those documents live:
+
+[https://github.com/132nd-etcher/docs](https://github.com/132nd-etcher/docs).
+
+I recommend you open a few of those documents and check them out side by side.
+In particular, note how they "look and feel" the same, and how the format
+is consistent across all of them.
+
+**Note**: the 617th SOP document that is listed in the examples is obviously not 
+official, but gives a nice overview of what can be done with this project
+(I haven't had the time to make it perfect, but it's close enough as an example).
+
+The very document you are reading right now has been made with EDLM (which is the
+name of my project, by the way).

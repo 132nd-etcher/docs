@@ -327,6 +327,9 @@ you can use the
 
 A few more examples:
 
+**Note**: this section about table examples is very long; feel free to skip it
+using the PDF bookmarks.
+
 //include "table examples.md"
 
 ### Flow commands
@@ -342,8 +345,8 @@ hope that it will actually do what you say.
 In our case, since we're using Markdown and Latex, we can use those lovely
 commands:
 
-* \textbackslash \textbackslash start a new paragraph.
-* \textbackslash \textbackslash* start a new line but not a new paragraph.
+* \textbackslash \textbackslash   start a new paragraph.
+* \textbackslash \textbackslash * start a new line but not a new paragraph.
 * \textbackslash - OK to hyphenate a word here.
 * \textbackslash cleardoublepage flush all material and start a new page, start new odd numbered page.
 * \textbackslash clearpage plush all material and start a new page.
@@ -357,7 +360,7 @@ commands:
 
 They are explained in more details [here](http://www.personal.ceu.hu/tex/breaking.htm).
 
-The one that I find myself using the most when writing in Latex is \textbackslash clearpage, because
+The one that I find myself using almost exclusively writing Latex with Markdown is \textbackslash clearpage, because
 when I'm done with a section I like to have the pictures that are relevant to that section to appear
 before the next section starts.
 

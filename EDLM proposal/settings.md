@@ -27,14 +27,9 @@ references:
   // freqs: "132nd Operational Frequencies, http://132virtualwing.org/index.php/page/freqlist"
   // ato_manual: "ATO Manual, http://132virtualwing.org/index.php/page/ato_manual"
   // charts: "Ground and Airport Charts, http://www.ariescon.com/DCS_GND_VAD_Charts_v36_030513x.zip"
-  
-papersize:
-  - a4
 ```
 
 ### Papersize
-
-Allow me to start with the simplest.
 
 The `papersize` settings is simply a list of formats ("A3", "A4", "A5", ...).
 
@@ -74,6 +69,14 @@ This setting is just a convenient way to output the same document multiple time,
 for example to make a version that can more easily be converted to a kneeboard
 (hint, hint).
 
+Here's an example of a valid `papersize` section in `settings.yml`:
+
+```
+papersize:
+	- a4
+	- a5
+```
+
 
 ### Aliases
 
@@ -87,7 +90,7 @@ aliases:
 	- //jf: "J-TAC/FAC(A)"
 ```
 
-This would allow me to type `// jf`[^alias_space] or `// etcher`[^alias_space] in my document,
+This would allow me to type `// jf` or `// etcher` in my document,
 and have that replaced by the corresponding text.
 
 It also help us to have a more "uniform" rendering of the names & conventions
@@ -98,7 +101,7 @@ within the //wing.
 References work exactly like aliases, with one added benefits: all references used in a document
 are neatly assembled in a "References list" at the beginning of the document.
 
-Here's one for the sake of the example: //ttp1 (I just typed `// ttp1`[^alias_space] in my document).
+Here's one for the sake of the example: //ttp1 (I just typed `// ttp1` in my document).
 
-[^alias_space]: I had to include a space after each `//` in the example in order
+[^alias_space]: I have to include a space after each `//` in the examples in this document in order
 to prevent automatic processing of the aliases/references.

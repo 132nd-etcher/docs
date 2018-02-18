@@ -81,7 +81,7 @@ Cfr. Figure \ref{basic_workflow} for a diagram of the editing workflow.
 
 Now there is more to this, of course. We want to give "properties" to our documents!
 
-An author, a published date, a list of changes, etc ...
+An author, a published date, a list of changes,etc.
 
 There is a standard header for all documents. Here's, for example, the header of
 the [OvGME for pilots PDF](http://132virtualwing.org/docs/OvGME%20for%20pilots.PDF):
