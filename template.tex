@@ -423,28 +423,13 @@ $if(applies)$
 $endif$
 
 
-%# This section includes references from the context
-%% if ctx.used_references|length > 0
-	\vspace*{5em}
-	\pdfbookmark[section]{List of references}{refs}
-	\section*{List of references}
-	\begin{itemize}
-	    %% for ref in ctx.used_references
-			\item \VAR{ref.to_latex()} \\
-		%% endfor
-	\end{itemize}
-	\newpage
-%% endif
-
-
 %$for(include-before)$
 %    $include-before$
 %    \newpage
 %$endfor$
 
-\vspace*{1cm}
-
 $if(toc)$
+	\vspace*{5em}
     {
         \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
         \setcounter{tocdepth}{$toc-depth$}
@@ -454,6 +439,20 @@ $if(toc)$
         \newpage
     }
 $endif$
+
+
+%# This section includes references from the context
+%% if ctx.latex_refs|length > 0
+	\vspace*{5em}
+	\pdfbookmark[section]{List of references}{refs}
+	\section*{List of references}
+	\begin{itemize}
+	    %% for ref in ctx.latex_refs
+			\item \VAR{ref} \\
+		%% endfor
+	\end{itemize}
+	\newpage
+%% endif
 
 \pagestyle{fancy}
 $body$
