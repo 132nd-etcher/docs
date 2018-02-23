@@ -60,6 +60,6 @@ links:
   menucolor: "Grey"
   runcolor: "Grey"
   # Creates bookmars for the PDF
-  bookmarks: "true"
+  # bookmarks: "true"
   # Auto-expand the bookmarks when the PDF is opened
-  bookmarksopen: "true"
+  # bookmarksopen: "true"
