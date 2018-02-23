@@ -18,9 +18,6 @@ summary_of_changes:
   - 0.1 180218 initial publication for review by CMD
 ---
 
-
-![A pile of books](https://i.imgur.com/DNB0lco.png)
-
 # Enhancement Proposal
 
 //include "intro.md"
