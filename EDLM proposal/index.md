@@ -85,5 +85,7 @@ talking about it here for the sake of being exhaustive in my presentation.
  
 //include "closing words.md"
 
+\clearpage
+
 //include "pictures.md"
 
