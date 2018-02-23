@@ -67,9 +67,9 @@ That's it ! We have a new document =)
 As an example, here is this very section of this very document written in Markdown:
 ```
 
-Cfr. Figure \ref{commit} for a diagram of the committing workflow.
+Cfr. \ref{commit} for a diagram of the committing workflow.
 
-Cfr. Figure \ref{basic_workflow} for a diagram of the editing workflow.
+Cfr. \ref{basic_workflow} for a diagram of the editing workflow.
 
 ![Basic work flow \label{basic_workflow}](https://www.planttext.com/plantuml/img/ZP9DQWGX48NtdgBe_GHQ-m2p2Ta4iiW97AsP4HnD_864aBkdhD4GGjEq6_sgwzLxK7tCHQTIRru8RKfCC3rQH_S4EWFQMPoZjqZbrrYJGRWZVyt9pF0bW0wDS6VIm-I2nO-7cvsWjRJwBBx5UyMAC3r7epqaV8kvUNpoc8RpkhlSTfSxtEKETxdkhhRTrGvtjSDThRilOclm8eoFrOu85mpKzX9SG9B-Jed1KwKjeBVtVgkBFkbCgPvSkTRJ_rYNQvFGzk5mw3kaPGoG16g08bW6B893i-o-LkuVA1dLGCN8uX5KiAfLA09B_hnLV_VcJdIE62pzmJy0)
 

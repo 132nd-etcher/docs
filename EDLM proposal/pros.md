@@ -70,7 +70,7 @@ see as PDF files. The link to those PDFs files do no change.
 We can have a link on our "document" page on the website, and that
 link will **always** point to the latest, official version of the document.
 
-Cfr. Figure \ref{publish} for a diagram of the publishing workflow.
+Cfr. \ref{publish} for a diagram of the publishing workflow.
 
 ![Publishing workflow \label{publish}](https://www.planttext.com/plantuml/img/RLAxRiCm3Dpv5OJt34dQZa6A1kqKe5ExTA4bsHOYIuOU2OAY_rwQTjt5MdIyeqJof6FA57Ff7G2rncUidaiEFMMZCMKpL52IKPGCLcVoXTpCWdAXQCHlG5wQCjMIz6PpLsgCPWZ9vX3lN_vCV2HY7Schha9As7Rmyrzl6Axc7g8eT0LeWjESlmZ83Tg6L4vJ2aTpsSOwBlb-UXLXqCrsdTwjq_jr-c6TVboddyPH9ZEgxNxdDNvODfID-hI-nPkfsGSZsJDU9Z-PmOMxI5eW0B-6kc3r4lhUPWmUUp5FSfIGC6susHn67w7j1B9nT6Kazapmy7Vhj2tY4XwMZiHJrfSEer6PV3lEUWggzDplwBn17svSYwoZsarJHO3vc5p9uT5upJ_g5m00)
 
@@ -167,7 +167,7 @@ that Bitbucket offers the same kind of functionality for
 an unlimited number of private repositories. I'm a strong 
 advocate of going public, though.
 
-See Figure \ref{basic_workflow} for a conceptualized workflow
+See \ref{basic_workflow} for a conceptualized workflow
 of how to edit the documents.
 
 #### Unified format
