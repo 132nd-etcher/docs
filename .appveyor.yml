@@ -10,7 +10,7 @@ environment:
     CYGWIN_GIT_PATH:   "C:\\cygwin\\bin;%GIT_DAEMON_PATH%"
     CYGWIN64_GIT_PATH: "C:\\cygwin64\\bin;%GIT_DAEMON_PATH%"
     APPVEYOR_ARTIFACT_UPLOAD_TIMEOUT: 60
-    PYTHON: "C:\\Miniconda36-x64"
+    PYTHON: "C:\\Python36-x64"
     PYTHON_VERSION: "3.6"
     GIT_PATH: "%GIT_DAEMON_PATH%"
     GH_TOKEN:
@@ -23,11 +23,6 @@ matrix:
     fast_finish: true
 
 init:
-  # If there is a newer build queued for the same PR, cancel this one.
-  # The AppVeyor 'rollout builds' option is supposed to serve the same
-  # purpose but is problematic because it tends to cancel builds pushed
-  # directly to master instead of just PR builds.
-  # credits: JuliaLang developers.
   - ps: if ($env:APPVEYOR_PULL_REQUEST_NUMBER -and $env:APPVEYOR_BUILD_NUMBER -ne ((Invoke-RestMethod `
         https://ci.appveyor.com/api/projects/$env:APPVEYOR_ACCOUNT_NAME/$env:APPVEYOR_PROJECT_SLUG/history?recordsNumber=50).builds | `
         Where-Object pullRequestId -eq $env:APPVEYOR_PULL_REQUEST_NUMBER)[0].buildNumber) { `
@@ -37,35 +32,35 @@ init:
   - set PATH=%PYTHON%;%PYTHON%\Scripts;C:\MinGW\msys\1.0\bin;%PATH%
   - "git config --system http.sslcainfo \"C:\\Program Files\\Git\\mingw64\\ssl\\certs\\ca-bundle.crt\""
 
-cache:
-  - C:\Miniconda36-x64\Scripts\ -> .invalidate_av_cache
-  - C:\Miniconda36-x64\conda-meta -> .invalidate_av_cache
-  - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
+# cache:
+#   - C:\Miniconda36-x64\Scripts\ -> .invalidate_av_cache
+#   - C:\Miniconda36-x64\conda-meta -> .invalidate_av_cache
+#   - C:\Miniconda36-x64\library\miktex -> .invalidate_av_cache
 
 install:
-  - "%PYTHON%/Scripts/conda.exe config --add channels conda-forge"
-  - "%PYTHON%/Scripts/conda.exe install miktex pandoc -y"
-  - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
+  # - cmd: pip install git+https://github.com/132nd-etcher/EDLM.git@feature/init#egg=edlm
+  - cmd: pip install edlm
 
 build_script:
-  - cmd: edlm convert pdf .
-  - cmd: REN OUTPUT docs
+  - cmd: edlm --debug convert pdf .
 
 
 artifacts:
-  - path: '**/*.pdf'
+  - path: '*.pdf'
     name: document
     type: File
+  # - path: 'C:\Users\appveyor\AppData\Local\MiKTeX\2.9\miktex\log\*.log'
+    # name: miktex_logs
+    # type: File
 
 deploy:
   provider: FTP
   protocol: sftp
   host:
     secure: 5ySqGu0Sy46I/vsKje7UrC3zMHw8+ouvqbc3wbSkpUg=
-  username:
-    secure: ISGmrm6l6EZVSeUIJFW7kw==
+  username: 'docs'
   password:
     secure: 3UqjnpgLIcOlO+lXGID86Q==
-  folder: docs
+  folder: 'docs'
   on:
     branch: master
