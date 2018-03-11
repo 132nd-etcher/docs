@@ -46,3 +46,20 @@ references:
 
 papersize:
   - a4
+  
+# Configuration of links
+links:
+  # Allow links to be broken into multiple lines (useful for very long links)
+  breaklinks: "true"
+  # Define links color; See https://en.wikibooks.org/wiki/LaTeX/Colors for more information about available Latex colors
+  linkcolor: "Grey"
+  citecolor: "Grey"
+  urlcolor: "Grey"
+  anchorcolor: "Grey"
+  filecolor: "Grey"
+  menucolor: "Grey"
+  runcolor: "Grey"
+  # Creates bookmars for the PDF
+  # bookmarks: "true"
+  # Auto-expand the bookmarks when the PDF is opened
+  # bookmarksopen: "true"
