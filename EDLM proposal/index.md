@@ -10,15 +10,13 @@ status: published for review by CMD
 title_pictures: //all_logos
 subtitle: Documentation overhaul
 type: Enhancement Proposal
-version: 0.1
+version: 0.2
 published_date: 180218
 responsible: etcher
 summary_of_changes:
+  - 0.2 180223 fixed layouts and references
   - 0.1 180218 initial publication for review by CMD
 ---
-
-
-![A pile of books](https://i.imgur.com/DNB0lco.png)
 
 # Enhancement Proposal
 
@@ -84,6 +82,8 @@ talking about it here for the sake of being exhaustive in my presentation.
 \clearpage
  
 //include "closing words.md"
+
+\clearpage
 
 //include "pictures.md"
 

@@ -177,7 +177,7 @@ However, the system is smart enough to:
 
 Since these example pictures are very big, they will appear on their own page later in the document (probably a page or two away).
 
-I have also included an example of a smaller picture at Figure \ref{smaller}.
+I have also included an example of a smaller picture at \ref{smaller}.
 
 ![Example picture 3 (smaller)\label{smaller}](image3.jpg)
 
@@ -221,10 +221,10 @@ This is my label \label{my-awesome-label} (you can't actually see it, but it's t
 You can then create a link to it later using:
 
 ```
-See my "Awesome label", \ref{my-awesome-label}
+See my "Awesome label" at \ref{my-awesome-label}
 ```
 
-This is my reference: See my "Awesome label", \ref{my-awesome-label}.
+This is my reference: See my "Awesome label" at \ref{my-awesome-label}.
 
 It even adds the numbering for us !
 
