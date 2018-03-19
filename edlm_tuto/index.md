@@ -17,3 +17,14 @@ summary_of_changes: nil
 ---
 
 # EDLM Tuto
+
+## Abstract
+
+This document is meant to give a "hands-on" experience of EDLM, and hopefully outline both the
+advantages of using a centralized library management system and the relative simplicity of the 
+proposed solution.
+
+While the previous proposal goes quite into details about the choices and the motives behind 
+EDLM, this document is meant as a step-by-step guide, showing how to create and edit documents using EDLM.
+
+No previous knowledge of any kind is required.
